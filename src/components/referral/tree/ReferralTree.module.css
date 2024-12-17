@@ -1,0 +1,158 @@
+.container {
+  @apply space-y-6;
+}
+
+.header {
+  @apply flex flex-col sm:flex-row sm:items-center justify-between gap-4 
+    mb-6 pb-4 border-b border-purple-500/20;
+}
+
+.title {
+  @apply text-xl font-semibold text-white;
+}
+
+.legend {
+  @apply flex items-center gap-6;
+}
+
+.legendItem {
+  @apply flex items-center gap-2 text-sm text-gray-400;
+}
+
+.legendIcon {
+  @apply w-3 h-3 rounded-full;
+}
+
+.legendIcon.active {
+  @apply bg-purple-400;
+}
+
+.legendIcon.inactive {
+  @apply bg-gray-500;
+}
+
+.treeContainer {
+  @apply space-y-4 pl-4;
+}
+
+.treeNode {
+  @apply relative;
+}
+
+/* 连接线 */
+.treeNode::before {
+  @apply content-[''] absolute -left-4 top-8 bottom-0 w-px 
+    bg-gradient-to-b from-purple-500/30 to-transparent;
+}
+
+.treeNode:last-child::before {
+  @apply hidden;
+}
+
+.nodeCard {
+  @apply relative transition-all duration-300 hover:translate-x-1;
+}
+
+.nodeCard::before {
+  @apply content-[''] absolute -left-4 top-1/2 w-4 h-px 
+    bg-gradient-to-r from-purple-500/30 to-transparent;
+}
+
+.nodeContent {
+  @apply flex items-center gap-4 p-4;
+}
+
+.toggleButton {
+  @apply p-1 rounded-lg hover:bg-purple-500/20 transition-colors;
+}
+
+.userInfo {
+  @apply flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2;
+}
+
+.addressSection {
+  @apply flex items-center gap-3;
+}
+
+.statusIcon {
+  @apply p-2 rounded-lg bg-gray-500/20 text-gray-400 
+    transition-colors;
+}
+
+.statusIcon.active {
+  @apply bg-purple-500/20 text-purple-400;
+}
+
+.address {
+  @apply font-mono text-sm;
+}
+
+.metadata {
+  @apply flex items-center gap-3 text-sm;
+}
+
+.level {
+  @apply text-purple-400;
+}
+
+.zone {
+  @apply px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-300;
+}
+
+.childNodes {
+  @apply pl-8 mt-4 space-y-4;
+}
+
+/* 加载状态 */
+.loadingState {
+  @apply space-y-4 animate-pulse;
+}
+
+.skeletonNode {
+  @apply h-16 bg-purple-900/20 rounded-xl;
+}
+
+/* 空状态 */
+.emptyState {
+  @apply text-center py-12 text-gray-400;
+}
+
+/* 移动端适配 */
+@media (max-width: 640px) {
+  .header {
+    @apply flex-col gap-3;
+  }
+
+  .nodeContent {
+    @apply p-3;
+  }
+
+  .childNodes {
+    @apply pl-4 mt-3;
+  }
+
+  .userInfo {
+    @apply flex-col gap-1;
+  }
+
+  .metadata {
+    @apply text-xs;
+  }
+
+  .referralLinkSection {
+    @apply p-4 mb-6;
+  }
+} 
+
+/* 动画类 */
+.fadeIn {
+  @apply animate-fade;
+}
+
+.slideIn {
+  @apply animate-slide-in;
+}
+
+.slideUp {
+  @apply animate-slide-up;
+}

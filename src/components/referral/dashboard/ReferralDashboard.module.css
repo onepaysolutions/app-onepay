@@ -1,0 +1,94 @@
+.container {
+  @apply space-y-6 md:space-y-8;
+}
+
+.section {
+  @apply bg-purple-900/20 rounded-xl border border-purple-500/20 
+    backdrop-blur-md overflow-hidden transition-all duration-300
+    hover:border-purple-500/30;
+}
+
+.sectionHeader {
+  @apply flex items-center justify-between px-6 py-4 
+    border-b border-purple-500/10;
+}
+
+.sectionTitle {
+  @apply text-lg font-semibold flex items-center gap-2;
+}
+
+.sectionIcon {
+  @apply text-purple-400;
+}
+
+.sectionContent {
+  @apply p-6;
+}
+
+.chart {
+  @apply relative h-[400px] w-full;
+}
+
+.chartContainer {
+  @apply absolute inset-0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .container {
+    @apply space-y-4;
+  }
+
+  .sectionHeader {
+    @apply px-4 py-3;
+  }
+
+  .sectionTitle {
+    @apply text-base;
+  }
+
+  .sectionContent {
+    @apply p-4;
+  }
+
+  .chart {
+    @apply h-[300px];
+  }
+}
+
+/* 动画效果 */
+.fadeIn {
+  @apply animate-fade;
+}
+
+.slideIn {
+  @apply animate-slide-in;
+}
+
+.slideUp {
+  @apply animate-slide-up;
+}
+
+/* 加载状态 */
+.skeleton {
+  @apply animate-pulse bg-purple-900/30 rounded-lg;
+}
+
+.skeletonText {
+  @apply h-4 bg-purple-900/30 rounded;
+}
+
+/* 卡片悬浮效果 */
+.card {
+  @apply transition-all duration-300 hover:transform hover:-translate-y-1;
+}
+
+/* 渐变背景 */
+.gradientBg {
+  @apply bg-gradient-to-br from-purple-500/5 via-purple-900/10 to-black/20;
+}
+
+/* 玻璃态效果 */
+.glassEffect {
+  @apply backdrop-blur-md bg-white/5;
+} 

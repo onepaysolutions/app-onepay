@@ -1,0 +1,27 @@
+.container {
+  @apply mb-6;
+}
+
+.header {
+  @apply flex justify-between items-center mb-2 text-sm;
+}
+
+.stats {
+  @apply text-gray-400;
+}
+
+.percentage {
+  @apply text-purple-400 font-medium;
+}
+
+.track {
+  @apply h-1.5 bg-[#1a1a1a]/60 rounded-full overflow-hidden;
+}
+
+.bar {
+  @apply h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full;
+}
+
+.loading {
+  @apply text-xs text-gray-500 mt-1;
+} 

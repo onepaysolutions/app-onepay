@@ -1,0 +1,33 @@
+.claimContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.claimContent {
+  flex: 1;
+}
+
+.claimDescription {
+  color: rgb(209 213 219);
+  margin-bottom: 1rem;
+}
+
+.claimButton {
+  background-color: rgb(147 51 234);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.claimButton:hover {
+  background-color: rgb(126 34 206);
+}
+
+.nftPreview {
+  width: 12rem;
+  height: 12rem;
+  background-color: rgba(126, 34, 206, 0.5);
+  border-radius: 0.75rem;
+} 

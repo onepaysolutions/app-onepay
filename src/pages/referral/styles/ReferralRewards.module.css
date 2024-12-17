@@ -1,0 +1,28 @@
+.container {
+  @apply space-y-6;
+}
+
+.card {
+  @apply bg-gradient-to-br from-purple-900/30 to-black/30 
+    rounded-xl backdrop-blur-sm border border-purple-500/20;
+}
+
+.tabNav {
+  @apply flex overflow-x-auto no-scrollbar border-b border-purple-500/20;
+}
+
+.tabButton {
+  @apply flex-1 min-w-[120px] px-4 py-3 text-sm font-medium transition-colors;
+}
+
+.tabButtonActive {
+  @apply text-purple-400 border-b-2 border-purple-400;
+}
+
+.tabButtonInactive {
+  @apply text-gray-400 hover:text-purple-300;
+}
+
+.content {
+  @apply p-4;
+} 

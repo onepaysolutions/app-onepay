@@ -1,0 +1,1 @@
+INSERT INTO "public"."starnftpresale" ("id", "walletaddress", "tokenid", "cycleid", "stage", "opsamount", "presaleprice", "contractvalue", "remindingvalue", "opsvalue") VALUES ('1', '0x5678test', '2', '1', '1', '0.00', '0.30', '12600.00', '12600.00', '0.00');

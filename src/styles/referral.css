@@ -1,0 +1,30 @@
+/* 基础卡片样式 */
+.card {
+  @apply bg-gradient-to-br from-purple-900/30 to-black/30 
+    rounded-xl backdrop-blur-sm border border-purple-500/20;
+}
+
+/* 导航样式 */
+.nav-link {
+  @apply px-6 py-3 text-sm font-medium transition-colors whitespace-nowrap;
+}
+
+.nav-link-active {
+  @apply text-purple-400 border-b-2 border-purple-400;
+}
+
+.nav-link-inactive {
+  @apply text-gray-400 hover:text-purple-300;
+}
+
+/* 内容区域样式 */
+.content {
+  @apply container mx-auto px-4 py-6;
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+  .content {
+    @apply px-4;
+  }
+} 

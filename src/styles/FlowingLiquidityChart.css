@@ -1,0 +1,112 @@
+/* 容器样式 */
+.liquidity-chart-container {
+  background: linear-gradient(180deg, 
+    rgba(37, 99, 235, 0.1) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 1rem;
+  box-shadow: 
+    0 4px 6px -1px rgba(37, 99, 235, 0.1),
+    0 2px 4px -1px rgba(37, 99, 235, 0.06),
+    inset 0 2px 4px rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* 波浪动画效果 */
+.wave-animation {
+  filter: url('#glow');
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* 发光效果 */
+.glow-effect {
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.3));
+}
+
+/* 文字样式 */
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+/* 粒子效果 */
+.particle {
+  background: radial-gradient(circle at center,
+    rgba(96, 165, 250, 0.6) 0%,
+    rgba(96, 165, 250, 0) 70%
+  );
+  mix-blend-mode: screen;
+}
+
+.particle-small {
+  width: 4px;
+  height: 4px;
+}
+
+.particle-large {
+  width: 8px;
+  height: 8px;
+}
+
+/* 悬浮效果 */
+.liquidity-chart-container:hover .wave-animation {
+  animation-play-state: running;
+  filter: brightness(1.2);
+}
+
+/* 动画关键帧 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+  .chart-title {
+    font-size: 1.25rem;
+  }
+  
+  .chart-value {
+    font-size: 2rem;
+  }
+}
+
+/* 深色模式优化 */
+@media (prefers-color-scheme: dark) {
+  .liquidity-chart-container {
+    background: linear-gradient(180deg, 
+      rgba(37, 99, 235, 0.15) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+} 

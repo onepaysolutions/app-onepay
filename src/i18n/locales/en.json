@@ -1,0 +1,345 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "connect": "Connect Wallet",
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "disconnect": "Disconnect",
+    "error": "Error",
+    "success": "Success",
+    "backToHome": "Back to Home"
+  },
+
+  "community": {
+    "title": "Join OnePay Community",
+    "subtitle": "Claim your Angel NFT to become a part of our exclusive community",
+    "buttons": {
+      "join": "Join Now",
+      "learnOPE": "Learn About OPE Token"
+    },
+    "connectWallet": "Please connect wallet first",
+    "addressCopied": "Address copied!",
+    
+    "benefits": {
+      "membership": {
+        "title": "Exclusive Angel NFT Membership",
+        "description": "Get lifetime access to premium features and benefits"
+      },
+      "rewards": {
+        "title": "1000 OPE Token Rewards",
+        "description": "Earn OPE tokens through community participation"
+      },
+      "features": {
+        "title": "Special Feature Access",
+        "description": "Early access to new features and products"
+      },
+      "voting": {
+        "title": "Community Voting Rights",
+        "description": "Participate in governance decisions"
+      }
+    },
+
+    "stats": {
+      "progress": "Claim Progress",
+      "contractAddress": "Contract Address",
+      "totalMinted": "Total Minted",
+      "totalValueLocked": "Total Value Locked",
+      "totalRewards": "Total Rewards",
+      "averagePrice": "Average Price"
+    }
+  },
+
+  "tutorial": {
+    "demo": {
+      "tryDemo": "Try Demo Mode",
+      "noRealTx": "No real transactions",
+      "description": "Experience all features without real transactions"
+    }
+  },
+
+  "nav": {
+    "community": "Community",
+    "starNFT": "Star NFT",
+    "referral": "Referral",
+    "profile": "Profile"
+  },
+
+  "errors": {
+    "pageNotFound": "The page you are looking for does not exist.",
+    "somethingWrong": "Something went wrong.",
+    "tryAgain": "Please try again later."
+  },
+
+  "starNFT": {
+    "connectWallet": "Connect Wallet",
+    "connectWalletDesc": "Please connect your wallet to view your Star NFTs",
+    "title": "Star NFT Digital Asset Growth Plan",
+    "subtitle": "Choose and claim your Star NFT",
+    "noNFTs": "No Star NFTs found",
+    "tabs": {
+      "overview": "Overview",
+      "rewards": "Rewards",
+      "tutorial": "Tutorial"
+    },
+    "levels": {
+      "title": "Star Levels",
+      "vip1": {
+        "title": "VIP 1",
+        "investment": "$500 USDC",
+        "opsAllocation": "677 OPS",
+        "benefits": {
+          "tradingFee": "5% Trading Fee Discount",
+          "referralBonus": "5% Referral Bonus",
+          "idoAccess": "Basic IDO Priority"
+        }
+      },
+      "vip2": {
+        "title": "VIP 2",
+        "investment": "$1,000 USDC",
+        "opsAllocation": "1,354 OPS",
+        "benefits": {
+          "tradingFee": "10% Trading Fee Discount",
+          "referralBonus": "10% Referral Bonus",
+          "idoAccess": "Medium IDO Priority"
+        }
+      },
+      "vip3": {
+        "title": "VIP 3",
+        "investment": "$3,000 USDC",
+        "opsAllocation": "4,062 OPS",
+        "benefits": {
+          "tradingFee": "15% Trading Fee Discount",
+          "referralBonus": "15% Referral Bonus",
+          "idoAccess": "High IDO Priority"
+        }
+      },
+      "vip4": {
+        "title": "VIP 4",
+        "investment": "$7,000 USDC",
+        "opsAllocation": "9,478 OPS",
+        "benefits": {
+          "tradingFee": "20% Trading Fee Discount",
+          "referralBonus": "20% Referral Bonus",
+          "idoAccess": "VIP IDO Priority"
+        }
+      }
+    },
+    "rewards": {
+      "title": "Reward System",
+      "trading": {
+        "title": "Trading Rewards",
+        "description": "Earn rewards from trading fees"
+      },
+      "referral": {
+        "title": "Referral Rewards",
+        "description": "Earn from referrals' trading fees"
+      },
+      "staking": {
+        "title": "Staking Rewards",
+        "description": "Earn OPS tokens by staking"
+      }
+    },
+    "calculator": {
+      "title": "Rewards Calculator",
+      "investment": "Investment Amount",
+      "tradingVolume": "Monthly Trading Volume",
+      "referralCount": "Active Referrals",
+      "calculate": "Calculate Rewards",
+      "confirm": "Confirm",
+      "results": {
+        "title": "Estimated Monthly Rewards",
+        "trading": "Trading Rewards",
+        "referral": "Referral Rewards",
+        "staking": "Staking Rewards",
+        "total": "Total Rewards",
+        "confirm": "Confirm"
+      }
+    },
+    "tutorial": {
+      "steps": {
+        "connect": "Connect Wallet",
+        "select": "Select Star Level",
+        "purchase": "Purchase NFT",
+        "activate": "Activate NFT",
+        "claim": "Claim Rewards",
+        "confirm": "Confirm"
+      }
+    },
+    "buttons": {
+      "purchase": "Purchase Now",
+      "activate": "Activate NFT",
+      "claim": "Claim Rewards",
+      "viewDetails": "View Details",
+      "confirm": "Confirm"
+    },
+    "claim": {
+      "title": "Claim Your First Star NFT",
+      "description": "Start your journey by claiming a Star NFT",
+      "success": "Successfully claimed Star NFT!",
+      "error": "Failed to claim Star NFT",
+      "confirm": "Confirm"
+    }
+  },
+
+  "nft": {
+    "info": {
+      "details": "NFT Details",
+      "sale": "Sale Information",
+      "price": "Price",
+      "ratio": "Ratio",
+      "presale": "Presale Value",
+      "contract": "Contract Value",
+      "benefits": "Benefits",
+      "earnings": "Earnings",
+      "levels": "Levels",
+      "tiers": "Tiers",
+      "rollup": "Rollup",
+      "direct": "Direct",
+      "generation": "Generation",
+      "return": "Return Rate",
+      "total": "Total"
+    },
+    "status": {
+      "active": "Active",
+      "readyToRelease": "Ready to Release",
+      "readyToBurn": "Ready to Burn"
+    },
+    "actions": {
+      "release": "Release",
+      "burn": "Burn",
+      "withdraw": "Withdraw Rewards",
+      "claim": {
+        "success": "NFT claimed successfully",
+        "error": "Failed to claim NFT",
+        "confirm": "Confirm"
+      }
+    },
+    "metrics": {
+      "presaleOPS": "Presale OPS",
+      "airdropOPS": "Airdrop OPS",
+      "rewardsOPS": "Rewards OPS",
+      "currentValue": "Current Value",
+      "contractValue": "Contract Value",
+      "releaseThreshold": "Release Threshold",
+      "userReceives": "User Receives",
+      "platformLiquidity": "Platform Liquidity",
+      "platformBuyback": "Platform Buyback",
+      "opsRelease": "OPS Release"
+    }
+  },
+
+  "release": {
+    "calculation": "Release Calculation",
+    "userReceives": "User Receives",
+    "platformLiquidity": "Platform Liquidity",
+    "platformBuyback": "Platform Buyback",
+    "opsRelease": "OPS Release",
+    "confirmRelease": "Confirm Release",
+    "noNFTs": "No NFTs available for release",
+    "currentCycle": "Current Cycle",
+    "nextCycle": "Next Cycle",
+    "totalOPS": "Total OPS",
+    "totalValue": "Total Value",
+    "releaseThreshold": "Release Threshold"
+      
+  },
+
+  "app": {
+    "nav": {
+      "home": "Home",
+      "community": "Community",
+      "starNFT": "Star NFT",
+      "profile": "Profile",
+      "referral": "Referral",
+      "star": "Star"
+    },
+    "tabBar": {
+      "home": "Home",
+      "star": "Star",
+      "referral": "Referral",
+      "profile": "Profile"
+    }
+  },
+
+  "referral": {
+    "title": "Referral Program",
+    "link": {
+      "title": "Your Referral Link",
+      "shareText": "Join me on OnePay - The next generation DeFi platform!",
+      "copy": "Copy Link",
+      "copied": "Link copied!",
+      "selectZone": "Select a zone first",
+      "share": "Share Link"
+    },
+    "zones": {
+      "title": "Zone Progress",
+      "left": "Left Zone",
+      "middle": "Middle Zone",
+      "right": "Right Zone",
+      "perf": "Performance",
+      "members": "Members",
+      "volume": "Volume"
+    },
+    "share": {
+      "button": "Share Referral",
+      "title": "Share Your Link",
+      "social": {
+        "facebook": "Share on Facebook",
+        "twitter": "Share on Twitter",
+        "telegram": "Share on Telegram",
+        "whatsapp": "Share on WhatsApp"
+      }
+    },
+    "stats": {
+      "level": "Star Level",
+      "maxLevel": "Max Level",
+      "rate": "Reward Rate",
+      "total": "Total Referrals",
+      "active": "Active Referrals"
+    },
+    "rewards": {
+      "direct": "Direct Rewards",
+      "level": "Level Rewards",
+      "pending": "Pending Rewards",
+      "claimed": "Claimed Rewards",
+      "total": "Total Rewards"
+    },
+    "tree": {
+      "title": "Referral Tree",
+      "empty": "No referral data found",
+      "basicUser": "Basic User",
+      "starActivated": "Star NFT Activated",
+      "level": "Level",
+      "zone": "Zone"
+    }
+  },
+
+  "auth": {
+    "registerSuccess": "Registration successful! Welcome to OnePay 🎉",
+    "welcomeBack": "Welcome back!"
+  },
+
+  "notification": {
+    "close": "Close",
+    "types": {
+      "success": {
+        "title": "Success",
+        "register": "Registration Successful",
+        "registerMessage": "Welcome to OnePay! Your wallet address: {address}... has been registered successfully 🎉",
+        "welcomeBack": "Welcome Back",
+        "welcomeMessage": "Great to see you again! Wallet address: {address}... 👋",
+        "referral": "Referral relationship recorded"
+      },
+      "error": {
+        "title": "Error",
+        "login": "Failed to process login",
+        "connect": "Failed to connect wallet",
+        "referral": "Failed to process referral",
+        "invalidReferrer": "Invalid referrer"
+      },
+      "info": {
+        "title": "Information"
+      }
+    }
+  }
+}

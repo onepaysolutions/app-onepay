@@ -1,0 +1,57 @@
+.container {
+  @apply sticky bottom-[64px] z-50 w-full;
+}
+
+.wrapper {
+  @apply relative w-full max-w-7xl mx-auto px-4;
+}
+
+.floatingButton {
+  @apply absolute right-4 md:right-8;
+}
+
+.shareButton {
+  @apply group flex items-center gap-2 px-4 py-3 rounded-full font-medium shadow-lg transition-all duration-300;
+}
+
+.shareButtonActive {
+  @apply bg-red-500 hover:bg-red-600 pr-3;
+}
+
+.shareButtonInactive {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
+    hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600;
+}
+
+.sharePanel {
+  @apply absolute top-[40px] right-4 w-full max-w-[360px] md:right-8;
+}
+
+.panelContent {
+  @apply bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-2xl border-2 border-white/20;
+}
+
+.zoneButton {
+  @apply p-3 rounded-lg text-sm font-medium transition-all duration-200;
+}
+
+.zoneButtonActive {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg;
+}
+
+.zoneButtonInactive {
+  @apply bg-white/5 text-white hover:bg-white/10 border border-white/10;
+}
+
+.linkInput {
+  @apply flex-1 min-w-0 bg-white/5 rounded-lg px-4 py-3 border border-white/10 
+    text-white placeholder-gray-400 text-sm;
+}
+
+.copyButton {
+  @apply shrink-0 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap;
+}
+
+.socialButton {
+  @apply p-3 rounded-full transition-all duration-200 hover:bg-white/10;
+} 

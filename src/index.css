@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+}
+
+/* 基础样式 */
+html,
+body {
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #0b0b0b;
+  color: #f5f5f5;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Logo 响应式样式 */
+.logo {
+  height: 32px;
+}
+
+/* iPhone SE, 5, 5S, 5C, iPod Touch 5g */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px) {
+  .logo {
+    height: 20px;
+  }
+  
+  .container {
+    padding: 0.75rem;
+  }
+  
+  h1 { font-size: 1.25rem; }
+  h2 { font-size: 1.125rem; }
+  p { font-size: 0.875rem; }
+}
+
+/* iPhone 6, 6S, 7, 8 */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) {
+  .logo {
+    height: 22px;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  h1 { font-size: 1.375rem; }
+  h2 { font-size: 1.25rem; }
+  p { font-size: 0.9375rem; }
+}
+
+/* iPhone 6+, 7+, 8+ */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) {
+  .logo {
+    height: 24px;
+  }
+}
+
+/* iPhone X, XS, 11 Pro */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-device-pixel-ratio: 3) {
+  .container {
+    padding: 1rem;
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* iPhone XR, 11 */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 896px) 
+and (-webkit-device-pixel-ratio: 2) {
+  .container {
+    padding: 1.25rem;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Android Phones */
+@media screen 
+and (max-width: 640px) 
+and (orientation: portrait) {
+  .logo {
+    height: 24px;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .gradient-background {
+    background-size: 200% auto;
+  }
+  
+  h1 { font-size: 1.375rem; }
+  h2 { font-size: 1.25rem; }
+  p { font-size: 0.9375rem; }
+}
+
+/* 通用移动端弹窗样式 */
+@media (max-width: 640px) {
+  .modal-container {
+    width: 92% !important;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .modal-content {
+    max-height: 85vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .modal-header {
+    padding: 0.875rem;
+  }
+  
+  .modal-body {
+    padding: 0.875rem;
+  }
+  
+  /* 按钮样式优化 */
+  button {
+    min-height: 44px; /* iOS 最小点击区域 */
+    touch-action: manipulation;
+  }
+  
+  /* 输入框优化 */
+  input, select, textarea {
+    font-size: 16px !important; /* 防止 iOS 自动缩放 */
+  }
+}
+
+.gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('./assets/images/bggradient.svg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  overflow: visible;
+}
+
+.bg-purple-custom {
+  background: linear-gradient(50deg, #926e96, #866E88);
+}
+
+.bg-purple-custom:hover {
+  background: linear-gradient(0deg, #926e9696, #866E8896);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e4e4e77d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #818181;
+}
+
+/* 安全区域适配 */
+.safe-area-padding {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* 禁用长按菜单 */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 允许输入框选择文本 */
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* 优化点击状态 */
+@media (hover: none) {
+  a:hover, button:hover {
+    opacity: 1 !important;
+  }
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+  }
+}
+
+/* 添加全局动画效果 */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #8B5CF6, #6D28D9, #4C1D95);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 3s ease infinite;
+}
+
+/* 优化卡片悬浮效果 */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+}
+
+/* 添加流动边框效果 */
+.flowing-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.flowing-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.2),
+    transparent
+  );
+  animation: flow 2s linear infinite;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.3) rgba(0, 0, 0, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(139, 92, 246, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(139, 92, 246, 0.5);
+}
+
+
+

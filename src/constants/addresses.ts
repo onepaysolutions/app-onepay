@@ -1,0 +1,1 @@
+export const REFERRAL_SYSTEM_ADDRESS = "0x5399BBb3628b60FbeD34ef6AdEe15277B53A5C75"; // 替换为你的合约地址 

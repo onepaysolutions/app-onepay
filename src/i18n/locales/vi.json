@@ -1,0 +1,470 @@
+{
+  "common": {
+    "loading": "Đang tải...",
+    "connect": "Kết nối ví",
+    "connecting": "Đang kết nối...",
+    "connected": "Đã kết nối",
+    "disconnect": "Ngắt kết nối",
+    "error": "Lỗi",
+    "success": "Thành công",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "share": "Chia sẻ",
+    "close": "Đóng",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy",
+    "next": "Tiếp theo",
+    "back": "Quay lại",
+    "submit": "Gửi",
+    "processing": "Đang xử lý..."
+  },
+
+  "community": {
+    "title": "Tham gia Cộng đồng OnePay",
+    "subtitle": "Nhận Angel NFT và trở thành thành viên của cộng đồng độc quyền của chúng tôi",
+    "contract": "Hợp đồng",
+    "copyAddress": "Sao chép địa chỉ",
+    "addressCopied": "Đã sao chép địa chỉ hợp đồng!",
+    "connectWallet": "Vui lòng kết nối ví trước",
+    "membership": "Tư cách thành viên",
+    "price": "Giá",
+    "gasFees": "Phí Gas",
+    "sponsored": "���c tài trợ",
+    "network": "Mạng lưới",
+    "opMainnet": "OP Mainnet",
+    "benefits": {
+      "membership": {
+        "title": "Tư cách thành viên Angel NFT độc quyền",
+        "description": "Nhận quyền truy cập trọn đời vào các tính năng và lợi ích cao cấp"
+      },
+      "rewards": {
+        "title": "1000 Token OPE thưởng",
+        "description": "Kiếm token OPE thông qua việc tham gia cộng đồng"
+      },
+      "features": {
+        "title": "Truy cập tính năng đặc biệt",
+        "description": "Truy cập sớm các tính năng và sản phẩm mới"
+      },
+      "voting": {
+        "title": "Quyền biểu quyết cộng đồng",
+        "description": "Tham gia vào các quyết định quản trị"
+      }
+    },
+    "stats": {
+      "progress": "Tiến độ yêu cầu",
+      "contractAddress": "Địa chỉ hợp đồng"
+    }
+  },
+
+  "nav": {
+    "community": "Cộng đồng",
+    "starNFT": "Star NFT",
+    "referral": "Giới thiệu",
+    "profile": "Hồ sơ"
+  },
+
+  "errors": {
+    "pageNotFound": "The page you are looking for does not exist.",
+    "somethingWrong": "Something went wrong.",
+    "tryAgain": "Please try again later."
+  },
+
+  "starNFT": {
+    "connectWallet": "Connect Wallet",
+    "connectWalletDesc": "Please connect your wallet to view your Star NFTs",
+    "title": "Kế hoạch Tăng trưởng Tài sản Số Star NFT",
+    "subtitle": "Chọn và yêu cầu Star NFT của bạn",
+    "noNFTs": "No Star NFTs found",
+    "tabs": {
+      "all": "Tất cả NFT",
+      "active": "NFT Đang hoạt động",
+      "release": "Phát hành NFT"
+    },
+    "levels": {
+      "title": "Star Levels",
+      "vip1": {
+        "title": "VIP 1",
+        "investment": "$500 USDC",
+        "opsAllocation": "677 OPS",
+        "benefits": {
+          "tradingFee": "5% Trading Fee Discount",
+          "referralBonus": "5% Referral Bonus",
+          "idoAccess": "Basic IDO Priority"
+        }
+      },
+      "vip2": {
+        "title": "VIP 2",
+        "investment": "$1,000 USDC",
+        "opsAllocation": "1,354 OPS",
+        "benefits": {
+          "tradingFee": "10% Trading Fee Discount",
+          "referralBonus": "10% Referral Bonus",
+          "idoAccess": "Medium IDO Priority"
+        }
+      },
+      "vip3": {
+        "title": "VIP 3",
+        "investment": "$3,000 USDC",
+        "opsAllocation": "4,062 OPS",
+        "benefits": {
+          "tradingFee": "15% Trading Fee Discount",
+          "referralBonus": "15% Referral Bonus",
+          "idoAccess": "High IDO Priority"
+        }
+      },
+      "vip4": {
+        "title": "VIP 4",
+        "investment": "$7,000 USDC",
+        "opsAllocation": "9,478 OPS",
+        "benefits": {
+          "tradingFee": "20% Trading Fee Discount",
+          "referralBonus": "20% Referral Bonus",
+          "idoAccess": "VIP IDO Priority"
+        }
+      }
+    },
+    "rewards": {
+      "title": "Reward System",
+      "trading": {
+        "title": "Trading Rewards",
+        "description": "Earn rewards from trading fees"
+      },
+      "referral": {
+        "title": "Referral Rewards",
+        "description": "Earn from referrals' trading fees"
+      },
+      "staking": {
+        "title": "Staking Rewards",
+        "description": "Earn OPS tokens by staking"
+      }
+    },
+    "calculator": {
+      "title": "Rewards Calculator",
+      "investment": "Investment Amount",
+      "tradingVolume": "Monthly Trading Volume",
+      "referralCount": "Active Referrals",
+      "calculate": "Calculate Rewards"
+    },
+    "metrics": {
+      "returnRate": "Tỷ lệ hoàn vốn",
+      "ownLevels": "Cấp độ sở hữu",
+      "contractValue": "Giá trị hợp đồng",
+      "opsHolding": "Số dư OPS",
+      "opsRewards": "Phần thưởng OPS",
+      "currentValue": "Giá trị hiện tại"
+    },
+    "vipLevels": {
+      "star1": {
+        "name": "Sao I",
+        "benefits": [
+          "500% tỷ lệ hoàn vốn",
+          "3 cấp phần thưởng",
+          "Truy cập sớm tính năng mới",
+          "Truy cập cộng đồng VIP"
+        ]
+      },
+      "star2": {
+        "name": "Sao II",
+        "benefits": [
+          "600% tỷ lệ hoàn vốn",
+          "8 cấp phần thưởng",
+          "Đặc quyền giao dịch nâng cao",
+          "Công cụ phân tích cao cấp"
+        ]
+      },
+      "star3": {
+        "name": "Sao III",
+        "benefits": [
+          "700% tỷ lệ hoàn vốn",
+          "15 cấp phần thưởng",
+          "Dịch vụ hỗ trợ cao cấp",
+          "Cơ hội đầu tư độc quyền"
+        ]
+      },
+      "star4": {
+        "name": "Sao IV",
+        "benefits": [
+          "800% tỷ lệ hoàn vốn",
+          "20 cấp phần thưởng",
+          "Tính năng giao dịch tối ưu",
+          "Quyền đối tác chiến lược"
+        ]
+      }
+    }
+  },
+
+  "nft": {
+    "info": {
+      "details": "NFT Details",
+      "sale": "Sale Information",
+      "price": "Price",
+      "ratio": "Ratio",
+      "presale": "Presale Value",
+      "contract": "Contract Value",
+      "benefits": "Benefits",
+      "earnings": "Earnings",
+      "levels": "Levels",
+      "tiers": "Tiers",
+      "rollup": "Rollup",
+      "direct": "Direct",
+      "generation": "Generation",
+      "return": "Return Rate"
+    },
+    "status": {
+      "active": "Active",
+      "readyToRelease": "Ready to Release",
+      "readyToBurn": "Ready to Burn"
+    },
+    "actions": {
+      "release": "Release",
+      "burn": "Burn",
+      "withdraw": "Withdraw Rewards"
+    },
+    "metrics": {
+      "presaleOPS": "Presale OPS",
+      "airdropOPS": "Airdrop OPS",
+      "rewardsOPS": "Rewards OPS",
+      "currentValue": "Current Value",
+      "contractValue": "Contract Value",
+      "releaseThreshold": "Release Threshold"
+    }
+  },
+
+  "release": {
+    "calculation": "Release Calculation",
+    "userReceives": "User Receives",
+    "platformLiquidity": "Platform Liquidity",
+    "platformBuyback": "Platform Buyback",
+    "opsRelease": "OPS Release",
+    "confirmRelease": "Confirm Release",
+    "noNFTs": "No NFTs available for release"
+  },
+
+  "verification": {
+    "email": {
+      "required": "Yêu cầu xác minh email",
+      "address": "Địa chỉ email",
+      "enter": "Nhập email của bạn",
+      "sendCode": "Gửi mã xác minh"
+    }
+  },
+
+  "wallets": {
+    "connect": "Kết nối",
+    "newToWallets": "Mới sử dụng ví?",
+    "getStarted": "Bắt đầu",
+    "list": {
+      "metamask": "MetaMask",
+      "coinbase": "Coinbase Wallet",
+      "trust": "Trust Wallet",
+      "okx": "OKX Wallet",
+      "bitget": "Bitget Wallet",
+      "binance": "Binance Web3 Wallet",
+      "uniswap": "Uniswap Wallet",
+      "safepal": "SafePal",
+      "bybit": "Bybit Wallet",
+      "tokenpocket": "TokenPocket",
+      "ledger": "Ledger Live",
+      "safe": "Safe",
+      "exodus": "Exodus",
+      "argent": "Argent",
+      "imtoken": "imToken",
+      "blockchain": "Blockchain.com",
+      "magiceden": "Magic Eden",
+      "kraken": "Kraken Wallet",
+      "zengo": "Zengo Wallet",
+      "mew": "MEW wallet",
+      "mathwallet": "MathWallet",
+      "alphawallet": "AlphaWallet",
+      "unstoppable": "Unstoppable Domains",
+      "keyring": "KEYRING PRO",
+      "frontier": "Frontier"
+    }
+  },
+
+  "ops": {
+    "title": "Bán Token OPS",
+    "stage": {
+      "title": "Thông tin Giai đoạn",
+      "cycle": "Chu kỳ Hiện tại",
+      "current": "Giai đoạn Hiện tại",
+      "price": "Giá Hiện tại",
+      "details": "Chi tiết Giai đoạn",
+      "sold": "Đã bán",
+      "total": "Tổng cộng"
+    },
+    "airdrop": {
+      "title": "Thông tin Airdrop",
+      "total": "Tổng số lượng",
+      "claimed": "Đã yêu cầu",
+      "eligible": "Địa chỉ hợp lệ",
+      "min": "Số dư tối thiểu"
+    }
+  },
+
+  "ref": {
+    "title": "Chương trình Giới thiệu",
+    "level": "Cấp độ Sao",
+    "maxLevel": "Cấp độ Tối đa",
+    "rate": "Tỷ lệ Phần thưởng",
+    "total": "Tổng số Giới thiệu",
+    "active": "Giới thiệu Đang hoạt động",
+    "zones": {
+      "title": "Tiến độ Khu vực",
+      "left": "Khu vực Trái",
+      "mid": "Khu vực Giữa",
+      "right": "Khu vực Phải",
+      "perf": "Hiệu suất",
+      "members": "Thành viên",
+      "volume": "Khối lượng"
+    },
+    "rewards": {
+      "direct": "Phần thưởng Trực tiếp",
+      "level": "Phần thưởng Cấp độ",
+      "pending": "Phần thưởng Chờ xử lý",
+      "claimed": "Phần thưởng Đã yêu cầu",
+      "total": "Tổng Phần thưởng"
+    },
+    "tree": {
+      "title": "Cây Giới thiệu",
+      "empty": "Không tìm thấy dữ liệu giới thiệu",
+      "left": "Khu vực Trái",
+      "mid": "Khu vực Giữa",
+      "right": "Khu vực Phải"
+    },
+    "link": {
+      "title": "Liên kết Giới thiệu của bạn",
+      "copy": "Sao chép Liên kết",
+      "share": "Chia sẻ Liên kết",
+      "copied": "Đã sao chép liên kết!"
+    },
+    "title": "Chương trình Giới thiệu",
+    "link": {
+      "title": "Liên kết Giới thiệu của bạn",
+      "shareText": "Tham gia OnePay - Nền tảng DeFi thế hệ tiếp theo!",
+      "copy": "Sao chép Liên kết",
+      "copied": "Đã sao chép!",
+      "selectZone": "Vui lòng chọn khu vực trước",
+      "share": "Chia sẻ Liên kết"
+    },
+    "zones": {
+      "title": "Tiến độ Khu vực",
+      "left": "Khu vực Trái",
+      "middle": "Khu vực Giữa",
+      "right": "Khu vực Phải",
+      "perf": "Hiệu suất",
+      "members": "Thành viên",
+      "volume": "Khối lượng"
+    },
+    "share": {
+      "button": "Chia sẻ Giới thiệu",
+      "title": "Chia sẻ Liên kết",
+      "social": {
+        "facebook": "Chia sẻ trên Facebook",
+        "twitter": "Chia sẻ trên Twitter",
+        "telegram": "Chia sẻ trên Telegram",
+        "whatsapp": "Chia sẻ trên WhatsApp"
+      }
+    },
+    "stats": {
+      "level": "Cấp độ Sao",
+      "maxLevel": "Cấp độ Tối đa",
+      "rate": "Tỷ lệ Phần thưởng",
+      "total": "Tổng số Giới thiệu",
+      "active": "Giới thiệu Đang hoạt động"
+    },
+    "rewards": {
+      "direct": "Phần thưởng Trực tiếp",
+      "level": "Phần thưởng Cấp độ",
+      "pending": "Phần thưởng Chờ xử lý",
+      "claimed": "Phần thưởng Đã yêu cầu",
+      "total": "Tổng Phần thưởng"
+    },
+    "tree": {
+      "title": "Cây Giới thiệu",
+      "empty": "Không tìm thấy dữ liệu giới thiệu",
+      "basicUser": "Người dùng Cơ bản",
+      "starActivated": "Đã kích hoạt Star NFT",
+      "level": "Cấp độ",
+      "zone": "Khu vực"
+    }
+  },
+
+  "layout": {
+    "about": "Giới thiệu",
+    "blog": "Blog",
+    "documentation": "Tài liệu",
+    "nftMarket": "Thị trường NFT",
+    "swap": "Hoán đổi",
+    "payment": "Thanh toán",
+    "promotionPlan": "Kế hoạch Khuyến mãi",
+    "github": "GitHub",
+    "eBooks": "Sách điện tử"
+  },
+
+  "home": {
+    "welcome": "Chào mừng đến với OnePay",
+    "subtitle": "Cổng thông tin của bạn đến tương lai tài chính phi tập trung",
+    "scrollDown": "Cuộn xuống",
+    "launchApp": "Khởi chạy Ứng dụng",
+    "coreFeatures": {
+      "title": "Tính năng Chính",
+      "description": "Khám phá các tính năng sáng tạo của OnePay và bắt đầu hành trình Web3 của bạn",
+      "launch": {
+        "title": "Khởi chạy",
+        "description": "Trở thành một phần của thế hệ tài chính phi tập trung tiếp theo"
+      }
+    }
+  },
+
+  "company": {
+    "profile": "Hồ sơ Công ty",
+    "team": {
+      "title": "Đội ngũ",
+      "technical": "Đội ngũ kỹ thuật chuyên nghiệp",
+      "research": "Trung tâm R&D sáng tạo",
+      "service": "Trung tâm dịch vụ khách hàng",
+      "operation": "Đội ngũ vận hành toàn cầu"
+    },
+    "management": "One Fund Management SA"
+  },
+
+  "presale": {
+    "stages": {
+      "title": "Giai đoạn Bán trước",
+      "stage1": {
+        "number": "Giai đoạn 1/20",
+        "price": "$0.30",
+        "nextPrice": "$0.31",
+        "startDate": "Bắt đầu: 2024/12/7",
+        "endDate": "Kết thúc: 2024/12/8"
+      },
+      "stage2": {
+        "number": "Giai đoạn 2/20",
+        "price": "$0.31",
+        "nextPrice": "$0.32",
+        "startDate": "Bắt đầu: 2024/12/8",
+        "endDate": "Kết thúc: 2024/12/9"
+      }
+    },
+    "info": {
+      "currentCycle": "Chu kỳ Hiện tại",
+      "stagesPerCycle": "20 Giai đoạn mỗi Chu kỳ",
+      "opsPerStage": "100,000 OPS mỗi Giai đoạn",
+      "priceIncrease": "Tăng $0.01 sau mỗi Giai đoạn",
+      "totalSupply": "Tổng cung",
+      "calculation": "100,000 × 20 Giai đoạn"
+    }
+  },
+
+  "app": {
+    "nav": {
+      "home": "Trang chủ",
+      "community": "Cộng đồng",
+      "starNFT": "Star NFT",
+      "profile": "Hồ sơ",
+      "referral": "Giới thiệu",
+      "star": "Star"
+    }
+  }
+} 

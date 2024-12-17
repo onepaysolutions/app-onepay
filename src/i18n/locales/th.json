@@ -1,0 +1,167 @@
+{
+  "common": {
+    "loading": "กำลังโหลด...",
+    "connect": "เชื่อมต่อกระเป๋าเงิน",
+    "connecting": "กำลังเชื่อมต่อ...",
+    "connected": "เชื่อมต่อแล้ว",
+    "disconnect": "ยกเลิกการเชื่อมต่อ",
+    "error": "ข้อผิดพลาด",
+    "success": "สำเร็จ",
+    "copy": "คัดลอก",
+    "copied": "คัดลอกแล้ว!",
+    "share": "แชร์",
+    "close": "ปิด",
+    "confirm": "ยืนยัน",
+    "cancel": "ยกเลิก",
+    "next": "ถัดไป",
+    "back": "ย้อนกลับ",
+    "submit": "ส่ง",
+    "processing": "กำลังประมวลผล..."
+  },
+  "nav": {
+    "community": "ชุมชน",
+    "star": "สตาร์ NFT",
+    "referral": "การแนะนำ",
+    "profile": "โปรไฟล์"
+  },
+  "starNFT": {
+    "title": "Star NFT แผนการเติบโตข���งสินทรัพย์ดิจิทัล",
+    "subtitle": "เลือกและรับ Star NFT ของคุณ",
+    "nftInfo": {
+      "soldAmount": "จำนวนที่ขายแล้ว",
+      "progress": "ขายแล้ว",
+      "price": "USDT",
+      "level": "ระดับ",
+      "rarity": "ความหายาก",
+      "benefits": "สิทธิประโยชน์"
+    },
+    "details": {
+      "stage": {
+        "title": "ขั้นตอนปัจจุบัน",
+        "cycle": "รอบปัจจุบัน",
+        "price": "ราคา OPS",
+        "progress": "ความคืบหน้าขั้นตอน",
+        "remaining": "เวลาที่เหลือ"
+      },
+      "sale": {
+        "title": "รายละเอียดการขาย",
+        "ratio": "อัตราส่วนการขายล่วงหน้า",
+        "value": "มูลค่าการขายล่วงหน้า",
+        "contract": "มูลค่าสัญญา",
+        "estimated": "ประมาณการ OPS",
+        "minimum": "การซื้อขั้นต่ำ",
+        "maximum": "การซื้อสูงสุด"
+      },
+      "benefits": {
+        "title": "รายละเอียดสิทธิประโยชน์",
+        "earnings": "ผลประโยชน์จากรายได้",
+        "levels": "รางวัลระดับ",
+        "direct": "รางวัลโดยตรง",
+        "generation": "รุ่น",
+        "rollup": "รางวัลสะสม",
+        "sharing": "รางวัลการแบ่งปัน"
+      }
+    },
+    "limitedOffer": {
+      "title": "ข้อเสนอจำกัดเวลา",
+      "bonus": "โบนัสเวลา",
+      "countdown": "นับถอยหลัง",
+      "buyers": "ผู้ซื้อ",
+      "decreasing": "โบนัสลดลง",
+      "hurry": "รีบด่วน!",
+      "endingSoon": "กำลังจะสิ้นสุด",
+      "extraBonus": "โบนัสพิเศษ"
+    },
+    "button": {
+      "claim": "รับ NFT",
+      "claiming": "กำลังรับ...",
+      "connect": "เชื่อมต่อกระเป๋าเงิน",
+      "approve": "อนุมัติ USDT",
+      "approving": "กำลังอนุมัติ...",
+      "confirmed": "ยืนยันแล้ว",
+      "failed": "การรับล้มเหลว"
+    }
+  },
+  "tutorial": {
+    "common": {
+      "skip": "ข้ามบทเรียน",
+      "next": "ถัดไป",
+      "complete": "เสร็จสิ้น",
+      "required": "จำเป็น",
+      "gotIt": "เข้าใจแล้ว"
+    },
+    "starNFT": {
+      "intro": {
+        "title": "ยินดีต้อนรับสู่ Star NFT",
+        "description": "มาเรียนรู้วิธีซื้อและจัดการ Star NFT ของคุณ"
+      }
+    }
+  },
+  "app": {
+    "nav": {
+      "home": "หน้าแรก",
+      "community": "ชุมชน",
+      "starNFT": "Star NFT",
+      "profile": "โปรไฟล์",
+      "referral": "แนะนำ",
+      "star": "Star"
+    }
+  },
+  "community": {
+    "title": "เข้าร่วมชุมชน OnePay",
+    "subtitle": "รับ Angel NFT และเป็นส่วนหนึ่งของชุมชนพิเศษของเรา",
+    "benefits": {
+      "membership": {
+        "title": "สมาชิก Angel NFT พิเศษ",
+        "description": "รับสิทธิ์การเข้าถึงฟีเจอร์และสิทธิประโยชน์พิเศษตลอดชีพ"
+      },
+      "rewards": {
+        "title": "รางวัล 1000 โทเค็น OPE",
+        "description": "รับโทเค็น OPE ผ่านการมีส่วนร่วมในชุมชน"
+      },
+      "features": {
+        "title": "การเข้าถึงฟีเจอร์พิเศษ",
+        "description": "เข้าถึงฟีเจอร์และผลิตภัณฑ์ใหม่ก่อนใคร"
+      },
+      "voting": {
+        "title": "สิทธิ์การโหวตในชุมชน",
+        "description": "มีส่วนร่วมในการตัดสินใจด้านการกำกับดูแล"
+      }
+    },
+    "stats": {
+      "progress": "ความคืบหน้าการเคลม",
+      "contractAddress": "ที่อยู่สัญญา"
+    },
+    "connectWallet": "กรุณาเชื่อมต่อกระเป๋าเงินก่อน"
+  },
+  "referral": {
+    "title": "โปรแกรมการแนะนำ",
+    "link": {
+      "title": "ลิงก์แนะนำของคุณ",
+      "shareText": "เข้าร่วม OnePay - แพลตฟอร์ม DeFi รุ่นถัดไป!",
+      "copy": "คัดลอกลิงก์",
+      "copied": "คัดลอกแล้ว!",
+      "selectZone": "กรุณาเลือกโซนก่อน",
+      "share": "แชร์ลิงก์"
+    },
+    "zones": {
+      "title": "ความคืบหน้าโซน",
+      "left": "โซนซ้าย",
+      "middle": "โซนกลาง",
+      "right": "โซนขวา",
+      "perf": "ประสิทธิภาพ",
+      "members": "สมาชิก",
+      "volume": "ปริมาณ"
+    },
+    "share": {
+      "button": "แชร์การแนะนำ",
+      "title": "แชร์ลิงก์ของคุณ",
+      "social": {
+        "facebook": "แชร์บน Facebook",
+        "twitter": "แชร์บน Twitter",
+        "telegram": "แชร์บน Telegram",
+        "whatsapp": "แชร์บน WhatsApp"
+      }
+    }
+  }
+} 

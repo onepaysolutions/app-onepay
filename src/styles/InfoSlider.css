@@ -1,0 +1,16 @@
+/* 自定义 Swiper 分页器样式 */
+.swiper-pagination-bullet {
+  background: rgba(139, 92, 246, 0.5) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(139, 92, 246, 1) !important;
+}
+
+/* 确保在小屏幕上也有合适的高度 */
+@media (max-width: 640px) {
+  .swiper-slide {
+    height: auto !important;
+    min-height: 120px;
+  }
+} 

@@ -1,0 +1,321 @@
+{
+  "app": {
+    "title": "OnePay",
+    "404": {
+      "title": "404",
+      "message": "页面不存在",
+      "backHome": "返回首页"
+    },
+    "nav": {
+      "home": "首页",
+      "community": "社区",
+      "starNFT": "Star NFT",
+      "profile": "我的",
+      "referral": "推荐",
+      "star": "Star"
+    },
+    "tabBar": {
+      "home": "首页",
+      "star": "星球",
+      "referral": "推荐",
+      "profile": "我的"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "connect": "连接钱包",
+    "connecting": "连接中...",
+    "connected": "已连接",
+    "disconnect": "断开连接",
+    "error": "错误",
+    "success": "成功",
+    "backToHome": "返回首页",
+    "demoMode": "演示模式",
+    "featureInDevelopment": "功能开发中，显示的是模拟数据"
+  },
+  "pages": {
+    "landing": {
+      "title": "加入 OnePay 社区",
+      "subtitle": "认领天使 NFT，成为我们专属社区的一员",
+      "features": {
+        "membership": "专属天使 NFT 会员资格",
+        "rewards": "1000 OPE 代币奖励",
+        "access": "特殊功能优先体验",
+        "voting": "社区治理投票权"
+      },
+      "connect": "请先连接钱包"
+    }
+  },
+  "referral": {
+    "title": "推荐计划",
+    "link": {
+      "title": "您的推荐链接",
+      "shareText": "加入 OnePay - 下一代 DeFi 平台！",
+      "copy": "复制链接",
+      "copied": "已复制！",
+      "selectZone": "请先选择区域",
+      "share": "分享链接"
+    },
+    "zones": {
+      "title": "区域进度",
+      "left": "左区",
+      "middle": "中区",
+      "right": "右区",
+      "perf": "业绩",
+      "members": "成员",
+      "volume": "交易量"
+    },
+    "share": {
+      "button": "分享推荐",
+      "title": "分享您的链接",
+      "social": {
+        "facebook": "分享到 Facebook",
+        "twitter": "分享到 Twitter",
+        "telegram": "分享到 Telegram",
+        "whatsapp": "分享到 WhatsApp"
+      }
+    },
+    "stats": {
+      "level": "星级等级",
+      "maxLevel": "最高等级",
+      "rate": "奖励比率",
+      "total": "总推荐人数",
+      "active": "活跃推荐人数"
+    },
+    "rewards": {
+      "direct": "直推奖励",
+      "level": "层级奖励",
+      "pending": "待领取奖励",
+      "claimed": "已领取奖励",
+      "total": "总奖励"
+    },
+    "tree": {
+      "title": "推荐树",
+      "empty": "暂无推荐数据",
+      "basicUser": "基础用户",
+      "starActivated": "已激活 Star NFT",
+      "level": "等级",
+      "zone": "区域"
+    }
+  },
+  "community": {
+    "title": "加入 OnePay 社区",
+    "subtitle": "认领天使 NFT，成为我们专属社区的一员",
+    "buttons": {
+      "join": "立即加入",
+      "learnOPE": "了解 OPE 代币"
+    },
+    "connectWallet": "请先连接钱包",
+    "addressCopied": "地址已复制！",
+    
+    "benefits": {
+      "membership": {
+        "title": "专属天使 NFT 会员资格",
+        "description": "获得终身高级功能和权益访问"
+      },
+      "rewards": {
+        "title": "1000 OPE 代币奖励",
+        "description": "通过社区参与赚取 OPE 代币"
+      },
+      "features": {
+        "title": "特殊功能访问",
+        "description": "优先体验新功能和产品"
+      },
+      "voting": {
+        "title": "社区投票权",
+        "description": "参与治理决策"
+      }
+    },
+
+    "stats": {
+      "progress": "认领进度",
+      "contractAddress": "合约地址",
+      "totalMinted": "已铸造总量",
+      "totalValueLocked": "总锁仓价值",
+      "totalRewards": "总奖励",
+      "averagePrice": "平均价格"
+    }
+  },
+  "tutorial": {
+    "demo": {
+      "tryDemo": "体验演示模式",
+      "noRealTx": "无真实交易",
+      "description": "无需真实交易即可体验所有功能"
+    }
+  },
+  "starNFT": {
+    "connectWallet": "连接钱包",
+    "connectWalletDesc": "请连接钱包以查看您的 Star NFT",
+    "title": "Star NFT 数字资产增长计划",
+    "subtitle": "选择并认领您的 Star NFT",
+    "noNFTs": "未找到 Star NFT",
+    "tabs": {
+      "overview": "概览",
+      "rewards": "奖励",
+      "tutorial": "教程"
+    },
+    "levels": {
+      "title": "星级等级",
+      "vip1": {
+        "title": "VIP 1",
+        "investment": "500 USDC",
+        "opsAllocation": "677 OPS",
+        "benefits": {
+          "tradingFee": "5% 交易费折扣",
+          "referralBonus": "5% 推荐奖励",
+          "idoAccess": "基础 IDO 优先权"
+        }
+      },
+      "vip2": {
+        "title": "VIP 2",
+        "investment": "1,000 USDC",
+        "opsAllocation": "1,354 OPS",
+        "benefits": {
+          "tradingFee": "10% 交易费折扣",
+          "referralBonus": "10% 推荐奖励",
+          "idoAccess": "中级 IDO 优先权"
+        }
+      },
+      "vip3": {
+        "title": "VIP 3",
+        "investment": "3,000 USDC",
+        "opsAllocation": "4,062 OPS",
+        "benefits": {
+          "tradingFee": "15% 交易费折扣",
+          "referralBonus": "15% 推荐奖励",
+          "idoAccess": "高级 IDO 优先权"
+        }
+      },
+      "vip4": {
+        "title": "VIP 4",
+        "investment": "7,000 USDC",
+        "opsAllocation": "9,478 OPS",
+        "benefits": {
+          "tradingFee": "20% 交易费折扣",
+          "referralBonus": "20% 推荐奖励",
+          "idoAccess": "VIP IDO 优先权"
+        }
+      }
+    },
+    "rewards": {
+      "title": "奖励系统",
+      "trading": {
+        "title": "交易奖励",
+        "description": "从交易费中获得奖励"
+      },
+      "referral": {
+        "title": "推荐奖励",
+        "description": "从被推荐人的交易费中获得奖励"
+      },
+      "staking": {
+        "title": "质押奖励",
+        "description": "通过质押赚取 OPS 代币"
+      }
+    },
+    "calculator": {
+      "title": "奖励计算器",
+      "investment": "投额",
+      "tradingVolume": "月交易量",
+      "referralCount": "活跃推荐人数",
+      "calculate": "计算奖励",
+      "confirm": "确认",
+      "results": {
+        "title": "预计月度奖励",
+        "trading": "交易奖励",
+        "referral": "推荐奖励",
+        "staking": "质押奖励",
+        "total": "总奖励",
+        "confirm": "确认"
+      }
+    }
+  },
+  "nft": {
+    "info": {
+      "details": "NFT 详情",
+      "sale": "销售信息",
+      "price": "价格",
+      "ratio": "比率",
+      "presale": "预售价",
+      "contract": "合约价值",
+      "benefits": "权益",
+      "earnings": "收益",
+      "levels": "等级",
+      "tiers": "层级",
+      "rollup": "累计",
+      "direct": "直接",
+      "generation": "代数",
+      "return": "回报率",
+      "total": "总计"
+    },
+    "status": {
+      "active": "激活",
+      "readyToRelease": "可释放",
+      "readyToBurn": "可销毁"
+    },
+    "actions": {
+      "release": "释放",
+      "burn": "销毁",
+      "withdraw": "提取奖励",
+      "claim": {
+        "success": "NFT 认领成功",
+        "error": "NFT 认领失败",
+        "confirm": "确认"
+      }
+    },
+    "metrics": {
+      "presaleOPS": "预售 OPS",
+      "airdropOPS": "空投 OPS",
+      "rewardsOPS": "奖励 OPS",
+      "currentValue": "当前价值",
+      "contractValue": "合约价值",
+      "releaseThreshold": "释放阈值",
+      "userReceives": "用户获得",
+      "platformLiquidity": "平台流动性",
+      "platformBuyback": "平台回购",
+      "opsRelease": "OPS 释放"
+    }
+  },
+  "release": {
+    "calculation": "释放计算",
+    "userReceives": "用户获得",
+    "platformLiquidity": "平台流动性",
+    "platformBuyback": "平台回购",
+    "opsRelease": "OPS 释放",
+    "confirmRelease": "确认释放",
+    "noNFTs": "没有可释放的 NFT",
+    "currentCycle": "当前周期",
+    "nextCycle": "下个周期",
+    "totalOPS": "总 OPS",
+    "totalValue": "总价值",
+    "releaseThreshold": "释放阈值"
+  },
+  "auth": {
+    "registerSuccess": "注册成功",
+    "registerMessage": "欢迎加入 OnePay！您的钱包地址：{address}... 已成功注册 🎉",
+    "welcomeBack": "欢迎回来",
+    "welcomeMessage": "很高兴再次见到您！钱包地址：{address}... 👋"
+  },
+  "notification": {
+    "close": "关闭",
+    "types": {
+      "success": {
+        "title": "成功",
+        "register": "注册成功",
+        "registerMessage": "欢迎加入 OnePay！您的钱包地址：{address}... 已成功注册 🎉",
+        "welcomeBack": "欢迎回来",
+        "welcomeMessage": "很高兴再次见到您！钱包地址：{address}... 👋",
+        "referral": "推荐关系已记录"
+      },
+      "error": {
+        "title": "错误",
+        "login": "登录处理失败",
+        "connect": "钱包连接失败",
+        "referral": "推荐关系处理失败",
+        "invalidReferrer": "无效的推荐人"
+      },
+      "info": {
+        "title": "提示"
+      }
+    }
+  }
+} 

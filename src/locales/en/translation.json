@@ -1,0 +1,22 @@
+{
+  "community": {
+    "title": "Join Our Community",
+    "description": "Connect with us and be part of our growing community. Join the discussion, get updates, and contribute to our ecosystem.",
+    "joinButton": "Join Our Community",
+    "discord": {
+      "description": "Join our Discord server for real-time discussions, support, and community events"
+    },
+    "telegram": {
+      "description": "Follow our Telegram channel for latest updates and announcements"
+    },
+    "twitter": {
+      "description": "Follow us on Twitter for news, updates, and community engagement"
+    },
+    "medium": {
+      "description": "Read our blog posts, technical articles, and project updates"
+    },
+    "github": {
+      "description": "Check out our open source code and contribute to our development"
+    }
+  }
+} 

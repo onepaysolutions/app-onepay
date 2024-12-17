@@ -1,0 +1,158 @@
+{
+  "common": {
+    "loading": "Wird geladen...",
+    "connect": "Wallet verbinden",
+    "connecting": "Verbindung wird hergestellt...",
+    "connected": "Verbunden",
+    "disconnect": "Trennen",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "backToHome": "Zurück zur Startseite"
+  },
+
+  "community": {
+    "title": "Der OnePay Community beitreten",
+    "subtitle": "Beanspruchen Sie Ihr Angel NFT und werden Sie Teil unserer exklusiven Community",
+    "buttons": {
+      "join": "Jetzt beitreten",
+      "learnOPE": "Mehr über OPE Token erfahren"
+    },
+    "stats": {
+      "progress": "Claim-Fortschritt",
+      "contractAddress": "Vertragsadresse",
+      "totalMinted": "Gesamt geprägt",
+      "totalValueLocked": "Gesamt-TVL",
+      "totalRewards": "Gesamtbelohnungen",
+      "averagePrice": "Durchschnittspreis"
+    }
+  },
+
+  "nav": {
+    "community": "Gemeinschaft",
+    "starNFT": "Star NFT",
+    "referral": "Empfehlung",
+    "profile": "Profil"
+  },
+
+  "errors": {
+    "pageNotFound": "Die gesuchte Seite wurde nicht gefunden",
+    "somethingWrong": "Etwas ist schief gelaufen",
+    "tryAgain": "Bitte versuchen Sie es später erneut"
+  },
+
+  "starNFT": {
+    "connectWallet": "Wallet verbinden",
+    "connectWalletDesc": "Bitte verbinden Sie Ihre Wallet, um Ihre Star NFTs anzuzeigen",
+    "title": "Star NFT Digitaler Asset-Wachstumsplan",
+    "subtitle": "Wählen und beanspruchen Sie Ihr Star NFT",
+    "noNFTs": "Keine Star NFTs gefunden",
+    
+    "tabs": {
+      "overview": "Übersicht",
+      "rewards": "Belohnungen",
+      "tutorial": "Anleitung"
+    },
+
+    "levels": {
+      "title": "Star-Level",
+      "vip1": {
+        "title": "VIP 1",
+        "investment": "500$ USDC",
+        "opsAllocation": "677 OPS",
+        "benefits": {
+          "tradingFee": "5% Handelsgebührenrabatt",
+          "referralBonus": "5% Empfehlungsbonus",
+          "idoAccess": "Basis IDO-Priorität"
+        }
+      },
+      "vip2": {
+        "title": "VIP 2",
+        "investment": "1,000$ USDC",
+        "opsAllocation": "1,354 OPS",
+        "benefits": {
+          "tradingFee": "10% Handelsgebührenrabatt",
+          "referralBonus": "10% Empfehlungsbonus",
+          "idoAccess": "Mittlere IDO-Priorität"
+        }
+      }
+    }
+  },
+
+  "nft": {
+    "info": {
+      "details": "NFT Details",
+      "sale": "Verkaufsinformationen",
+      "price": "Preis",
+      "ratio": "Verhältnis",
+      "presale": "Vorverkaufswert",
+      "contract": "Vertragswert",
+      "benefits": "Vorteile",
+      "earnings": "Erträge",
+      "levels": "Level",
+      "tiers": "Stufen",
+      "rollup": "Rollup",
+      "direct": "Direkt",
+      "generation": "Generation",
+      "return": "Rendite"
+    }
+  },
+
+  "ops": {
+    "title": "OPS Token-Verkauf",
+    "stage": {
+      "title": "Phaseninformation",
+      "cycle": "Aktueller Zyklus",
+      "current": "Aktuelle Phase",
+      "price": "Aktueller Preis",
+      "details": "Phasendetails",
+      "sold": "Verkauft",
+      "total": "Gesamt"
+    },
+    "airdrop": {
+      "title": "Airdrop-Information",
+      "total": "Gesamtbetrag",
+      "claimed": "Beanspruchter Betrag",
+      "eligible": "Berechtigte Adressen",
+      "min": "Mindesthaltedauer"
+    }
+  },
+
+  "presale": {
+    "stages": {
+      "title": "Vorverkaufsphasen",
+      "stage1": {
+        "number": "Phase 1/20",
+        "price": "$0.30",
+        "nextPrice": "$0.31",
+        "startDate": "Start: 2024/12/7",
+        "endDate": "Ende: 2024/12/8"
+      },
+      "stage2": {
+        "number": "Phase 2/20",
+        "price": "$0.31",
+        "nextPrice": "$0.32",
+        "startDate": "Start: 2024/12/8",
+        "endDate": "Ende: 2024/12/9"
+      }
+    },
+    "info": {
+      "currentCycle": "Aktueller Zyklus",
+      "stagesPerCycle": "20 Phasen pro Zyklus",
+      "opsPerStage": "100.000 OPS pro Phase",
+      "priceIncrease": "$0,01 Erhöhung nach jeder Phase",
+      "totalSupply": "Gesamtangebot",
+      "calculation": "100.000 × 20 Phasen"
+    }
+  },
+
+  "app": {
+    "nav": {
+      "home": "Startseite",
+      "community": "Gemeinschaft",
+      "starNFT": "Star NFT",
+      "profile": "Profil",
+      "referral": "Empfehlung",
+      "star": "Star"
+    }
+  }
+} 

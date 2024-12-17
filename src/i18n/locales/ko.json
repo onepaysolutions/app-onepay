@@ -1,0 +1,365 @@
+{
+  "common": {
+    "loading": "로딩 중...",
+    "connect": "지갑 연결",
+    "connecting": "연결 중...",
+    "connected": "연결됨",
+    "disconnect": "연결 해제",
+    "error": "오류",
+    "success": "성공",
+    "copy": "복사",
+    "copied": "복사됨!",
+    "share": "공유",
+    "close": "닫기",
+    "confirm": "확인",
+    "cancel": "취소",
+    "next": "다음",
+    "back": "이전",
+    "submit": "제출",
+    "processing": "처리 중..."
+  },
+  "nav": {
+    "community": "커뮤니티",
+    "star": "스타 NFT",
+    "referral": "추천",
+    "profile": "프로필"
+  },
+  "auth": {
+    "title": "커뮤니티 가입",
+    "username": "사용자 이름",
+    "email": "이메일",
+    "refCode": "추천 코드",
+    "optional": "선택사항",
+    "register": "등록",
+    "registering": "등록 중..."
+  },
+  "nft": {
+    "title": "프리미엄 NFT 컬렉션",
+    "subtitle": "지금 바로 전용 NFT를 청구하세요",
+    "price": "가격",
+    "rewards": "OPE 보상",
+    "supply": "총 공급량",
+    "claimed": "청구됨",
+    "available": "사용 가능",
+    "claim": "NFT 청구",
+    "claiming": "청구 중...",
+    "connect": "지갑을 연결하여 청구",
+    "yours": "내 NFT",
+    "angel": "엔젤 NFT",
+    "star": "스타 NFT",
+    "info": {
+      "soldAmount": "판매 수량",
+      "price": "USDT",
+      "details": "NFT 상세",
+      "sale": "판매 정보",
+      "ratio": "프리세일 비율",
+      "presale": "프리세일 가치",
+      "contract": "계약 가치",
+      "benefits": "혜택",
+      "earnings": "수익",
+      "return": "수익률",
+      "levels": "레벨 보상",
+      "tiers": "티어",
+      "rollup": "롤업 보상",
+      "direct": "직접 공유",
+      "generation": "세대"
+    },
+    "limitedOffer": {
+      "title": "한정 제공",
+      "bonus": "시간 보너스",
+      "countdown": "카운트다운",
+      "buyers": "구매자",
+      "decreasing": "보너스 감소 중",
+      "hurry": "서두르세요!",
+      "endingSoon": "곧 종료",
+      "extraBonus": "추가 보너스"
+    }
+  },
+  "tutorial": {
+    "common": {
+      "skip": "튜토리얼 건너뛰기",
+      "next": "다음",
+      "complete": "완료",
+      "required": "필수",
+      "gotIt": "알겠습니다"
+    },
+    "starNFT": {
+      "intro": {
+        "title": "Star NFT 시작하기",
+        "description": "Star NFT 구매 및 관리 방법 알아보기"
+      },
+      "level": {
+        "title": "레벨 선택",
+        "description": "투자 목표에 맞는 Star NFT 레벨을 선택하세요"
+      }
+    }
+  },
+  "ope": {
+    "balance": "OPE 잔액",
+    "claim": "보상 청구",
+    "referral": "추천 보상",
+    "OPEChart": "OPE 가격 차트",
+    "price": "가격",
+    "supply": "공급량",
+    "cap": "시가총액",
+    "period": "기간",
+    "title": "OPE 토큰",
+    "currentStage": {
+      "title": "현재 단계",
+      "stage": "단계",
+      "currentPrice": "현재 가격",
+      "availableSupply": "사용 가능 공급량",
+      "nextPrice": "다음 가격"
+    },
+    "priceStages": {
+      "title": "가격 단계",
+      "headers": {
+        "stage": "단계",
+        "price": "가격",
+        "supply": "공급량",
+        "marketCap": "시가총액"
+      }
+    },
+    "userStatus": {
+      "title": "내 OPE 상태"
+    },
+    "chart": {
+      "title": "가 ���트",
+      "allocation": "토큰 할당",
+      "buyback": "바이백 메커니즘"
+    }
+  },
+  "ref": {
+    "title": "추천 프로그램",
+    "level": "스타 레벨",
+    "maxLevel": "최대 레벨",
+    "rate": "보상 비율",
+    "active": "활성 추천수",
+    "zones": {
+      "title": "구역 진행도",
+      "left": "왼쪽 구역",
+      "mid": "중앙 구역",
+      "right": "오른쪽 구역",
+      "perf": "성과",
+      "members": "멤버",
+      "volume": "거래량"
+    },
+    "rewards": {
+      "direct": "직접 보상",
+      "level": "레벨 보상",
+      "pending": "대기 중인 보상",
+      "claimed": "청구된 보상"
+    },
+    "link": {
+      "title": "내 추천 링크",
+      "copy": "링크 복사",
+      "share": "링크 공유",
+      "copied": "링크가 복사되었습니다!"
+    }
+  },
+  "ops": {
+    "title": "OPS 토큰 세일",
+    "stage": {
+      "title": "단계 정보",
+      "cycle": "사이클",
+      "current": "현재 단",
+      "price": "현재 가격",
+      "details": "단계 상세",
+      "sold": "판매됨",
+      "progress": "진행도"
+    },
+    "airdrop": {
+      "title": "에어드롭 정보",
+      "claimed": "청구된 금액",
+      "eligible": "적격 주소",
+      "min": "최소 보유량"
+    }
+  },
+  "profile": {
+    "title": "프로필",
+    "wallet": "지갑 주소",
+    "connect": "지갑을 연결해주세요",
+    "stats": "내 통계"
+  },
+  "starNFT": {
+    "title": "스타 NFT 디지털 자산 성장 계획",
+    "subtitle": "스타 NFT를 선택하고 청구하세요",
+    "tabs": {
+      "all": "모든 NFT",
+      "active": "활성 NFT",
+      "release": "NFT 출시"
+    },
+    "metrics": {
+      "returnRate": "수익률",
+      "ownLevels": "보유 레벨",
+      "contractValue": "계약 가치",
+      "opsHolding": "OPS 보유량",
+      "opsRewards": "OPS 보상",
+      "currentValue": "현재 가치"
+    },
+    "benefits": {
+      "title": "VIP 혜택"
+    },
+    "vipLevels": {
+      "star1": {
+        "name": "스타 I",
+        "benefits": [
+          "500% 수익률",
+          "3 레벨 보상",
+          "신규 기능 우선 접근",
+          "VIP 커뮤니티 접근"
+        ]
+      },
+      "star2": {
+        "name": "스타 II",
+        "benefits": [
+          "600% 수익률",
+          "8 레벨 보상",
+          "거래 특권 강화",
+          "고급 분석 접근"
+        ]
+      },
+      "star3": {
+        "name": "스타 III",
+        "benefits": [
+          "700% 수익률",
+          "15 레벨 보상",
+          "프리미엄 지원 서비스",
+          "독점 투자 기회"
+        ]
+      },
+      "star4": {
+        "name": "스타 IV",
+        "benefits": [
+          "800% 수익률",
+          "20 레벨 보상",
+          "궁극의 거래 기능",
+          "전략적 파트너십 권한"
+        ]
+      }
+    }
+  },
+  "community": {
+    "title": "OnePay 커뮤니티 가입",
+    "subtitle": "엔젤 NFT를 청구하고 독점 커뮤니티의 일원이 되세요",
+    "contract": "컨트랙트",
+    "copyAddress": "주소 복사",
+    "addressCopied": "컨트랙트 주소가 복사되었습니다!",
+    "connectWallet": "엔젤 NFT를 청구하려면 지갑을 연결하세요",
+    "membership": "커뮤니티 멤버십",
+    "price": "가격",
+    "gasFees": "가스비",
+    "sponsored": "스폰서",
+    "network": "네트크",
+    "opMainnet": "OP 메인넷",
+    "payment": {
+      "choose": "결제 방법 선택",
+      "payWith": "결제 수단",
+      "insufficientFunds": "잔액 부족",
+      "otherWallet": "다른 지갑으로 결제",
+      "creditCard": "신용카드로 결제"
+    }
+  },
+  "wallets": {
+    "connect": "연결",
+    "newToWallets": "지갑이 처음이신가요?",
+    "getStarted": "시작하기",
+    "list": {
+      "metamask": "MetaMask",
+      "coinbase": "Coinbase Wallet",
+      "trust": "Trust Wallet",
+      "okx": "OKX Wallet",
+      "bitget": "Bitget Wallet",
+      "binance": "Binance Web3 Wallet",
+      "uniswap": "Uniswap Wallet",
+      "safepal": "SafePal",
+      "bybit": "Bybit Wallet",
+      "tokenpocket": "TokenPocket",
+      "ledger": "Ledger Live",
+      "safe": "Safe",
+      "exodus": "Exodus",
+      "argent": "Argent",
+      "imtoken": "imToken",
+      "blockchain": "Blockchain.com",
+      "magiceden": "Magic Eden",
+      "kraken": "Kraken Wallet",
+      "zengo": "Zengo Wallet",
+      "mew": "MEW wallet",
+      "mathwallet": "MathWallet",
+      "alphawallet": "AlphaWallet",
+      "unstoppable": "Unstoppable Domains",
+      "keyring": "KEYRING PRO",
+      "frontier": "Frontier"
+    }
+  },
+  "verification": {
+    "email": {
+      "required": "이메일 인증이 필요합니다",
+      "address": "이메일 주소",
+      "enter": "이메일을 입력하세요",
+      "sendCode": "인증 코드 전송"
+    }
+  },
+  "layout": {
+    "about": "소개",
+    "blog": "블로그",
+    "documentation": "문서",
+    "nftMarket": "NFT 마켓",
+    "swap": "스왑",
+    "payment": "결제",
+    "promotionPlan": "프로모션 계획",
+    "github": "GitHub",
+    "eBooks": "전자책"
+  },
+  "home": {
+    "welcome": "OnePay에 오신 것을 환영합니다",
+    "subtitle": "탈중앙화 금융의 미래로 가는 관문",
+    "scrollDown": "아래로 스크롤",
+    "launchApp": "앱 실행",
+    "coreFeatures": {
+      "title": "핵심 기능",
+      "description": "OnePay의 혁신적인 기능을 탐색하고 Web3 여정을 시작하세요",
+      "launch": {
+        "title": "실행",
+        "description": "차세대 탈중앙화 금융의 일원이 되세요"
+      }
+    }
+  },
+  "presale": {
+    "stages": {
+      "title": "프리세일 단계",
+      "stage1": {
+        "number": "단계 1/20",
+        "price": "$0.30",
+        "nextPrice": "$0.31",
+        "startDate": "시작: 2024/12/7",
+        "endDate": "종료: 2024/12/8"
+      },
+      "stage2": {
+        "number": "단계 2/20",
+        "price": "$0.31",
+        "nextPrice": "$0.32",
+        "startDate": "시작: 2024/12/8",
+        "endDate": "종료: 2024/12/9"
+      }
+    },
+    "info": {
+      "currentCycle": "현재 사이클",
+      "stagesPerCycle": "사이클당 20단계",
+      "opsPerStage": "단계당 100,000 OPS",
+      "priceIncrease": "각 단계 후 $0.01 상승",
+      "totalSupply": "총 공급량",
+      "calculation": "100,000 × 20단계"
+    }
+  },
+  "app": {
+    "nav": {
+      "home": "홈",
+      "community": "커뮤니티",
+      "starNFT": "Star NFT",
+      "profile": "프로필",
+      "referral": "추천",
+      "star": "Star"
+    }
+  }
+} 

@@ -1,0 +1,148 @@
+.container {
+  @apply fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-lg 
+    border-t border-purple-500/20 p-4 space-y-4 z-50;
+}
+
+.zoneSelector {
+  @apply space-y-2 max-w-2xl mx-auto;
+}
+
+.zoneTitle {
+  @apply text-sm text-gray-400 text-center mb-2;
+}
+
+.zoneButtons {
+  @apply grid grid-cols-3 gap-3;
+}
+
+.zoneButton {
+  @apply flex flex-col items-center justify-center p-3 rounded-lg
+    bg-purple-900/20 border border-purple-500/20 transition-all duration-200
+    hover:bg-purple-600/20 active:bg-purple-700/30
+    hover:border-purple-500 hover:scale-105;
+}
+
+.zoneActive {
+  @apply bg-purple-600 border-purple-500 shadow-lg shadow-purple-500/20;
+}
+
+.zoneIcon {
+  @apply text-2xl mb-2 font-bold text-purple-400;
+}
+
+.linkContainer {
+  @apply flex items-center gap-3 max-w-2xl mx-auto relative;
+}
+
+.linkLabel {
+  @apply absolute -top-5 left-0 text-xs text-gray-400;
+}
+
+.linkInput {
+  @apply flex-1 px-4 py-3 bg-purple-900/20 rounded-lg
+    border border-purple-500/20 text-sm focus:outline-none
+    focus:border-purple-500 focus:ring-1 focus:ring-purple-500
+    placeholder-gray-500;
+}
+
+.actions {
+  @apply flex gap-2;
+}
+
+.actionButton {
+  @apply p-3 rounded-lg bg-purple-900/20 border border-purple-500/20
+    hover:bg-purple-600/20 transition-all duration-200 active:bg-purple-700/30
+    text-lg hover:border-purple-500 hover:scale-105
+    disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.shareMenu {
+  @apply grid grid-cols-4 gap-3 pt-3 border-t border-purple-500/20
+    max-w-2xl mx-auto mt-4;
+}
+
+.shareButton {
+  @apply flex flex-col items-center justify-center p-3 rounded-lg
+    bg-purple-900/20 border border-purple-500/20 transition-all duration-200
+    hover:bg-purple-600/20 active:bg-purple-700/30
+    hover:border-purple-500 hover:scale-105;
+}
+
+.shareButton span {
+  @apply text-xs mt-2 font-medium;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .container {
+    @apply pb-safe px-4;
+  }
+  
+  .zoneSelector {
+    @apply space-y-3;
+  }
+  
+  .zoneButtons {
+    @apply gap-2;
+  }
+  
+  .zoneButton {
+    @apply p-2;
+  }
+  
+  .zoneIcon {
+    @apply text-xl mb-1;
+  }
+  
+  .linkInput {
+    @apply text-xs py-2.5;
+  }
+  
+  .actionButton {
+    @apply p-2.5 text-base;
+  }
+  
+  .shareMenu {
+    @apply grid-cols-2 gap-2;
+  }
+  
+  .shareButton {
+    @apply flex-row justify-start gap-3 p-3;
+  }
+  
+  .shareButton span {
+    @apply text-sm mt-0;
+  }
+}
+
+/* 暗色主题优化 */
+@media (prefers-color-scheme: dark) {
+  .container {
+    @apply bg-black/90;
+  }
+  
+  .linkInput {
+    @apply text-gray-200;
+  }
+  
+  .actionButton,
+  .shareButton {
+    @apply text-gray-300;
+  }
+}
+
+/* 动画效果 */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: slideUp 0.3s ease-out;
+} 

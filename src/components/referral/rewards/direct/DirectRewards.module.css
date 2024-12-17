@@ -1,0 +1,69 @@
+.container {
+  @apply space-y-6;
+}
+
+.referralList {
+  @apply space-y-4;
+}
+
+.referralCard {
+  @apply bg-purple-900/20 rounded-lg p-4;
+}
+
+.referralHeader {
+  @apply flex items-center justify-between mb-2;
+}
+
+.levelBadge {
+  @apply text-sm text-gray-400;
+}
+
+.address {
+  @apply text-sm text-gray-400;
+}
+
+.referralStats {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.label {
+  @apply text-sm text-gray-400;
+}
+
+.value {
+  @apply text-lg font-bold;
+}
+
+.rewardSummary {
+  @apply grid grid-cols-3 gap-4 pt-4 border-t border-purple-500/20;
+}
+
+.levelSelector {
+  @apply mb-6;
+}
+
+.levelGrid {
+  @apply grid grid-cols-10 gap-2;
+}
+
+.levelButton {
+  @apply w-8 h-8 rounded-lg text-sm font-medium transition-colors;
+}
+
+.levelActive {
+  @apply bg-purple-600 text-white;
+}
+
+.levelInactive {
+  @apply bg-purple-900/20 text-gray-400;
+}
+
+@media (max-width: 768px) {
+  .levelGrid {
+    @apply grid-cols-5 gap-1;
+  }
+  
+  .levelButton {
+    @apply w-6 h-6 text-xs;
+  }
+} 

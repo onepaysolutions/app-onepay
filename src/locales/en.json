@@ -1,0 +1,64 @@
+{
+  "tutorial": {
+    "connect": {
+      "title": "Connect Your Wallet",
+      "description": "First, connect your wallet to join our community. Click the 'Connect Wallet' button in the top right corner."
+    },
+    "claim_angel": {
+      "title": "Claim Angel NFT",
+      "description": "Claim your Angel NFT to become a community member and receive 1000 OPE tokens."
+    },
+    "check_ope": {
+      "title": "Check OPE Info",
+      "description": "View your OPE balance and price changes in the OPE Info section."
+    },
+    "claim_star": {
+      "title": "Claim Star NFT",
+      "description": "Claim Star NFT to activate presale allocation and participate in OPS token presale."
+    },
+    "star": {
+      "claim": {
+        "title": "Claim Star NFT",
+        "description": "Choose and claim your Star NFT to unlock presale allocation."
+      },
+      "presale": {
+        "title": "Presale Activation",
+        "description": "Your Star NFT automatically activates presale allocation for OPS tokens."
+      },
+      "progress": {
+        "title": "Check Progress",
+        "description": "Monitor your OPS presale progress and contract value."
+      },
+      "allocation": {
+        "title": "View Allocation",
+        "description": "Check your presale allocation and active NFTs in the dashboard."
+      }
+    },
+    "next": "Next",
+    "finish": "Got it!"
+  },
+  "referral": {
+    "link": {
+      "title": "Referral Link",
+      "shareText": "Join me on this amazing platform!",
+      "copy": "Copy Link",
+      "copied": "Copied!",
+      "selectZone": "Select a zone first"
+    },
+    "zones": {
+      "left": "Left Zone",
+      "middle": "Middle Zone",
+      "right": "Right Zone"
+    },
+    "share": {
+      "button": "Share Referral",
+      "title": "Share Your Link",
+      "social": {
+        "facebook": "Share on Facebook",
+        "twitter": "Share on Twitter",
+        "telegram": "Share on Telegram",
+        "whatsapp": "Share on WhatsApp"
+      }
+    }
+  }
+} 

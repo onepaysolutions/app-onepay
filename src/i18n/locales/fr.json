@@ -1,0 +1,197 @@
+{
+    "common": {
+      "loading": "Chargement...",
+      "connect": "Connecter le Portefeuille",
+      "connecting": "Connexion...",
+      "connected": "Connecté",
+      "disconnect": "Déconnecter",
+      "error": "Erreur",
+      "success": "Succès",
+      "copy": "Copier",
+      "copied": "Copié !",
+      "share": "Partager",
+      "close": "Fermer",
+      "confirm": "Confirmer",
+      "cancel": "Annuler",
+      "next": "Suivant",
+      "back": "Retour",
+      "submit": "Soumettre",
+      "processing": "Traitement..."
+    },
+    "nav": {
+      "community": "Communauté",
+      "star": "Star NFT",
+      "referral": "Parrainage",
+      "profile": "Profil",
+      "home": "Accueil"
+    },
+    "auth": {
+      "title": "Rejoindre Notre Communauté",
+      "username": "Nom d'utilisateur",
+      "email": "Email",
+      "refCode": "Code de Parrainage",
+      "optional": "Optionnel",
+      "register": "S'inscrire",
+      "registering": "Inscription..."
+    },
+    "nft": {
+      "title": "Collection NFT Premium",
+      "subtitle": "Réclamez votre NFT exclusif maintenant",
+      "price": "Prix",
+      "rewards": "Récompenses OPE",
+      "supply": "Offre Totale",
+      "claimed": "Réclamé",
+      "available": "Disponible",
+      "claim": "Réclamer NFT",
+      "claiming": "Réclamation...",
+      "connect": "Connectez le portefeuille pour réclamer",
+      "yours": "Vos NFTs",
+      "angel": "NFTs Ange",
+      "star": "NFTs Star",
+      "total": "Total NFTs",
+      "info": {
+        "soldAmount": "Montant Vendu",
+        "price": "USDT",
+        "details": "Détails NFT",
+        "sale": "Informations de Vente",
+        "ratio": "Ratio de Prévente",
+        "presale": "Valeur de Prévente",
+        "contract": "Valeur du Contrat",
+        "benefits": "Avantages",
+        "earnings": "Gains",
+        "return": "Retour",
+        "levels": "Récompenses de Niveau",
+        "tiers": "Niveaux",
+        "rollup": "Récompenses Cumulées",
+        "direct": "Part Directe",
+        "generation": "Génération"
+      },
+      "limitedOffer": {
+        "title": "Offre Limitée",
+        "bonus": "Bonus Temporel",
+        "countdown": "Compte à Rebours",
+        "buyers": "acheteurs",
+        "decreasing": "Bonus en diminution",
+        "hurry": "Dépêchez-vous!",
+        "endingSoon": "Se termine bientôt",
+        "extraBonus": "Bonus supplémentaire"
+      }
+    },
+    "ope": {
+      "balance": "Solde OPE",
+      "claim": "Réclamer Récompenses",
+      "referral": "Récompenses de Parrainage",
+      "total": "Récompenses Totales",
+      "chart": "Graphique des Prix OPE",
+      "price": "Prix",
+      "supply": "Offre",
+      "cap": "Capitalisation",
+      "period": "Période"
+    },
+    "ref": {
+      "title": "Programme de Parrainage",
+      "level": "Niveau Star",
+      "maxLevel": "Niveaux Max",
+      "rate": "Taux de Récompense",
+      "total": "Total Parrainages",
+      "active": "Parrainages Actifs",
+      "zones": {
+        "title": "Progression des Zones",
+        "left": "Zone Gauche",
+        "mid": "Zone Centrale",
+        "right": "Zone Droite",
+        "perf": "Performance",
+        "members": "Membres",
+        "volume": "Volume"
+      },
+      "rewards": {
+        "direct": "Récompenses Directes",
+        "level": "Récompenses de Niveau",
+        "pending": "Récompenses en Attente",
+        "claimed": "Récompenses Réclamées",
+        "total": "Récompenses Totales"
+      },
+      "tree": {
+        "title": "Arbre de Parrainage",
+        "empty": "Aucune donnée de parrainage trouvée",
+        "left": "Zone Gauche",
+        "mid": "Zone Centrale",
+        "right": "Zone Droite"
+      },
+      "link": {
+        "title": "Votre Lien de Parrainage",
+        "copy": "Copier le Lien",
+        "share": "Partager le Lien",
+        "copied": "Lien copié!"
+      }
+    },
+    "ops": {
+      "title": "Vente de Tokens OPS",
+      "stage": {
+        "title": "Info Étape",
+        "cycle": "Cycle Actuel",
+        "current": "Étape Actuelle",
+        "price": "Prix Actuel",
+        "details": "Détails de l'Étape",
+        "sold": "Vendu",
+        "total": "Total"
+      },
+      "airdrop": {
+        "title": "Info Airdrop",
+        "total": "Montant Total",
+        "claimed": "Montant Réclamé",
+        "eligible": "Adresses Éligibles",
+        "min": "Détention Minimum"
+      }
+    },
+    "profile": {
+      "title": "Profil",
+      "wallet": "Adresse du Portefeuille",
+      "connect": "Veuillez connecter votre portefeuille",
+      "stats": "Vos Statistiques",
+      "link": "Votre Lien de Parrainage"
+    },
+    "tutorial": {
+      "common": {
+        "skip": "Passer le tutoriel",
+        "next": "Suivant",
+        "complete": "Terminer",
+        "required": "Requis",
+        "gotIt": "Compris"
+      },
+      "starNFT": {
+        "intro": {
+          "title": "Bienvenue sur Star NFT",
+          "description": "Apprenez à acheter et gérer votre Star NFT"
+        }
+      }
+    },
+    "community": {
+      "title": "Rejoignez la Communauté OnePay",
+      "subtitle": "Obtenez votre Angel NFT et devenez membre de notre communauté exclusive",
+      "benefits": {
+        "membership": {
+          "title": "Adhésion Angel NFT Exclusive",
+          "description": "Accédez à vie aux fonctionnalités et avantages premium"
+        },
+        "rewards": {
+          "title": "1000 Tokens OPE de Récompense",
+          "description": "Gagnez des tokens OPE en participant à la communauté"
+        },
+        "features": {
+          "title": "Accès aux Fonctionnalités Spéciales",
+          "description": "Accès anticipé aux nouvelles fonctionnalités et produits"
+        },
+        "voting": {
+          "title": "Droits de Vote Communautaire",
+          "description": "Participez aux décisions de gouvernance"
+        }
+      },
+      "stats": {
+        "progress": "Progression des Réclamations",
+        "contractAddress": "Adresse du Contrat"
+      },
+      "connectWallet": "Veuillez d'abord connecter votre portefeuille"
+    }
+  }
+  

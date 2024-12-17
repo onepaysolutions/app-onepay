@@ -1,0 +1,197 @@
+{
+  "common": {
+    "loading": "Sedang memuat...",
+    "connect": "Sambung Dompet",
+    "connecting": "Sedang menyambung...",
+    "connected": "Tersambung",
+    "disconnect": "Putuskan sambungan",
+    "error": "Ralat",
+    "success": "Berjaya",
+    "copy": "Salin",
+    "copied": "Disalin!",
+    "share": "Kongsi",
+    "close": "Tutup",
+    "confirm": "Sahkan",
+    "cancel": "Batal",
+    "next": "Seterusnya",
+    "back": "Kembali",
+    "submit": "Hantar",
+    "processing": "Sedang diproses..."
+  },
+  "nav": {
+    "community": "Komuniti",
+    "star": "Bintang NFT",
+    "referral": "Rujukan",
+    "profile": "Profil",
+    "home": "Laman Utama",
+    "starNFT": "Star NFT"
+  },
+  "auth": {
+    "title": "Sertai Komuniti Kami",
+    "username": "Nama Pengguna",
+    "email": "E-mel",
+    "refCode": "Kod Rujukan",
+    "optional": "Pilihan",
+    "register": "Daftar",
+    "registering": "Mendaftar..."
+  },
+  "nft": {
+    "title": "Koleksi NFT Premium",
+    "subtitle": "Tuntut NFT eksklusif anda sekarang",
+    "price": "Harga",
+    "rewards": "Ganjaran OPE",
+    "supply": "Jumlah Bekalan",
+    "claimed": "Dituntut",
+    "available": "Tersedia",
+    "claim": "Tuntut NFT",
+    "claiming": "Menuntut...",
+    "connect": "Sambung Dompet untuk Menuntut",
+    "yours": "NFT Anda",
+    "angel": "NFT Malaikat",
+    "star": "NFT Bintang",
+    "total": "Jumlah NFT",
+    "info": {
+      "soldAmount": "Jumlah Terjual",
+      "price": "USDT",
+      "details": "Butiran NFT",
+      "sale": "Maklumat Jualan",
+      "ratio": "Nisbah Pra-jualan",
+      "presale": "Nilai Pra-jualan",
+      "contract": "Nilai Kontrak",
+      "benefits": "Faedah",
+      "earnings": "Pendapatan",
+      "return": "Pulangan",
+      "levels": "Ganjaran Tahap",
+      "tiers": "Peringkat",
+      "rollup": "Ganjaran Terkumpul",
+      "direct": "Perkongsian Langsung",
+      "generation": "Generasi"
+    },
+    "limitedOffer": {
+      "title": "Tawaran Terhad Masa",
+      "bonus": "Bonus Masa",
+      "countdown": "Kiraan Mundur",
+      "buyers": "pembeli",
+      "decreasing": "Bonus berkurangan",
+      "hurry": "Cepat!",
+      "endingSoon": "Akan berakhir",
+      "extraBonus": "Bonus tambahan"
+    }
+  },
+  "ope": {
+    "balance": "Baki OPE",
+    "claim": "Tuntut Ganjaran",
+    "referral": "Ganjaran Rujukan",
+    "total": "Jumlah Ganjaran",
+    "chart": "Carta Harga OPE",
+    "price": "Harga",
+    "supply": "Bekalan",
+    "cap": "Modal Pasaran",
+    "period": "Tempoh"
+  },
+  "ref": {
+    "title": "Program Rujukan",
+    "level": "Tahap Bintang",
+    "maxLevel": "Tahap Maksimum",
+    "rate": "Kadar Ganjaran",
+    "total": "Jumlah Rujukan",
+    "active": "Rujukan Aktif",
+    "zones": {
+      "title": "Kemajuan Zon",
+      "left": "Zon Kiri",
+      "mid": "Zon Tengah",
+      "right": "Zon Kanan",
+      "perf": "Prestasi",
+      "members": "Ahli",
+      "volume": "Volum"
+    },
+    "rewards": {
+      "direct": "Ganjaran Langsung",
+      "level": "Ganjaran Tahap",
+      "pending": "Ganjaran Tertunggak",
+      "claimed": "Ganjaran Dituntut",
+      "total": "Jumlah Ganjaran"
+    },
+    "tree": {
+      "title": "Pokok Rujukan",
+      "empty": "Tiada data rujukan ditemui",
+      "left": "Zon Kiri",
+      "mid": "Zon Tengah",
+      "right": "Zon Kanan"
+    },
+    "link": {
+      "title": "Pautan Rujukan Anda",
+      "copy": "Salin Pautan",
+      "share": "Kongsi Pautan",
+      "copied": "Pautan disalin!"
+    }
+  },
+  "ops": {
+    "title": "Jualan Token OPS",
+    "stage": {
+      "title": "Maklumat Peringkat",
+      "cycle": "Kitaran Semasa",
+      "current": "Peringkat Semasa",
+      "price": "Harga Semasa",
+      "details": "Butiran Peringkat",
+      "sold": "Terjual",
+      "total": "Jumlah"
+    },
+    "airdrop": {
+      "title": "Maklumat Airdrop",
+      "total": "Jumlah Amaun",
+      "claimed": "Amaun Dituntut",
+      "eligible": "Alamat Layak",
+      "min": "Pegangan Minimum"
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "wallet": "Alamat Dompet",
+    "connect": "Sila sambungkan dompet anda",
+    "stats": "Statistik Anda",
+    "link": "Pautan Rujukan Anda"
+  },
+  "tutorial": {
+    "common": {
+      "skip": "Langkau Tutorial",
+      "next": "Seterusnya",
+      "complete": "Selesai",
+      "required": "Diperlukan",
+      "gotIt": "Faham"
+    },
+    "starNFT": {
+      "intro": {
+        "title": "Selamat Datang ke Star NFT",
+        "description": "Mari belajar cara membeli dan menguruskan Star NFT anda"
+      }
+    }
+  },
+  "community": {
+    "title": "Sertai Komuniti OnePay",
+    "subtitle": "Dapatkan Angel NFT dan menjadi sebahagian daripada komuniti eksklusif kami",
+    "benefits": {
+      "membership": {
+        "title": "Keahlian Angel NFT Eksklusif",
+        "description": "Dapatkan akses seumur hidup kepada ciri-ciri dan faedah premium"
+      },
+      "rewards": {
+        "title": "1000 Token OPE Ganjaran",
+        "description": "Dapatkan token OPE melalui penyertaan komuniti"
+      },
+      "features": {
+        "title": "Akses Ciri Istimewa",
+        "description": "Akses awal kepada ciri dan produk baharu"
+      },
+      "voting": {
+        "title": "Hak Mengundi Komuniti",
+        "description": "Sertai dalam keputusan tadbir urus"
+      }
+    },
+    "stats": {
+      "progress": "Kemajuan Tuntutan",
+      "contractAddress": "Alamat Kontrak"
+    },
+    "connectWallet": "Sila sambungkan dompet terlebih dahulu"
+  }
+} 

@@ -1,0 +1,50 @@
+.container {
+  @apply flex flex-col min-h-screen bg-gradient-to-b from-purple-900/10 to-black/10;
+}
+
+.header {
+  @apply sticky top-0 z-10 bg-black/80 backdrop-blur-lg border-b border-purple-500/20;
+}
+
+.stats {
+  @apply p-4 grid grid-cols-2 gap-4;
+}
+
+.tabNav {
+  @apply flex overflow-x-auto no-scrollbar p-4;
+}
+
+.tabButton {
+  @apply flex-none px-4 py-2 text-sm font-medium rounded-full transition-colors;
+}
+
+.tabButtonActive {
+  @apply bg-purple-600 text-white;
+}
+
+.tabButtonInactive {
+  @apply text-gray-400 hover:text-purple-300;
+}
+
+.content {
+  @apply flex-1 p-4;
+}
+
+.footer {
+  @apply sticky bottom-0 bg-black/80 backdrop-blur-lg border-t border-purple-500/20 p-4;
+}
+
+/* 响应式调整 */
+@media (min-width: 768px) {
+  .stats {
+    @apply grid-cols-4;
+  }
+  
+  .tabNav {
+    @apply justify-center;
+  }
+  
+  .tabButton {
+    @apply px-6;
+  }
+} 

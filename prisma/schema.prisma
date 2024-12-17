@@ -1,0 +1,238 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+
+model Client {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String
+  verified      Boolean   @default(false)
+  verifyToken   String?
+  status        ClientStatus @default(ACTIVE)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+
+  users         User[]   
+
+  @@map("clients")
+}
+
+
+model User {
+  id            String    @id @default(cuid())
+  clientId      String?   // 可选关联到Client
+  referralCode  String    @unique
+  referrerCode  String?   // 推荐人的邀请码
+  nickname      String?
+  avatar        String?
+  isActivated   Boolean   @default(false)  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+
+  client        Client?   @relation(fields: [clientId], references: [id])
+  wallets       Wallet[]
+  
+
+  asReferrer    ReferralRelation[] @relation("Referrer")
+  asReferee     ReferralRelation[] @relation("Referee")
+  
+
+  asStarReferrer StarNFTReferral[] @relation("StarReferrer")
+  asStarReferee  StarNFTReferral[] @relation("StarReferee")
+
+  zoneStats     ZoneStats[] @relation("UserZoneStats")
+
+  @@map("users")
+}
+
+
+model Wallet {
+  id            String    @id @default(cuid())
+  address       String    @unique
+  userId        String 
+  isPrimary     Boolean   @default(false)
+  status        WalletStatus @default(ACTIVE)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+
+  user          User      @relation(fields: [userId], references: [id])
+  angelNFTs     AngelNFT[]
+  starNFTs      StarNFT[]
+
+  @@map("wallets")
+}
+
+
+model ReferralRelation {
+  id            String    @id @default(cuid())
+  referrerId    String    // 推荐人用户ID
+  refereeId     String    // 被推荐人用户ID
+  level         Int       // 层级
+  zone          Zone      @default(MIDDLE) 
+  isActivated   Boolean   @default(false)  
+  status        Status    @default(ACTIVE)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  referrer      User      @relation("Referrer", fields: [referrerId], references: [id])
+  referee       User      @relation("Referee", fields: [refereeId], references: [id])
+
+  @@map("referral_relations")
+}
+
+// NFT Models
+model AngelNFT {
+  id            String    @id @default(cuid())
+  tokenId       Int       @unique
+  ownerAddress  String
+  type          NFTType   @default(ANGEL)
+  level         Int
+  power         Int
+  status        NFTStatus @default(ACTIVE)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  owner         Wallet    @relation(fields: [ownerAddress], references: [address])
+
+  @@map("angel_nfts")
+}
+
+model StarNFT {
+  id            String    @id @default(cuid())
+  tokenId       Int       @unique
+  ownerAddress  String
+  type          NFTType   @default(STAR)
+  starLevel     Int
+  contractValue Decimal
+  opsHolding    Decimal
+  opsRewards    Decimal
+  currentValue  Decimal
+  burnStatus    BurnStatus @default(NONE)
+  releaseRate   Decimal
+  status        NFTStatus @default(ACTIVE)
+  activatedAt   DateTime?  // 激活时间
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  owner         Wallet    @relation(fields: [ownerAddress], references: [address])
+  referrals     StarNFTReferral[]
+
+  @@map("star_nfts")
+}
+
+
+model StarNFTReferral {
+  id            String    @id @default(cuid())
+  starNftId     String   
+  referrerId    String   
+  refereeId     String   
+  level         Int      
+  zone          Zone      @default(MIDDLE) 
+  status        Status    @default(ACTIVE)
+  rewardRate    Decimal   
+  activatedAt   DateTime  @default(now())
+  createdAt     DateTime  @default(now())
+
+  // 关联
+  starNFT       StarNFT   @relation(fields: [starNftId], references: [id])
+  referrer      User      @relation("StarReferrer", fields: [referrerId], references: [id])
+  referee       User      @relation("StarReferee", fields: [refereeId], references: [id])
+
+  @@map("star_nft_referrals")
+}
+
+
+model StarNFTLevel {
+  id          Int       @id
+  nameKey     String
+  price       Decimal
+  returnRate  Decimal
+  opsHolding  Decimal
+  ownLevels   Int
+  benefitsKey String
+
+  @@map("star_nft_levels")
+}
+
+
+model OPSPresale {
+  id          String    @id @default(cuid())
+  cycle       Int
+  stage       Int
+  currentPrice Decimal
+  nextPrice   Decimal
+  soldAmount  Decimal
+  stageAmount Decimal
+  totalStages Int
+  totalAmount Decimal
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("ops_presales")
+}
+
+enum NFTType {
+  ANGEL
+  STAR
+}
+
+enum NFTStatus {
+  ACTIVE
+  INACTIVE
+  BURNED
+}
+
+enum BurnStatus {
+  NONE
+  PARTIAL
+  COMPLETE
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
+}
+
+enum WalletStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum ClientStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+// 区域统计
+model ZoneStats {
+  id            String    @id @default(cuid())
+  userId        String   
+  user          User      @relation("UserZoneStats", fields: [userId], references: [id])
+  zone          Zone     
+  directCount   Int       @default(0) 
+  teamCount     Int       @default(0) 
+  directVolume  Decimal   @default(0) 
+  teamVolume    Decimal   @default(0) 
+  updatedAt     DateTime  @updatedAt
+
+
+  @@map("zone_stats")
+}
+
+
+enum Zone {
+  LEFT
+  MIDDLE
+  RIGHT
+} 

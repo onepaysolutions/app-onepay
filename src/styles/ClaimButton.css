@@ -1,0 +1,57 @@
+.claim-container {
+  @apply flex items-center justify-between;
+}
+
+.claim-content {
+  @apply flex-1;
+}
+
+.claim-description {
+  @apply text-gray-300 mb-4;
+}
+
+.claim-button {
+  @apply bg-gradient-to-r from-purple-600 to-purple-700 
+         hover:from-purple-700 hover:to-purple-800 
+         text-white 
+         px-4 sm:px-8 
+         py-2.5 sm:py-3 
+         rounded-xl 
+         text-sm sm:text-base 
+         font-medium 
+         transition-all duration-200 
+         shadow-lg shadow-purple-500/20 
+         w-full
+         min-h-[44px] /* iOS 最小点击区域 */
+         touch-action: manipulation;
+}
+
+.nft-preview {
+  @apply w-full 
+         h-48 sm:h-64 
+         bg-purple-700/50 
+         rounded-xl 
+         object-contain 
+         border border-purple-500/20 
+         shadow-lg shadow-purple-500/10;
+}
+
+@media (max-width: 640px) {
+  .claim-button {
+    @apply text-sm px-4 py-2.5;
+  }
+  
+  .claim-description {
+    @apply text-sm mb-3;
+  }
+  
+  .nft-preview {
+    @apply h-40;
+  }
+}
+
+@media (hover: none) {
+  .claim-button:active {
+    @apply opacity-80;
+  }
+} 

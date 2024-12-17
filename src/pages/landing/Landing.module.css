@@ -1,0 +1,82 @@
+.container {
+  min-height: screen;
+  padding-bottom: 6rem;
+  background: radial-gradient(ellipse at top, var(--tw-gradient-stops));
+  --tw-gradient-from: #581c87;
+  --tw-gradient-to: #000;
+  --tw-gradient-stops: var(--tw-gradient-from), #000, var(--tw-gradient-to);
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+}
+
+@media (min-width: 640px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+.logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+.connectButton {
+  background: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+  --tw-gradient-from: #9333ea;
+  --tw-gradient-to: #7e22ce;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 200ms;
+  box-shadow: 0 4px 6px -1px rgba(147, 51, 234, 0.2);
+}
+
+.connectButton:hover {
+  --tw-gradient-from: #7e22ce;
+  --tw-gradient-to: #6b21a8;
+}
+
+@media (min-width: 640px) {
+  .connectButton {
+    padding: 0.625rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* 隐藏 thirdweb branding */
+.connectButton :global(*) [data-powered-by],
+.connectButton :global(*) [data-testid="powered-by"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  overflow: hidden !important;
+}
+
+/* 额外的全局样式来确保隐藏 */
+:global([data-powered-by]),
+:global([data-testid="powered-by"]) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+} 

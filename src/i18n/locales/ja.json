@@ -1,0 +1,508 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "connect": "ウォレット接続",
+    "connecting": "接続中...",
+    "connected": "接続済み",
+    "disconnect": "切断",
+    "error": "エラー",
+    "success": "成功",
+    "copy": "コピー",
+    "copied": "コピー完了!",
+    "share": "シェア",
+    "close": "閉じる",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "next": "次へ",
+    "back": "戻る",
+    "submit": "送信",
+    "processing": "処理中..."
+  },
+  "nav": {
+    "community": "コミュニティ",
+    "star": "スター NFT",
+    "referral": "紹介",
+    "profile": "プロフィール"
+  },
+  "auth": {
+    "title": "コミュニティに参加",
+    "username": "ユーザー名",
+    "email": "メールアドレス",
+    "refCode": "紹介コード",
+    "optional": "任意",
+    "register": "登録",
+    "registering": "登録中..."
+  },
+  "nft": {
+    "title": "プレミアム NFT コレクション",
+    "subtitle": "あなたの専用 NFT を今すぐ請求",
+    "price": "価格",
+    "rewards": "OPE 報酬",
+    "supply": "総供給量",
+    "claimed": "請求済み",
+    "available": "利用可能",
+    "claim": "NFT を請求",
+    "claiming": "請求中...",
+    "connect": "ウォレットを接続して請求",
+    "yours": "あなたの NFT",
+    "angel": "エンジェル NFT",
+    "star": "スター NFT",
+    "total": "NFT 総数",
+    "info": {
+      "soldAmount": "販売数量",
+      "price": "USDT",
+      "details": "NFT 詳細",
+      "sale": "販売情報",
+      "ratio": "プリセール比率",
+      "presale": "プリセール価値",
+      "contract": "契約価値",
+      "benefits": "特典",
+      "earnings": "収益",
+      "return": "リターン",
+      "levels": "レベル報酬",
+      "tiers": "ティア",
+      "rollup": "ロールアップ報酬",
+      "direct": "直接シェア",
+      "generation": "世代"
+    },
+    "limitedOffer": {
+      "title": "期間限定オファー",
+      "bonus": "タイムボーナス",
+      "countdown": "カウントダウン",
+      "buyers": "購入者",
+      "decreasing": "ボーナス減少中",
+      "hurry": "お急ぎください!",
+      "endingSoon": "まもなく終了",
+      "extraBonus": "追加ボーナス"
+    },
+    "metrics": {
+      "presaleOPS": "プリセール OPS",
+      "airdropOPS": "エアドロップ OPS",
+      "rewardsOPS": "報酬 OPS",
+      "currentValue": "現在の価値",
+      "contractValue": "契約価値",
+      "releaseThreshold": "リリース閾値",
+      "userReceives": "ユーザー受取額",
+      "platformLiquidity": "プラットフォーム流動性",
+      "platformBuyback": "プラットフォーム買戻し",
+      "opsRelease": "OPS リリース"
+    }
+  },
+  "tutorial": {
+    "common": {
+      "skip": "チュートリアルをスキップ",
+      "next": "次へ",
+      "complete": "完了",
+      "required": "必須",
+      "gotIt": "了解"
+    },
+    "starNFT": {
+      "intro": {
+        "title": "Star NFTへようこそ",
+        "description": "Star NFTの購入と管理方法を学びましょう"
+      },
+      "level": {
+        "title": "レベルを選択",
+        "description": "投資目標に合わせてStar NFTのレベルを選択してください"
+      }
+    },
+    "angelNFT": {
+      "intro": {
+        "title": "Angel NFTへようこそ",
+        "description": "コミュニティメンバーになって特別な特典を獲得しましょう"
+      }
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "OnePay へようこそ",
+      "subtitle": "分散型金融の未来への入り口",
+      "scrollDown": "スクロールダウン",
+      "launchApp": "アプリを起動"
+    },
+    "features": {
+      "title": "主な機能",
+      "subtitle": "OnePay の革新的な機能を探索し、Web3 の旅を始めましょう",
+      "launch": {
+        "title": "起動",
+        "description": "次世代の分散型金融の一員になりましょう"
+      },
+      "starNFT": {
+        "title": "スター NFT",
+        "description": "スター NFT コレクションで特別な特典をアンロック"
+      },
+      "community": {
+        "title": "コミュニティ",
+        "description": "成長する DeFi コミュニティに参加"
+      }
+    }
+  },
+  "presale": {
+    "ops": {
+      "title": "OPS プリセール",
+      "cycle": {
+        "current": "現在のサイクル",
+        "stages": "サイクルあたり20ステージ"
+      },
+      "stage": {
+        "current": "現在のステージ",
+        "amount": "ステージあたり100,000 OPS",
+        "format": "ステージ {number}/20"
+      }
+    },
+    "stages": {
+      "title": "プリセールステージ",
+      "stage1": {
+        "number": "ステージ 1/20",
+        "price": "$0.30",
+        "nextPrice": "$0.31",
+        "startDate": "開始: 2024/12/7",
+        "endDate": "終了: 2024/12/8"
+      },
+      "stage2": {
+        "number": "ステージ 2/20",
+        "price": "$0.31",
+        "nextPrice": "$0.32",
+        "startDate": "開始: 2024/12/8",
+        "endDate": "終了: 2024/12/9"
+      }
+    },
+    "info": {
+      "currentCycle": "現在のサイクル",
+      "stagesPerCycle": "サイクルあたり20ステージ",
+      "opsPerStage": "ステージあたり100,000 OPS",
+      "priceIncrease": "各ステージ後に$0.01上昇",
+      "totalSupply": "総供給量",
+      "calculation": "100,000 × 20ステージ"
+    }
+  },
+  "ope": {
+    "balance": "OPE 残高",
+    "claim": "報酬を請求",
+    "referral": "紹介報酬",
+    "total": "総報酬",
+    "OPEChart": "OPE 価格チャート",
+    "price": "価格",
+    "supply": "供給量",
+    "cap": "時価総額",
+    "period": "期間",
+    "title": "OPE トークン",
+    "currentStage": {
+      "title": "現在のステージ",
+      "stage": "ステージ",
+      "currentPrice": "現在の価格",
+      "availableSupply": "利用可能な供給量",
+      "nextPrice": "次の価格"
+    },
+    "priceStages": {
+      "title": "価格ステージ",
+      "headers": {
+        "stage": "ステージ",
+        "price": "価格",
+        "supply": "供給量",
+        "marketCap": "時価総額"
+      }
+    },
+    "userStatus": {
+      "title": "あなたの OPE ステータス"
+    },
+    "chart": {
+      "title": "価格チャート",
+      "allocation": "トークン配分",
+      "buyback": "バイバックメカニズム"
+    }
+  },
+  "ref": {
+    "title": "紹介プログラム",
+    "level": "スターレベル",
+    "maxLevel": "最大レベル",
+    "rate": "報酬レート",
+    "total": "紹介数",
+    "active": "アクティブな紹介",
+    "zones": {
+      "title": "ゾーン進捗",
+      "left": "左ゾーン",
+      "mid": "中央ゾーン",
+      "right": "右ゾーン",
+      "perf": "パフォーマンス",
+      "members": "メンバー",
+      "volume": "取引量"
+    },
+    "rewards": {
+      "direct": "直接報酬",
+      "level": "レベル報酬",
+      "pending": "保留中の報酬",
+      "claimed": "請求済み報酬",
+      "total": "総報酬"
+    },
+    "tree": {
+      "title": "紹介ツリー",
+      "empty": "紹介データが見つかりません",
+      "left": "左ゾーン",
+      "mid": "中央ゾーン",
+      "right": "右ゾーン"
+    },
+    "link": {
+      "title": "あなたの紹介リンク",
+      "copy": "リンクをコピー",
+      "share": "リンクをシェア",
+      "copied": "リンクをコピーしました！"
+    }
+  },
+  "ops": {
+    "title": "OPS トークンセール",
+    "stage": {
+      "title": "ステージ情報",
+      "Current cycle": "現在のサイクル",
+      "current": "現在のステージ",
+      "price": "現在の価格",
+      "details": "ステージ詳細",
+      "sold": "販売済み",
+      "total": "合計",
+      "cycle": "サイクル",
+      "stage": "ステージ",
+      "currentPrice": "現在の価格",
+      "progress": "進捗"
+    },
+    "airdrop": {
+      "title": "エアドロップ情報",
+      "total": "総額",
+      "claimed": "請求済み額",
+      "eligible": "対象アドレス",
+      "min": "最小保有量"
+    }
+  },
+  "profile": {
+    "title": "プロフィール",
+    "wallet": "ウォレットアドレス",
+    "connect": "ウォレットを接続してください",
+    "stats": "あなたの統計",
+    "link": "あなたの紹介リンク"
+  },
+  "starNFT": {
+    "title": "スターNFTデジタル資産成長プラン",
+    "subtitle": "スターNFTを選択して請求",
+    "tabs": {
+      "all": "すべてのNFT",
+      "active": "アクティブなNFT",
+      "release": "NFTのリリース"
+    },
+    "metrics": {
+      "returnRate": "リターンレート",
+      "ownLevels": "所有レベル",
+      "contractValue": "契約価値",
+      "opsHolding": "OPS保有量",
+      "opsRewards": "OPS報酬",
+      "currentValue": "現在の価値"
+    },
+    "benefits": {
+      "title": "VIP特典"
+    },
+    "vipLevels": {
+      "star1": {
+        "name": "スターI",
+        "benefits": [
+          "500%リターンレート",
+          "3レベル報酬",
+          "新機能への優先アクセス",
+          "VIPコミュニティアクセス"
+        ]
+      },
+      "star2": {
+        "name": "スターII",
+        "benefits": [
+          "600%リターンレート",
+          "8レベル報酬",
+          "取引特権の強化",
+          "高度な分析アクセス"
+        ]
+      },
+      "star3": {
+        "name": "スターIII",
+        "benefits": [
+          "700%リターンレート",
+          "15レベル報酬",
+          "プレミアムサポートサービス",
+          "独占的な投資機会"
+        ]
+      },
+      "star4": {
+        "name": "スターIV",
+        "benefits": [
+          "800%リターンレート",
+          "20レベル報酬",
+          "究極の取引機能",
+          "戦略的パートナーシップ権"
+        ]
+      }
+    }
+  },
+  "community": {
+    "title": "OnePayコミュニティに参加",
+    "subtitle": "エンジェルNFTを請求して、独占的なコミュニティの一員になりましょう",
+    "contract": "コントラクト",
+    "copyAddress": "アドレスをコピー",
+    "addressCopied": "コントラクトアドレスをコピーしました！",
+    "connectWallet": "エンジェルNFTを請求するにはウォレットを接続してください",
+    "membership": "コミュニティメンバーシップ",
+    "price": "価格",
+    "gasFees": "ガス料金",
+    "sponsored": "スポンサー",
+    "network": "ネットワーク",
+    "opMainnet": "OPメインネット",
+    "payment": {
+      "choose": "支払い方法を選��",
+      "payWith": "支払い方法",
+      "insufficientFunds": "残高不足",
+      "otherWallet": "他のウォレットで支払う",
+      "creditCard": "クレジットカードで支払う"
+    }
+  },
+  "wallets": {
+    "connect": "接続",
+    "newToWallets": "ウォレットは初めてですか？",
+    "getStarted": "始めましょう",
+    "list": {
+      "metamask": "MetaMask",
+      "coinbase": "Coinbase Wallet",
+      "trust": "Trust Wallet",
+      "okx": "OKX Wallet",
+      "bitget": "Bitget Wallet",
+      "binance": "Binance Web3 Wallet",
+      "uniswap": "Uniswap Wallet",
+      "safepal": "SafePal",
+      "bybit": "Bybit Wallet",
+      "tokenpocket": "TokenPocket",
+      "ledger": "Ledger Live",
+      "safe": "Safe",
+      "exodus": "Exodus",
+      "argent": "Argent",
+      "imtoken": "imToken",
+      "blockchain": "Blockchain.com",
+      "magiceden": "Magic Eden",
+      "kraken": "Kraken Wallet",
+      "zengo": "Zengo Wallet",
+      "mew": "MEW wallet",
+      "mathwallet": "MathWallet",
+      "alphawallet": "AlphaWallet",
+      "unstoppable": "Unstoppable Domains",
+      "keyring": "KEYRING PRO",
+      "frontier": "Frontier"
+    }
+  },
+  "verification": {
+    "email": {
+      "required": "メール認証が必要です",
+      "address": "メーアドレス",
+      "enter": "メールアドレスを入力",
+      "sendCode": "認証コードを送信"
+    }
+  },
+  "layout": {
+    "about": "概要",
+    "blog": "ブログ",
+    "documentation": "ドキュメント",
+    "nftMarket": "NFTマーケット",
+    "swap": "スワップ",
+    "payment": "支払い",
+    "promotionPlan": "プロモーション計画",
+    "github": "GitHub",
+    "eBooks": "電子書籍"
+  },
+  "home": {
+    "welcome": "OnePayへようこそ",
+    "subtitle": "分散型金融の未来への入り口",
+    "scrollDown": "スクロールダウン",
+    "launchApp": "アプリを起動",
+    "coreFeatures": {
+      "title": "主な機能",
+      "description": "OnePayの革新的な機能を探索し、Web3の旅を始めましょう",
+      "launch": {
+        "title": "起動",
+        "description": "次世代の分散型金融の一員になりましょう"
+      }
+    }
+  },
+  "app": {
+    "nav": {
+      "home": "ホーム",
+      "community": "コミュニティ",
+      "starNFT": "Star NFT",
+      "profile": "プロフィール",
+      "referral": "紹介",
+      "star": "Star"
+    },
+    "tabBar": {
+      "home": "ホーム",
+      "star": "スター",
+      "referral": "紹介",
+      "profile": "マイページ"
+    }
+  },
+  "referral": {
+    "title": "紹介プログラム",
+    "link": {
+      "title": "あなたの紹介リンク",
+      "shareText": "OnePay に参加しましょう - 次世代の DeFi プラットフォーム！",
+      "copy": "リンクをコピー",
+      "copied": "コピーしました！",
+      "selectZone": "まずゾーンを選択してください",
+      "share": "リンクを共有"
+    },
+    "zones": {
+      "title": "ゾーン進捗",
+      "left": "左ゾーン",
+      "middle": "中央ゾーン",
+      "right": "右ゾーン",
+      "perf": "パフォーマンス",
+      "members": "メンバー",
+      "volume": "取引量"
+    },
+    "share": {
+      "button": "紹介を共有",
+      "title": "リンクを共有",
+      "social": {
+        "facebook": "Facebook で共有",
+        "twitter": "Twitter で共有",
+        "telegram": "Telegram で共有",
+        "whatsapp": "WhatsApp で共有"
+      }
+    },
+    "stats": {
+      "level": "スターレベル",
+      "maxLevel": "最大レベル",
+      "rate": "報酬レート",
+      "total": "総紹介数",
+      "active": "アクティブな紹介"
+    },
+    "rewards": {
+      "direct": "直接報酬",
+      "level": "レベル報酬",
+      "pending": "保留中の報酬",
+      "claimed": "請求済み報酬",
+      "total": "総報酬"
+    },
+    "tree": {
+      "title": "紹介ツリー",
+      "empty": "紹介データが見つかりません",
+      "basicUser": "基本ユーザー",
+      "starActivated": "Star NFT アクティブ化済み",
+      "level": "レベル",
+      "zone": "ゾーン"
+    }
+  },
+  "release": {
+    "calculation": "リリース計算",
+    "userReceives": "ユーザー受取額",
+    "platformLiquidity": "プラットフォーム流動性",
+    "platformBuyback": "プラットフォーム買戻し",
+    "opsRelease": "OPS リリース",
+    "confirmRelease": "リリース確認",
+    "noNFTs": "リリース可能な NFT がありません",
+    "currentCycle": "現在のサイクル",
+    "nextCycle": "次のサイクル",
+    "totalOPS": "総 OPS",
+    "totalValue": "総価値",
+    "releaseThreshold": "リリース閾値"
+  }
+} 

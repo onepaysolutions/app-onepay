@@ -1,0 +1,113 @@
+.container {
+  @apply bg-gradient-to-b from-purple-900/20 to-black/20 
+    rounded-xl p-6 space-y-6 backdrop-blur-sm
+    border border-purple-500/20;
+}
+
+.header {
+  @apply flex items-center justify-between;
+}
+
+.title {
+  @apply text-xl font-bold text-purple-500;
+}
+
+.phase {
+  @apply px-3 py-1 bg-purple-600/20 rounded-full text-sm font-medium;
+}
+
+.grid {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.stat {
+  @apply bg-purple-900/20 rounded-lg p-4;
+}
+
+.label {
+  @apply flex flex-col text-sm text-gray-400;
+}
+
+.info {
+  @apply text-xs text-gray-500;
+}
+
+.value {
+  @apply text-2xl font-bold mt-2;
+}
+
+.priceContainer {
+  @apply flex items-center justify-between gap-4;
+}
+
+.priceBox {
+  @apply flex-1 bg-purple-900/20 rounded-lg p-4;
+}
+
+.priceLabel {
+  @apply flex flex-col text-sm text-gray-400;
+}
+
+.price {
+  @apply flex items-baseline mt-2;
+}
+
+.currency {
+  @apply text-lg font-medium text-purple-400 mr-1;
+}
+
+.amount {
+  @apply text-2xl font-bold;
+}
+
+.priceArrow {
+  @apply text-2xl text-purple-500;
+}
+
+.progressSection {
+  @apply space-y-2;
+}
+
+.progressLabel {
+  @apply flex justify-between text-sm text-gray-400;
+}
+
+.progressBar {
+  @apply h-2 bg-purple-900/20 rounded-full overflow-hidden;
+}
+
+.progressFill {
+  @apply h-full bg-gradient-to-r from-purple-500 to-purple-600
+    transition-all duration-300 ease-out;
+}
+
+.notice {
+  @apply bg-purple-900/20 rounded-lg p-4 space-y-2;
+}
+
+.notice h3 {
+  @apply text-sm font-medium text-purple-400;
+}
+
+.notice p {
+  @apply text-sm text-gray-400;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .container {
+    @apply p-4;
+  }
+  
+  .grid {
+    @apply grid-cols-1;
+  }
+  
+  .priceContainer {
+    @apply flex-col;
+  }
+  
+  .priceArrow {
+    @apply rotate-90;
+  }
+} 

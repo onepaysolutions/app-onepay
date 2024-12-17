@@ -1,0 +1,152 @@
+.container {
+  @apply min-h-screen bg-gradient-to-b from-[#1a1a1a] to-black;
+  padding-top: var(--header-height, 72px);
+}
+
+.content {
+  @apply container mx-auto px-4 py-8 md:py-12;
+}
+
+.card {
+  @apply max-w-lg mx-auto relative;
+}
+
+.cardInner {
+  @apply relative bg-[#1a1a1a]/50 backdrop-blur-xl rounded-2xl p-6 md:p-8 
+    border border-[#8B5CF6]/30 overflow-hidden;
+}
+
+.cardBackground {
+  @apply absolute inset-0 rounded-2xl opacity-30 bg-cover bg-center z-0;
+}
+
+.cardContent {
+  @apply relative z-10;
+}
+
+.title {
+  @apply text-2xl md:text-3xl font-bold mb-2 text-center 
+    bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80;
+}
+
+.subtitle {
+  @apply text-gray-400 text-center mb-8;
+}
+
+.benefitsList {
+  @apply space-y-4 mb-8;
+}
+
+.benefitItem {
+  @apply flex items-center gap-3 text-gray-300 
+    p-3 rounded-xl bg-[#8B5CF6]/5 border border-[#8B5CF6]/10
+    transition-all duration-200 hover:bg-[#8B5CF6]/10;
+}
+
+.benefitIcon {
+  @apply w-10 h-10 rounded-full bg-[#8B5CF6]/20 
+    flex items-center justify-center shrink-0
+    border border-[#8B5CF6]/20;
+}
+
+.benefitText {
+  @apply text-sm md:text-base;
+}
+
+.demoButton {
+  @apply fixed bottom-4 right-4 z-50 px-4 py-2 
+    bg-[#8B5CF6]/80 hover:bg-[#8B5CF6] rounded-lg 
+    backdrop-blur-sm border border-[#8B5CF6]/30 
+    shadow-lg shadow-[#8B5CF6]/20
+    transition-all duration-200
+    flex items-center gap-2
+    group;
+}
+
+.demoIcon {
+  @apply text-lg group-hover:scale-110 transition-transform;
+}
+
+.demoText {
+  @apply text-sm font-medium;
+}
+
+.learnMoreButton {
+  @apply w-full py-3 px-6 rounded-xl text-white/80 hover:text-white
+    bg-[#8B5CF6]/10 hover:bg-[#8B5CF6]/20
+    transition-colors duration-200
+    border border-[#8B5CF6]/30 backdrop-blur-sm
+    flex items-center justify-center gap-2;
+}
+
+/* 响应式设计 */
+@media (max-width: 390px) {
+  .cardInner {
+    @apply p-4;
+  }
+
+  .title {
+    @apply text-xl;
+  }
+
+  .benefitItem {
+    @apply p-2;
+  }
+
+  .benefitIcon {
+    @apply w-8 h-8;
+  }
+
+  .benefitText {
+    @apply text-sm;
+  }
+
+  .demoButton {
+    @apply px-3 py-1.5;
+  }
+}
+
+/* 适配 iPhone SE 等小屏设备 */
+@media (max-width: 320px) {
+  .title {
+    @apply text-lg;
+  }
+
+  .benefitIcon {
+    @apply w-7 h-7;
+  }
+
+  .demoText {
+    @apply text-xs;
+  }
+}
+
+/* 适配大屏幕 */
+@media (min-width: 1024px) {
+  .cardInner {
+    @apply p-10;
+  }
+
+  .title {
+    @apply text-4xl;
+  }
+
+  .benefitItem {
+    @apply p-4;
+  }
+}
+
+.demoMode {
+  @apply relative;
+}
+
+.demoMode::before {
+  content: '';
+  @apply absolute inset-0 border-2 border-yellow-400/30 rounded-2xl pointer-events-none;
+}
+
+.demoLabel {
+  @apply absolute top-2 right-2 px-2 py-1 
+    bg-yellow-400/20 text-yellow-400 
+    text-xs font-medium rounded;
+} 

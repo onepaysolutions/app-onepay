@@ -1,0 +1,177 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "connect": "ربط المحفظة",
+    "connecting": "جاري الربط...",
+    "connected": "تم الربط",
+    "disconnect": "قطع الاتصال",
+    "error": "خطأ",
+    "success": "نجاح",
+    "backToHome": "العودة للرئيسية"
+  },
+
+  "community": {
+    "title": "انضم إلى مجتمع OnePay",
+    "subtitle": "اطصل على Angel NFT وكن جزءًا من مجتمعنا الحصري",
+    "buttons": {
+      "join": "انضم الآن",
+      "learnOPE": "تعرف على رمز OPE"
+    },
+    "stats": {
+      "progress": "تقدم الطلب",
+      "contractAddress": "عنوان العقد",
+      "totalMinted": "إجمالي المسكوك",
+      "totalValueLocked": "إجمالي القيمة المقفلة",
+      "totalRewards": "إجمالي المكافآت",
+      "averagePrice": "متوسط السعر"
+    },
+    "benefits": {
+      "membership": {
+        "title": "عضوية Angel NFT الحصرية",
+        "description": "احصل على وصول مدى الحياة للميزات والمزايا المتميزة"
+      },
+      "rewards": {
+        "title": "1000 رمز OPE كمكافأة",
+        "description": "اكسب رموز OPE من خلال المشاركة المجتمعية"
+      },
+      "features": {
+        "title": "وصول للميزات الخاصة",
+        "description": "وصول مبكر للميزات والمنتجات الجديدة"
+      },
+      "voting": {
+        "title": "حقوق التصويت المجتمعية",
+        "description": "المشاركة في قرارات الحوكمة"
+      }
+    },
+    "connectWallet": "يرجى توصيل المحفظة أولاً"
+  },
+
+  "nav": {
+    "community": "المجتمع",
+    "starNFT": "Star NFT",
+    "referral": "الإحالة",
+    "profile": "الملف الشخصي"
+  },
+
+  "errors": {
+    "pageNotFound": "الصفحة التي تبحث عنها غير موجودة",
+    "somethingWrong": "حدث خطأ ما",
+    "tryAgain": "يرجى المحاولة مرة أخرى لاحقاً"
+  },
+
+  "starNFT": {
+    "connectWallet": "ربط المحفظة",
+    "connectWalletDesc": "يرجى ربط محفظتك لعرض Star NFTs الخاصة بك",
+    "title": "Star NFT خطة نمو الأصول الرقمية",
+    "subtitle": "اختر واطلب Star NFT الخاص بك",
+    "noNFTs": "لم يتم العثور على Star NFTs",
+    
+    "tabs": {
+      "overview": "نظرة عامة",
+      "rewards": "المكافآت",
+      "tutorial": "الدليل التعليمي"
+    },
+
+    "levels": {
+      "title": "مستويات النجوم",
+      "vip1": {
+        "title": "VIP 1",
+        "investment": "500$ USDC",
+        "opsAllocation": "677 OPS",
+        "benefits": {
+          "tradingFee": "خصم 5% على رسوم التداول",
+          "referralBonus": "مكافأة إحالة 5%",
+          "idoAccess": "أولوية IDO الأساسية"
+        }
+      },
+      "vip2": {
+        "title": "VIP 2",
+        "investment": "1,000$ USDC",
+        "opsAllocation": "1,354 OPS",
+        "benefits": {
+          "tradingFee": "خصم 10% على رسوم التداول",
+          "referralBonus": "مكافأة إحالة 10%",
+          "idoAccess": "أولوية IDO متوسطة"
+        }
+      }
+    }
+  },
+
+  "nft": {
+    "info": {
+      "details": "تفاصيل NFT",
+      "sale": "معلومات البيع",
+      "price": "السعر",
+      "ratio": "النسبة",
+      "presale": "قيمة البيع المسبق",
+      "contract": "قيمة العقد",
+      "benefits": "المزايا",
+      "earnings": "الأرباح",
+      "levels": "المستويات",
+      "tiers": "الفئات",
+      "rollup": "التجميع",
+      "direct": "مباشر",
+      "generation": "الجيل",
+      "return": "معدل العائد"
+    }
+  },
+
+  "ops": {
+    "title": "بيع رمز OPS",
+    "stage": {
+      "title": "معلومات المرحلة",
+      "cycle": "الدورة الحالية",
+      "current": "المرحلة الحالية",
+      "price": "السعر الحالي",
+      "details": "تفاصيل المرحلة",
+      "sold": "تم البيع",
+      "total": "المجموع"
+    },
+    "airdrop": {
+      "title": "معلومات الإسقاط الجوي",
+      "total": "المبلغ الإجمالي",
+      "claimed": "المبلغ المطالب به",
+      "eligible": "العناوين المؤهلة",
+      "min": "الحد الأدنى للحيازة"
+    }
+  },
+
+  "presale": {
+    "stages": {
+      "title": "مراحل البيع المسبق",
+      "stage1": {
+        "number": "المرحلة 1/20",
+        "price": "$0.30",
+        "nextPrice": "$0.31",
+        "startDate": "البداية: 2024/12/7",
+        "endDate": "النهاية: 2024/12/8"
+      },
+      "stage2": {
+        "number": "المرحلة 2/20",
+        "price": "$0.31",
+        "nextPrice": "$0.32",
+        "startDate": "البداية: 2024/12/8",
+        "endDate": "النهاية: 2024/12/9"
+      }
+    },
+    "info": {
+      "currentCycle": "الدورة الحالية",
+      "stagesPerCycle": "20 مرحلة لكل دورة",
+      "opsPerStage": "100,000 OPS لكل مرحلة",
+      "priceIncrease": "زيادة $0.01 بعد كل مرحلة",
+      "totalSupply": "إجمالي العرض",
+      "calculation": "100,000 × 20 مرحلة"
+    }
+  },
+
+  "app": {
+    "nav": {
+      "home": "الرئيسية",
+      "community": "المجتمع",
+      "starNFT": "Star NFT",
+      "profile": "الملف الشخصي",
+      "referral": "الإحالة",
+      "star": "Star"
+    }
+  }
+} 
