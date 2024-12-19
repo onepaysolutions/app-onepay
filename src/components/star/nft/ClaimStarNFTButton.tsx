@@ -1,55 +1,79 @@
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { useActiveAccount, PayEmbed } from "thirdweb/react";
+import { useActiveWallet, PayEmbed } from "thirdweb/react";
 import { toast } from "react-hot-toast";
 import { claimTo } from "thirdweb/extensions/erc1155";
 import { ContractOptions } from "thirdweb";
 import { CONTRACT_ADDRESSES } from "@/config/contracts";
 import { supabase } from '@/lib/supabase';
 import client from "@/client";
-import { chain } from "@/chain";
+import { chain } from "@/config/chain";
 
 interface ClaimStarNFTProps {
   walletAddress: string;
-  tokenId: number;
+  selectedLevel: number;
   price: number;
   onSuccess?: () => void;
   onError?: (error: Error) => void;
   disabled?: boolean;
 }
 
-const MemoizedPayEmbed = memo(PayEmbed);
-
-export function ClaimStarNFTButton({ 
+export function ClaimStarNFTButton({
   walletAddress,
-  tokenId,
+  selectedLevel,
   price,
   onSuccess,
   onError,
   disabled
 }: ClaimStarNFTProps) {
   const { t } = useTranslation();
-  const account = useActiveAccount();
   const [showPayEmbed, setShowPayEmbed] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+
+  const tokenId = selectedLevel + 1;
 
   const handleClaimSuccess = useCallback(async (info: any) => {
     try {
       setIsProcessing(true);
 
-      // 记录 NFT 认领到数据库
-      const { error: nftError } = await supabase
-        .from('starnfts')
-        .insert({
-          walletaddress: walletAddress.toLowerCase(),
-          tokenid: tokenId,
-          txhash: info.transactionHash,
-          price: price,
-          status: 'ACTIVE',
-          claimedat: new Date().toISOString()
-        });
+      // 1. 获取 NFT 配置
+      const { data: nftConfig, error: configError } = await supabase
+        .from('starnftconfig')
+        .select('*')
+        .eq('tokenid', tokenId)
+        .single();
 
-      if (nftError) throw nftError;
+      if (configError) throw configError;
+
+      // 2. 获取当前阶段信息
+      const { data: currentStage, error: stageError } = await supabase
+        .from('stageview')
+        .select('*')
+        .single();
+
+      if (stageError) throw stageError;
+
+      // 3. 创建 NFT 认领记录
+      const { data: claimData, error: claimError } = await supabase
+        .from('starnftclaim')
+        .insert({
+          tokenid: tokenId,
+          walletaddress: walletAddress.toLowerCase(),
+          price: price,
+          claimdate: new Date().toISOString(),
+          claimstatus: 'claiming',
+          status: 'ACTIVE',
+          contractvalue: nftConfig.contractvalue,
+          presalevalue: nftConfig.presalevalue,
+          opebuybackvalue: nftConfig.opebuybackvalue,
+          rewardvalue: nftConfig.rewardvalue,
+          fundpoolvalue: nftConfig.fundpoolvalue,
+          opsamount: Math.floor(nftConfig.presalevalue / currentStage.stageprice)
+        })
+        .select()
+        .single();
+
+      if (claimError) throw claimError;
 
       toast.success(t("StarNFT claimed successfully"));
       onSuccess?.();
@@ -65,64 +89,77 @@ export function ClaimStarNFTButton({
 
   const handleClose = useCallback(() => setShowPayEmbed(false), []);
 
-  if (!account) return null;
-
   return (
     <>
       {!showPayEmbed ? (
         <button
           onClick={() => setShowPayEmbed(true)}
-          disabled={disabled || isProcessing}
-          className="w-full py-3 px-4 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-600/50 
-            rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+          disabled={disabled || isProcessing || selectedLevel === undefined}
+          className={`
+            w-full px-6 py-3 rounded-lg font-semibold text-white
+            transition-all duration-300 transform hover:scale-105
+            ${disabled || isProcessing || selectedLevel === undefined
+              ? 'bg-gray-600 cursor-not-allowed opacity-50'
+              : 'bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900'
+            }
+            flex items-center justify-center gap-2
+          `}
         >
           {isProcessing ? (
             <>
-              <div className="w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin" />
-              <span>{t('common.processing')}</span>
+              <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+              {t("Processing...")}
             </>
+          ) : selectedLevel === undefined ? (
+            t("Select NFT Level")
           ) : (
-            <span>{t('starNFT.claim')}</span>
+            <>
+              {t("Claim Star NFT Level {{level}}", { level: selectedLevel + 1 })}
+              <span className="text-sm opacity-80">({price} USDC)</span>
+            </>
           )}
         </button>
       ) : (
-        <>
-          <div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999]"
-            onClick={handleClose}
-          />
-          <div className="fixed inset-0 flex items-center justify-center z-[10000] p-4">
-            <div className="w-full max-w-[360px]">
-              <div className="bg-gradient-to-b from-[#1a1a1a] to-black rounded-xl overflow-hidden border border-purple-500/30">
-                <div className="p-4">
-                  <MemoizedPayEmbed
-                    client={client}
-                    className="w-full"
-                    payOptions={{
-                      mode: "transaction",
-                      transaction: claimTo({
-                        contract: {
-                          address: CONTRACT_ADDRESSES.STAR_NFT,
-                          client,
-                          chain,
-                        } as ContractOptions,
-                        to: walletAddress,
-                        quantity: 1n,
-                        tokenId: BigInt(tokenId),
-                      }),
-                      metadata: {
-                        name: "Star NFT",
-                        image: "https://example.com/star-nft.png",
-                      },
-                      onPurchaseSuccess: handleClaimSuccess,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
+        <PayEmbed
+          client={client}
+          className="w-full"
+          payOptions={{
+            mode: "transaction",
+            transaction: claimTo({
+              contract: {
+                address: CONTRACT_ADDRESSES.STAR_NFT,
+                client,
+                chain: {
+                  id: chain.chainId,
+                  rpc: chain.rpc[0],
+                },
+              } as ContractOptions,
+              to: walletAddress,
+              quantity: 1n,
+              tokenId: BigInt(tokenId),
+            }),
+            metadata: {
+              name: `Star NFT Level ${selectedLevel + 1}`,
+              image: `https://example.com/star-nft-${selectedLevel + 1}.png`,
+            },
+            onPurchaseSuccess: handleClaimSuccess,
+            buyWithCrypto: {
+              testMode: false,
+              prefillSource: {
+                chain: {
+                  rpc: "https://mainnet.optimism.io",
+                  id: 10,
+                },
+                token: {
+                  name: "USD Coin",
+                  address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+                  symbol: "USDC",
+                },
+              },
+            },
+          }}
+        />
       )}
     </>
   );
-} 
+}

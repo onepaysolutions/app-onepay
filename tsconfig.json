@@ -19,7 +19,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["react"]
   },
   "include": ["src/**/*", "ReferralLink.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]

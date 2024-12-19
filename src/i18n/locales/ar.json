@@ -11,14 +11,14 @@
   },
 
   "community": {
-    "title": "انضم إلى مجتمع OnePay",
-    "subtitle": "اطصل على Angel NFT وكن جزءًا من مجتمعنا الحصري",
+    "title": "انضم إلى مجتمعنا",
+    "subtitle": "كن عضواً في نظامنا البيئي المزدهر",
     "buttons": {
       "join": "انضم الآن",
       "learnOPE": "تعرف على رمز OPE"
     },
     "stats": {
-      "progress": "تقدم الطلب",
+      "progress": "تقدم النحت",
       "contractAddress": "عنوان العقد",
       "totalMinted": "إجمالي المسكوك",
       "totalValueLocked": "إجمالي القيمة المقفلة",
@@ -27,23 +27,30 @@
     },
     "benefits": {
       "membership": {
-        "title": "عضوية Angel NFT الحصرية",
-        "description": "احصل على وصول مدى الحياة للميزات والمزايا المتميزة"
+        "title": "عضوية حصرية",
+        "description": "الوصول إلى الميزات والمحتوى المميز"
       },
       "rewards": {
-        "title": "1000 رمز OPE كمكافأة",
-        "description": "اكسب رموز OPE من خلال المشاركة المجتمعية"
+        "title": "اكسب المكافآت",
+        "description": "احصل على مكافآت لمساهماتك"
       },
       "features": {
-        "title": "وصول للميزات الخاصة",
-        "description": "وصول مبكر للميزات والمنتجات الجديدة"
+        "title": "ميزات خاصة",
+        "description": "افتح قدرات فريدة للمنصة"
       },
       "voting": {
-        "title": "حقوق التصويت المجتمعية",
-        "description": "المشاركة في قرارات الحوكمة"
+        "title": "حقوق الحوكمة",
+        "description": "شارك في قرارات المجتمع"
       }
     },
-    "connectWallet": "يرجى توصيل المحفظة أولاً"
+    "connectWallet": "يرجى توصيل محفظتك للمتابعة",
+    "tutorial": {
+      "demo": {
+        "tryDemo": "جرب الوضع التجريبي",
+        "noRealTx": "لا توجد معاملات حقيقية",
+        "description": "أنت في الوضع التجريبي. لن يتم إجراء أي معاملات حقيقية."
+      }
+    }
   },
 
   "nav": {
@@ -80,7 +87,7 @@
         "opsAllocation": "677 OPS",
         "benefits": {
           "tradingFee": "خصم 5% على رسوم التداول",
-          "referralBonus": "مكافأة إحالة 5%",
+          "referralBonus": "مك��فأة إحالة 5%",
           "idoAccess": "أولوية IDO الأساسية"
         }
       },

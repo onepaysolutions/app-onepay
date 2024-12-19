@@ -11,19 +11,40 @@
   },
 
   "community": {
-    "title": "Der OnePay Community beitreten",
-    "subtitle": "Beanspruchen Sie Ihr Angel NFT und werden Sie Teil unserer exklusiven Community",
-    "buttons": {
-      "join": "Jetzt beitreten",
-      "learnOPE": "Mehr über OPE Token erfahren"
-    },
+    "title": "Treten Sie Unserer Community Bei",
+    "subtitle": "Werden Sie Teil unseres florierenden Ökosystems",
     "stats": {
-      "progress": "Claim-Fortschritt",
-      "contractAddress": "Vertragsadresse",
-      "totalMinted": "Gesamt geprägt",
-      "totalValueLocked": "Gesamt-TVL",
-      "totalRewards": "Gesamtbelohnungen",
-      "averagePrice": "Durchschnittspreis"
+      "progress": "Minting-Fortschritt",
+      "contractAddress": "Vertragsadresse"
+    },
+    "benefits": {
+      "membership": {
+        "title": "Exklusive Mitgliedschaft",
+        "description": "Zugang zu Premium-Funktionen und Inhalten"
+      },
+      "rewards": {
+        "title": "Verdienen Sie Belohnungen",
+        "description": "Werden Sie für Ihre Beiträge belohnt"
+      },
+      "features": {
+        "title": "Spezielle Funktionen",
+        "description": "Schalten Sie einzigartige Plattformfunktionen frei"
+      },
+      "voting": {
+        "title": "Governance-Rechte",
+        "description": "Nehmen Sie an Community-Entscheidungen teil"
+      }
+    },
+    "connectWallet": "Bitte verbinden Sie Ihre Wallet, um fortzufahren",
+    "tutorial": {
+      "demo": {
+        "tryDemo": "Demo-Modus ausprobieren",
+        "noRealTx": "Keine echten Transaktionen",
+        "description": "Sie befinden sich im Demo-Modus. Es werden keine echten Transaktionen durchgeführt."
+      }
+    },
+    "buttons": {
+      "learnOPE": "Mehr über OPE erfahren"
     }
   },
 

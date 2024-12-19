@@ -8,7 +8,7 @@ import { claimTo } from "thirdweb/extensions/erc1155";
 import { ContractOptions } from "thirdweb";
 import { CONTRACT_ADDRESSES } from '@/config/contracts';
 import client from "@/client";
-import { chain } from "@/chain";
+import { chain } from "@/config/chain";
 import { ClaimTutorialGuide } from '../../tutorial/ClaimTutorialGuide';
 import { supabase } from "@/lib/supabase";
 import nftOperations from "@/lib/supabase/supabase";
@@ -23,6 +23,15 @@ interface ClaimButton2Props {
 }
 
 const MemoizedPayEmbed = memo(PayEmbed);
+
+const chainConfig = {
+  id: chain.chainId,
+  rpc: chain.rpc[0],
+  nativeCurrency: chain.nativeCurrency,
+  name: chain.name,
+  chain: chain.chain,
+  testnet: true // 强制设置为 true 以匹配 ContractOptions 类型
+} as const;
 
 export function ClaimButton2({
   walletAddress,
@@ -233,8 +242,8 @@ export function ClaimButton2({
                         contract: {
                           address: CONTRACT_ADDRESSES.ANGEL_NFT,
                           client,
-                          chain,
-                        } as ContractOptions,
+                          chain: chainConfig,
+                        } as unknown as ContractOptions,
                         to: walletAddress,
                         quantity: 1n,
                         tokenId: 0n,

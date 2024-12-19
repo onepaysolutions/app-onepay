@@ -5,7 +5,7 @@ import { useActiveAccount } from "thirdweb/react";
 import { InfoSlider } from '@/components/community/info/InfoSlider';
 import { useNavigate } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
-import { Header } from '@/components/common/layout/Header';
+import { Header } from '@/components/layout/Header';
 
 export function OPEPage() {
   const { t } = useTranslation();

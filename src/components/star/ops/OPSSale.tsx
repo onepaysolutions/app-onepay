@@ -1,55 +1,45 @@
-import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from './OPSSale.module.css';
-import { supabase } from '../../lib/supabase';
 
-interface StageInfo {
-  currentstage: number;
-  totalminted: number;
-  stagelimit: number;
-  currentprice: string;
-  nextprice: string;
+interface OPSSaleProps {
+  currentCycle: number;
+  currentStage: number;
+  totalStages: number;
   progress: number;
 }
 
-export function OPSSale() {
+export function OPSSale({ currentCycle, currentStage, totalStages, progress }: OPSSaleProps) {
   const { t } = useTranslation();
-  const [stageInfo, setStageInfo] = useState<StageInfo | null>(null);
-
-  useEffect(() => {
-    const fetchStageInfo = async () => {
-      const { data, error } = await supabase
-        .from('currentstageview')
-        .select('*')
-        .single();
-
-      if (!error && data) {
-        setStageInfo(data);
-      }
-    };
-
-    fetchStageInfo();
-  }, []);
-
-  if (!stageInfo) return null;
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <h2>Stage {stageInfo.currentstage}</h2>
-        <div className={styles.progress}>
-          {stageInfo.progress.toFixed(2)}%
-        </div>
-      </div>
-      
-      <div className={styles.prices}>
+    <div className="bg-gradient-to-b from-purple-900/40 to-black/40 rounded-lg p-6 backdrop-blur-sm border border-purple-500/20">
+      <div className="space-y-6">
         <div>
-          <p>Current Price</p>
-          <p>${Number(stageInfo.currentprice) / 10**18}</p>
+          <h3 className="text-xl font-bold mb-2">{t('ops.sale.title')}</h3>
+          <p className="text-sm text-gray-400">{t('ops.sale.description')}</p>
         </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <p className="text-sm text-gray-400">{t('ops.sale.cycle')}</p>
+            <p className="text-2xl font-bold">#{currentCycle}</p>
+          </div>
+          <div>
+            <p className="text-sm text-gray-400">{t('ops.sale.stage')}</p>
+            <p className="text-2xl font-bold">{currentStage}/{totalStages}</p>
+          </div>
+        </div>
+
         <div>
-          <p>Next Price</p>
-          <p>${Number(stageInfo.nextprice) / 10**18}</p>
+          <div className="flex justify-between text-sm mb-2">
+            <span className="text-gray-400">{t('ops.sale.progress')}</span>
+            <span className="text-purple-400">{progress}%</span>
+          </div>
+          <div className="h-2 bg-black/40 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-500"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
         </div>
       </div>
     </div>

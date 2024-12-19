@@ -1,42 +1,30 @@
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { RouterProvider } from 'react-router-dom';
-import { router } from './router';
-import { LoadingScreen } from '@/components/common/LoadingScreen';
-import { ThirdwebProvider } from "thirdweb/react";
-import { optimism } from "thirdweb/chains";
-import { Toaster } from 'react-hot-toast';
-import { ErrorBoundary } from '@/components/ErrorBoundary';
-
-const THIRDWEB_CLIENT_ID = "26e654d5187f29b971bd69e6ff677afa";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThirdwebProvider } from 'thirdweb/react';
+import { MainLayout } from '@/components/layout/MainLayout';
+import { LandingPage } from '@/pages/landing/LandingPage';
+import { Home } from '@/pages/home/Home';
+import { Community } from '@/pages/community';
+import { StarNFT } from '@/pages/star-nft/StarNFT';
+import { ReferralPage } from '@/pages/referral/ReferralPage';
+import { Profile } from '@/pages/profile';
+import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 
 export function App() {
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') || 'en';
-    i18n.changeLanguage(savedLanguage);
-  }, [i18n]);
-
   return (
-    <ErrorBoundary>
-      <ThirdwebProvider 
-      >
-        <RouterProvider 
-          router={router} 
-          fallbackElement={<LoadingScreen />} 
-        />
-        <Toaster
-          position="top-right"
-          toastOptions={{
-            duration: 5000,
-            style: {
-              background: '#333',
-              color: '#fff',
-            },
-          }}
-        />
-      </ThirdwebProvider>
-    </ErrorBoundary>
+    <ThirdwebProvider>
+      <Router>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/home" element={<MainLayout><Home /></MainLayout>} />
+            <Route path="/community" element={<MainLayout><Community /></MainLayout>} />
+            <Route path="/star-nft" element={<MainLayout><StarNFT /></MainLayout>} />
+            <Route path="/referral" element={<MainLayout><ReferralPage /></MainLayout>} />
+            <Route path="/referral/:tab" element={<MainLayout><ReferralPage /></MainLayout>} />
+            <Route path="/profile" element={<MainLayout><Profile /></MainLayout>} />
+          </Routes>
+        </ErrorBoundary>
+      </Router>
+    </ThirdwebProvider>
   );
 }

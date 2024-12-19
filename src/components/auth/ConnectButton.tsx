@@ -8,6 +8,7 @@ import { supabase } from "@/lib/supabase/supabase";
 import { toast } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 import { Notification } from '@/components/common/Notification';
+import { useActiveWallet } from "thirdweb/react";
 
 // 创建客户端实例
 const client = createThirdwebClient({
@@ -43,19 +44,21 @@ const wallets = [
 
 interface ConnectButtonProps {
   style?: React.CSSProperties;
+  onConnect?: () => void;
 }
 
-export function ConnectButton({ style }: ConnectButtonProps) {
+export function ConnectButton({ style, onConnect }: ConnectButtonProps) {
   const [searchParams] = useSearchParams();
   const [isProcessing, setIsProcessing] = useState(false);
   const { t } = useTranslation();
-  const account = useActiveAccount();
+  const address = useActiveWallet();
   const [notification, setNotification] = useState<{
     type: 'success' | 'error' | 'info';
     title: string;
     message: string;
     isOpen: boolean;
   } | null>(null);
+  const account = useActiveAccount();
 
   const showNotification = (type: 'success' | 'error' | 'info', title: string, message: string) => {
     setNotification({ type, title, message, isOpen: true });
@@ -210,11 +213,9 @@ export function ConnectButton({ style }: ConnectButtonProps) {
         onConnect={async (connection: any) => {
           try {
             console.log("Connection data:", connection);
-            // 直接从 connection 对象获取地址
             const addressObj = connection.getAccount();
             console.log("Got address:", addressObj);
-
-            // 从地址对象中提取实际的地址字符串
+            
             let actualAddress = '';
             if (typeof addressObj === 'object' && addressObj.address) {
               actualAddress = addressObj.address;
@@ -224,16 +225,16 @@ export function ConnectButton({ style }: ConnectButtonProps) {
             } else if (typeof addressObj === 'string') {
               actualAddress = addressObj;
             }
-
+            
             console.log("Actual address:", actualAddress);
-
+            
             if (!actualAddress) {
               console.error("No valid address found");
               return;
             }
-
-            // 使用实际的地址字符串
+            
             await handleLogin(actualAddress);
+            onConnect?.();
           } catch (error) {
             console.error("Connection error:", error);
             if (error instanceof Error && error.message !== "User closed login window") {

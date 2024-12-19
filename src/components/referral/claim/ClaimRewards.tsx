@@ -32,7 +32,7 @@ export function ClaimRewards({ address }: ClaimRewardsProps) {
           <div className={styles.rewardCard}>
             <div className="flex justify-between items-center">
               <span>{t("Direct Rewards")}</span>
-              <span className="text-xl font-bold">0.00 OPE</span>
+              <span className="text-xl font-bold">0.00 USDC</span>
             </div>
           </div>
 
@@ -40,7 +40,7 @@ export function ClaimRewards({ address }: ClaimRewardsProps) {
           <div className={styles.rewardCard}>
             <div className="flex justify-between items-center">
               <span>{t("Pair Rewards")}</span>
-              <span className="text-xl font-bold">0.00 OPE</span>
+              <span className="text-xl font-bold">0.00 USDC</span>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export function ClaimRewards({ address }: ClaimRewardsProps) {
           <div className={styles.rewardCard}>
             <div className="flex justify-between items-center">
               <span>{t("Glory Rewards")}</span>
-              <span className="text-xl font-bold">0.00 OPE</span>
+              <span className="text-xl font-bold">0.00 USDC</span>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export function ClaimRewards({ address }: ClaimRewardsProps) {
         <div className={`flex justify-between items-center pt-4 ${styles.divider}`}>
           <div>
             <p className="text-sm text-gray-400">{t("Total Claimable")}</p>
-            <p className="text-2xl font-bold">0.00 OPE</p>
+            <p className="text-2xl font-bold">0.00 USDC</p>
           </div>
           <button
             onClick={handleClaim}

@@ -1,0 +1,142 @@
+.container {
+  @apply space-y-6;
+}
+
+/* 统计概览 */
+.statsGrid {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-4;
+}
+
+.statCard {
+  @apply flex items-center gap-4 p-4 bg-purple-900/20 rounded-xl 
+    border border-purple-500/20 transition-all duration-200
+    hover:border-purple-500/30;
+}
+
+.statIcon {
+  @apply w-8 h-8 text-purple-400;
+}
+
+.statValue {
+  @apply block text-xl font-bold text-purple-400;
+}
+
+.statLabel {
+  @apply block text-sm text-gray-400;
+}
+
+/* 代数选择器 */
+.tabsContainer {
+  @apply bg-purple-900/20 rounded-xl border border-purple-500/20 p-2;
+}
+
+.tabs {
+  @apply grid grid-cols-3 gap-2;
+}
+
+.tab {
+  @apply flex flex-col items-center justify-center p-3 rounded-lg
+    transition-all duration-200 hover:bg-purple-500/10;
+}
+
+.tab.active {
+  @apply bg-purple-500/20 text-purple-400;
+}
+
+.tabLabel {
+  @apply text-sm font-medium;
+}
+
+.tabRate {
+  @apply text-xs text-green-400 mt-1;
+}
+
+/* 会员列表 */
+.membersList {
+  @apply space-y-3;
+}
+
+.memberCard {
+  @apply relative bg-purple-900/20 rounded-xl border border-purple-500/20 
+    p-4 transition-all duration-200;
+}
+
+.memberInfo {
+  @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2;
+}
+
+.memberStatus {
+  @apply flex items-center gap-2;
+}
+
+.statusDot {
+  @apply w-2 h-2 rounded-full bg-gray-500;
+}
+
+.statusDot.active {
+  @apply bg-green-400;
+}
+
+.memberAddress {
+  @apply text-sm font-medium;
+}
+
+.memberEarnings {
+  @apply flex items-center gap-2;
+}
+
+.earningsLabel {
+  @apply text-sm text-gray-400;
+}
+
+.earningsValue {
+  @apply text-sm font-medium text-purple-400;
+}
+
+.inactiveOverlay {
+  @apply absolute inset-0 flex items-center justify-center
+    bg-black/40 backdrop-blur-[1px] rounded-xl;
+}
+
+.inactiveLabel {
+  @apply text-sm text-gray-400;
+}
+
+/* 移动端优化 */
+@media (max-width: 640px) {
+  .statsGrid {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .statCard {
+    @apply p-3;
+  }
+
+  .statIcon {
+    @apply w-6 h-6;
+  }
+
+  .statValue {
+    @apply text-lg;
+  }
+
+  .tab {
+    @apply p-2;
+  }
+
+  .tabLabel {
+    @apply text-xs;
+  }
+
+  .tabRate {
+    @apply text-[10px];
+  }
+
+  .memberCard {
+    @apply p-3;
+  }
+
+  .memberInfo {
+    @apply flex-col gap-1;
+  }
+} 

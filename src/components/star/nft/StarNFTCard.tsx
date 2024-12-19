@@ -1,93 +1,83 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { ClaimStarNFTButton } from './ClaimStarNFTButton';
 import { NFTBadge } from './NFTBadge';
-
-interface NFTData {
-  tokenId: number;
-  starLevel: number;
-  contractValue: string;
-  opsHolding: string;
-  opsRewards: string;
-  currentValue: string;
-  releaseRate: string;
-}
+import { useActiveAccount } from "thirdweb/react";
 
 interface StarNFTCardProps {
-  nft: NFTData;
+  level: number;
+  price: number;
+  opsAllocation: number;
+  benefits: string[];
+  isSelected?: boolean;
+  onSelect?: () => void;
 }
 
-export function StarNFTCard({ nft }: StarNFTCardProps) {
+export function StarNFTCard({ 
+  level, 
+  price, 
+  opsAllocation, 
+  benefits,
+  isSelected,
+  onSelect 
+}: StarNFTCardProps) {
   const { t } = useTranslation();
+  const account = useActiveAccount();
+
+  if (!account) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-gradient-to-b from-purple-900/40 to-black/40 rounded-lg p-4 backdrop-blur-sm border border-purple-500/20"
+    <motion.div 
+      onClick={onSelect}
+      className={`
+        bg-gradient-to-b from-purple-900/40 to-black/40 rounded-lg p-6 
+        backdrop-blur-sm border transition-all cursor-pointer
+        ${isSelected 
+          ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
+          : 'border-purple-500/20 hover:border-purple-500/40'
+        }
+      `}
+      whileHover={{ scale: 1.02 }}
     >
-      {/* NFT 头部信息 - 更紧凑的布局 */}
-      <div className="flex items-center gap-3 mb-4">
-        <div className="relative w-10 h-10">
-          <NFTBadge level={nft.starLevel} size={40} />
-        </div>
+      <div className="flex items-center gap-4 mb-6">
+        <NFTBadge level={level} size={48} />
         <div>
-          <h3 className="text-base font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            {t(`starNFT.levels.vip${nft.starLevel}.title`)}
+          <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            {t(`starNFT.levels.vip${level}.title`)}
           </h3>
-          <p className="text-sm text-gray-400">
-            Token #{nft.tokenId}
-          </p>
+          <p className="text-sm text-purple-400">{level}x Multiplier</p>
         </div>
       </div>
 
-      {/* NFT 数据 - 更紧凑的网格布局 */}
-      <div className="grid grid-cols-2 gap-3 text-sm">
-        <div className="bg-black/30 rounded-lg p-3">
-          <p className="text-xs text-gray-400 mb-1">{t("Contract Value")}</p>
-          <p className="font-medium">
-            ${Number(nft.contractValue).toLocaleString()}
-          </p>
-        </div>
-        <div className="bg-black/30 rounded-lg p-3">
-          <p className="text-xs text-gray-400 mb-1">{t("Current Value")}</p>
-          <p className="font-medium">
-            ${Number(nft.currentValue).toLocaleString()}
-          </p>
-        </div>
-        <div className="bg-black/30 rounded-lg p-3">
-          <p className="text-xs text-gray-400 mb-1">{t("OPS Holding")}</p>
-          <p className="font-medium">
-            {Number(nft.opsHolding).toLocaleString()} OPS
-          </p>
-        </div>
-        <div className="bg-black/30 rounded-lg p-3">
-          <p className="text-xs text-gray-400 mb-1">{t("OPS Rewards")}</p>
-          <p className="font-medium">
-            {Number(nft.opsRewards).toLocaleString()} OPS
-          </p>
-        </div>
-      </div>
-
-      {/* Release Rate - 底部操作栏 */}
-      <div className="mt-3 bg-black/30 rounded-lg p-3 flex items-center justify-between">
+      <div className="space-y-4 mb-6">
         <div>
-          <p className="text-xs text-gray-400 mb-1">{t("Release Rate")}</p>
-          <p className="font-medium">
-            {Number(nft.releaseRate)}%
-          </p>
+          <p className="text-sm text-gray-400">{t("starNFT.price")}</p>
+          <p className="text-2xl font-bold">${price.toLocaleString()}</p>
         </div>
-        <button
-          onClick={() => {
-            // TODO: 实现释放功能
-            console.log('Release NFT:', nft.tokenId);
-          }}
-          className="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 rounded text-xs font-medium transition-colors"
-        >
-          {t("Release")}
-        </button>
+
+        <div>
+          <p className="text-sm text-gray-400">{t("starNFT.allocation")}</p>
+          <p className="text-lg text-purple-400">{opsAllocation.toLocaleString()} OPS</p>
+        </div>
+
+        <div>
+          <p className="text-sm text-gray-400 mb-2">{t("starNFT.benefits")}</p>
+          <ul className="space-y-2">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="flex items-center gap-2 text-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                {t(benefit)}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+
+      <ClaimStarNFTButton 
+        walletAddress={account.address}
+        selectedLevel={level - 1}
+        price={price}
+      />
     </motion.div>
   );
-}
-
-export default StarNFTCard; 
+} 

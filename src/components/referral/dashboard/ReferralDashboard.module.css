@@ -1,94 +1,152 @@
 .container {
-  @apply space-y-6 md:space-y-8;
+  @apply space-y-6 w-full max-w-7xl mx-auto p-4;
 }
 
-.section {
-  @apply bg-purple-900/20 rounded-xl border border-purple-500/20 
-    backdrop-blur-md overflow-hidden transition-all duration-300
-    hover:border-purple-500/30;
+/* 顶部推荐链接区域 */
+.linkSection {
+  @apply bg-purple-900/20 rounded-xl p-6 border border-purple-500/20;
 }
 
-.sectionHeader {
-  @apply flex items-center justify-between px-6 py-4 
-    border-b border-purple-500/10;
+/* 主网格布局 */
+.mainGrid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
 }
 
-.sectionTitle {
-  @apply text-lg font-semibold flex items-center gap-2;
+/* 左侧列 */
+.leftColumn {
+  @apply space-y-6;
 }
 
-.sectionIcon {
-  @apply text-purple-400;
+/* 右侧列 */
+.rightColumn {
+  @apply space-y-6;
 }
 
-.sectionContent {
-  @apply p-6;
+/* 卡片基础样式 */
+.rewardCard,
+.treeCard,
+.gloryCard {
+  @apply bg-purple-900/20 rounded-xl border border-purple-500/20 overflow-hidden;
 }
 
-.chart {
-  @apply relative h-[400px] w-full;
+/* 卡片标题 */
+.cardTitle {
+  @apply text-lg font-semibold p-4 border-b border-purple-500/20 
+    bg-gradient-to-r from-purple-500/10 to-purple-900/10;
 }
 
-.chartContainer {
-  @apply absolute inset-0;
+/* 荣耀奖励卡片内容 */
+.gloryContent {
+  @apply p-6 space-y-6;
+}
+
+.gloryStats {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.gloryStat {
+  @apply flex flex-col gap-1;
+}
+
+.gloryLabel {
+  @apply text-sm text-gray-400;
+}
+
+.gloryValue {
+  @apply text-2xl font-bold text-purple-400;
+}
+
+.gloryProgress {
+  @apply space-y-2;
+}
+
+.progressLabel {
+  @apply flex justify-between text-sm text-gray-400;
+}
+
+.progressBar {
+  @apply h-2 bg-purple-900/40 rounded-full overflow-hidden;
+}
+
+.progressFill {
+  @apply h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full 
+    transition-all duration-500 ease-out;
+}
+
+/* 底部领取奖励区域 */
+.claimSection {
+  @apply bg-purple-900/20 rounded-xl p-6 border border-purple-500/20;
 }
 
 /* 响应式调整 */
-@media (max-width: 768px) {
-  .container {
-    @apply space-y-4;
+@media (max-width: 1024px) {
+  .mainGrid {
+    @apply grid-cols-1;
   }
-
-  .sectionHeader {
-    @apply px-4 py-3;
-  }
-
-  .sectionTitle {
-    @apply text-base;
-  }
-
-  .sectionContent {
-    @apply p-4;
-  }
-
-  .chart {
-    @apply h-[300px];
+  
+  .gloryStats {
+    @apply grid-cols-2;
   }
 }
 
-/* 动画效果 */
-.fadeIn {
-  @apply animate-fade;
+/* 三区进度 */
+.zoneProgress {
+  @apply space-y-4;
 }
 
-.slideIn {
-  @apply animate-slide-in;
+.zoneCard {
+  @apply bg-purple-900/30 rounded-lg p-4;
 }
 
-.slideUp {
-  @apply animate-slide-up;
+.zoneHeader {
+  @apply flex justify-between items-center mb-2;
 }
 
-/* 加载状态 */
-.skeleton {
-  @apply animate-pulse bg-purple-900/30 rounded-lg;
+.zoneLabel {
+  @apply text-sm font-medium;
 }
 
-.skeletonText {
-  @apply h-4 bg-purple-900/30 rounded;
+.zoneValue {
+  @apply text-sm text-gray-400;
 }
 
-/* 卡片悬浮效果 */
-.card {
-  @apply transition-all duration-300 hover:transform hover:-translate-y-1;
+.minZoneInfo {
+  @apply flex justify-between items-center mt-2 px-4 py-2
+    bg-purple-900/20 rounded-lg border border-purple-500/20;
 }
 
-/* 渐变背景 */
-.gradientBg {
-  @apply bg-gradient-to-br from-purple-500/5 via-purple-900/10 to-black/20;
+.minZoneLabel {
+  @apply text-sm text-gray-400;
 }
 
-/* 玻璃态效果 */
-.glassEffect {
-  @apply backdrop-blur-md bg-white/5;
-} 
+.minZoneValue {
+  @apply text-sm font-medium text-purple-400;
+}
+
+/* 进度条样式优化 */
+.progressBar {
+  @apply h-2 bg-purple-900/40 rounded-full overflow-hidden;
+}
+
+.progressFill {
+  @apply h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full 
+    transition-all duration-500 ease-out;
+}
+
+/* 移动端优化 */
+@media (max-width: 640px) {
+  .zoneCard {
+    @apply p-3;
+  }
+  
+  .zoneLabel,
+  .zoneValue,
+  .minZoneLabel,
+  .minZoneValue {
+    @apply text-xs;
+  }
+  
+  .progressBar {
+    @apply h-1.5;
+  }
+}

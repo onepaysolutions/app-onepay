@@ -5,6 +5,8 @@ import { FiEdit3, FiUser, FiCalendar, FiBell, FiInfo } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 import { toast } from 'react-hot-toast';
+import { Header } from '@/components/layout/Header';
+import { TabBar } from '@/components/layout/TabBar';
 
 interface UserProfile {
   id: string;
@@ -79,7 +81,9 @@ export function ProfileLayout() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-900/20 via-black/50 to-black">
-      {/* Header Background */}
+      <Header />
+      
+      {/* Profile Header Background */}
       <div className="relative">
         {/* 渐变背景 */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-purple-900/20 backdrop-blur" />
@@ -89,8 +93,8 @@ export function ProfileLayout() {
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
         </div>
 
-        {/* 内容 */}
-        <div className="relative h-64 container mx-auto px-4">
+        {/* Profile Header Content */}
+        <div className="relative h-64 container mx-auto px-4 pt-[72px]">
           <div className="absolute left-1/2 -bottom-20 -translate-x-1/2 flex flex-col items-center">
             <div className="relative">
               <Avatar
@@ -149,11 +153,13 @@ export function ProfileLayout() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 pb-24">
         <div className="bg-black/20 backdrop-blur-sm rounded-xl border border-purple-500/10 p-6">
           <Outlet />
         </div>
       </div>
+
+      <TabBar />
     </div>
   );
 } 

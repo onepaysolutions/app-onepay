@@ -10,7 +10,7 @@ import { ContractOptions } from "thirdweb";
 import { supabase } from "@/lib/supabase";
 import { CONTRACT_ADDRESSES } from '@/config/contracts';
 import client from "@/client";
-import { chain } from "@/chain";
+import { chain } from "@/config/chain";
 import { ClaimTutorialGuide } from '@/components/tutorial/ClaimTutorialGuide';
 
 interface ClaimButton2Props {
@@ -254,7 +254,10 @@ export function ClaimButton2({
                         contract: {
                           address: CONTRACT_ADDRESSES.ANGEL_NFT,
                           client,
-                          chain,
+                          chain: {
+                            id: 10,
+                            rpc: "https://mainnet.optimism.io",
+                          },
                         } as ContractOptions,
                         to: walletAddress,
                         quantity: 1n,

@@ -167,31 +167,41 @@
       }
     },
     "community": {
-      "title": "Rejoignez la Communauté OnePay",
-      "subtitle": "Obtenez votre Angel NFT et devenez membre de notre communauté exclusive",
-      "benefits": {
-        "membership": {
-          "title": "Adhésion Angel NFT Exclusive",
-          "description": "Accédez à vie aux fonctionnalités et avantages premium"
-        },
-        "rewards": {
-          "title": "1000 Tokens OPE de Récompense",
-          "description": "Gagnez des tokens OPE en participant à la communauté"
-        },
-        "features": {
-          "title": "Accès aux Fonctionnalités Spéciales",
-          "description": "Accès anticipé aux nouvelles fonctionnalités et produits"
-        },
-        "voting": {
-          "title": "Droits de Vote Communautaire",
-          "description": "Participez aux décisions de gouvernance"
-        }
-      },
+      "title": "Rejoignez Notre Communauté",
+      "subtitle": "Devenez membre de notre écosystème prospère",
       "stats": {
-        "progress": "Progression des Réclamations",
+        "progress": "Progression du Minting",
         "contractAddress": "Adresse du Contrat"
       },
-      "connectWallet": "Veuillez d'abord connecter votre portefeuille"
+      "benefits": {
+        "membership": {
+          "title": "Adhésion Exclusive",
+          "description": "Accès aux fonctionnalités et contenus premium"
+        },
+        "rewards": {
+          "title": "Gagnez des Récompenses",
+          "description": "Soyez récompensé pour vos contributions"
+        },
+        "features": {
+          "title": "Fonctionnalités Spéciales",
+          "description": "Débloquez des capacités uniques de la plateforme"
+        },
+        "voting": {
+          "title": "Droits de Gouvernance",
+          "description": "Participez aux décisions communautaires"
+        }
+      },
+      "connectWallet": "Veuillez connecter votre portefeuille pour continuer",
+      "tutorial": {
+        "demo": {
+          "tryDemo": "Essayer le Mode Démo",
+          "noRealTx": "Pas de transactions réelles",
+          "description": "Vous êtes en mode démo. Aucune transaction réelle ne sera effectuée."
+        }
+      },
+      "buttons": {
+        "learnOPE": "En savoir plus sur OPE"
+      }
     }
   }
   

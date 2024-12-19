@@ -1,15 +1,15 @@
 import { ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 
 interface MainProps {
   children: ReactNode;
+  className?: string;
 }
 
-export function Main({ children }: MainProps) {
+export function Main({ children, className }: MainProps) {
   return (
-    <main className="flex-1">
-      <div className="container mx-auto px-4">
-        {children}
-      </div>
+    <main className={cn("flex-1", className)}>
+      {children}
     </main>
   );
 } 

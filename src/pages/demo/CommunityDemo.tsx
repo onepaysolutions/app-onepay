@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { ClaimButton2 } from "@/components/community/angel/ClaimButton2";
-import { Header } from "@/components/common/layout/Header";
+import { Header } from "@/components/layout/Header";
 
 const benefits = [
   {

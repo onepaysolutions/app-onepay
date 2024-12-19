@@ -302,7 +302,47 @@
       "level": "Level Rewards",
       "pending": "Pending Rewards",
       "claimed": "Claimed Rewards",
-      "total": "Total Rewards"
+      "total": "Total Rewards",
+      "tier": {
+        "title": "Tier Rewards",
+        "subtitle": "Level up Star Badge to unlock more rewards",
+        "stats": {
+          "totalRewards": "Total Rewards",
+          "claimedRewards": "Claimed Rewards",
+          "rollupRewards": "Rollup Rewards"
+        },
+        "badges": {
+          "star1": "Star Badge I",
+          "star2": "Star Badge II",
+          "star3": "Star Badge III",
+          "star4": "Star Badge IV"
+        },
+        "noNFT": "Get Star Badge to unlock tier rewards"
+      },
+      "directTier": {
+        "gen1": {
+          "title": "First Generation Rewards",
+          "description": "5% rewards from direct referrals"
+        },
+        "gen2": {
+          "title": "Second Generation Rewards",
+          "description": "3% rewards from second-gen referrals"
+        },
+        "gen3": {
+          "title": "Third Generation Rewards",
+          "description": "2% rewards from third-gen referrals"
+        },
+        "stats": {
+          "totalReferrals": "Total Referrals",
+          "totalRewards": "Total Rewards",
+          "activeGenerations": "Active Generations"
+        },
+        "requirements": {
+          "badge": "Required Badge Level",
+          "commission": "Total Commission"
+        }
+      },
+      "noNFT": "Please get Star NFT to activate referral rewards"
     },
     "tree": {
       "title": "Referral Tree",
@@ -311,6 +351,72 @@
       "starActivated": "Star NFT Activated",
       "level": "Level",
       "zone": "Zone"
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "directTier": "Direct Tier",
+      "tree": "Referral Tree",
+      "tierRewards": "Tier Rewards",
+      "gloryRewards": "Glory Rewards"
+    },
+    "dashboard": {
+      "stats": {
+        "totalEarnings": "Total Earnings",
+        "totalRollups": "Total Roll-ups",
+        "activeMembers": "Active Members",
+        "inactiveMembers": "Inactive Members"
+      }
+    },
+    "tierRewards": {
+      "groups": {
+        "basic": "Basic Tier Rewards",
+        "intermediate": "Intermediate Tier Rewards",
+        "advanced": "Advanced Tier Rewards",
+        "elite": "Elite Tier Rewards"
+      },
+      "starNFT": {
+        "required": "Requires Star NFT Level {{level}}"
+      },
+      "status": {
+        "locked": "Locked",
+        "active": "Active",
+        "inactive": "Inactive"
+      }
+    },
+    "directTier": {
+      "generations": {
+        "first": "First Generation",
+        "second": "Second Generation",
+        "third": "Third Generation"
+      },
+      "stats": {
+        "totalDirects": "Total Directs",
+        "activeMembers": "Active Members",
+        "totalEarnings": "Total Earnings",
+        "earnings": "Earnings"
+      }
+    },
+    "glory": {
+      "stats": {
+        "totalPoints": "Total Glory Points",
+        "currentRank": "Current Rank",
+        "nextRank": "Progress to Next Rank"
+      },
+      "zones": {
+        "left": "Left Zone",
+        "middle": "Middle Zone",
+        "right": "Right Zone",
+        "minProgress": "Minimum Zone Progress"
+      }
+    },
+    "tree": {
+      "title": "Referral Network",
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "level": "Level {{level}}",
+      "zone": "{{zone}} Zone"
     }
   },
 
@@ -339,6 +445,33 @@
       },
       "info": {
         "title": "Information"
+      }
+    }
+  },
+
+  "ops": {
+    "sale": {
+      "title": "OPS Presale Progress",
+      "description": "Track the current presale progress and participate in the OPS token sale",
+      "cycle": "Current Cycle",
+      "stage": "Current Stage",
+      "progress": "Progress",
+      "currentPrice": "Current Price",
+      "nextPrice": "Next Price",
+      "totalSupply": "Total Supply",
+      "soldAmount": "Sold Amount"
+    },
+    "calculator": {
+      "title": "OPS Airdrop Calculator",
+      "description": "Calculate your potential OPS token airdrop",
+      "input": {
+        "label": "Enter OPS amount",
+        "placeholder": "Enter the amount of OPS tokens"
+      },
+      "calculate": "Calculate Airdrop",
+      "result": {
+        "title": "Estimated Airdrop Amount",
+        "description": "Your estimated airdrop based on the current ratio"
       }
     }
   }

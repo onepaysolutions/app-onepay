@@ -1,18 +1,58 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { FiHome, FiStar, FiUsers, FiUser } from 'react-icons/fi';
+import { 
+  IoPeopleOutline,
+  IoPeople,
+  IoStarOutline,
+  IoStar,
+  IoShareSocialOutline,
+  IoShareSocial,
+  IoPersonOutline,
+  IoPerson
+} from "react-icons/io5";
 import { cn } from '@/lib/utils';
 
-export function TabBar() {
-  const { t } = useTranslation();
-  const location = useLocation();
+const tabs = [
+  { 
+    path: '/community', 
+    icon: IoPeopleOutline,
+    activeIcon: IoPeople,
+    labels: {
+      en: 'Community',
+      zh: '社区'
+    }
+  },
+  { 
+    path: '/star-nft', 
+    icon: IoStarOutline,
+    activeIcon: IoStar,
+    labels: {
+      en: 'STAR',
+      zh: 'STAR'
+    }
+  },
+  { 
+    path: '/referral', 
+    icon: IoShareSocialOutline,
+    activeIcon: IoShareSocial,
+    labels: {
+      en: 'Referral',
+      zh: '推荐'
+    }
+  },
+  { 
+    path: '/profile', 
+    icon: IoPersonOutline,
+    activeIcon: IoPerson,
+    labels: {
+      en: 'Profile',
+      zh: '我的'
+    }
+  }
+];
 
-  const tabs = [
-    { path: '/', icon: FiHome, label: 'home' },
-    { path: '/star-nft', icon: FiStar, label: 'star' },
-    { path: '/referral', icon: FiUsers, label: 'referral' },
-    { path: '/profile', icon: FiUser, label: 'profile' }
-  ];
+export function TabBar() {
+  const location = useLocation();
+  const lang = localStorage.getItem('lang') || 'en';
 
   const isPathActive = (path: string) => {
     if (path === '/') {
@@ -30,7 +70,7 @@ export function TabBar() {
       <div className="relative bg-black/95 backdrop-blur-md border-t border-purple-500/20">
         <div className="max-w-xl mx-auto px-4 py-2">
           <nav className="flex justify-around items-center">
-            {tabs.map(({ path, icon: Icon, label }) => {
+            {tabs.map(({ path, icon: Icon, activeIcon: ActiveIcon, labels }) => {
               const active = isPathActive(path);
               return (
                 <Link
@@ -49,16 +89,23 @@ export function TabBar() {
                       'relative p-2 rounded-xl transition-all duration-300 group-hover:bg-purple-500/10',
                       active && 'bg-purple-500/20'
                     )}>
-                      <Icon className={cn(
-                        'w-5 h-5 transition-colors duration-300',
-                        active ? 'text-purple-400' : 'text-gray-400 group-hover:text-purple-400'
-                      )} />
+                      {active ? (
+                        <ActiveIcon className={cn(
+                          'w-5 h-5 transition-colors duration-300',
+                          'text-purple-400'
+                        )} />
+                      ) : (
+                        <Icon className={cn(
+                          'w-5 h-5 transition-colors duration-300',
+                          'text-gray-400 group-hover:text-purple-400'
+                        )} />
+                      )}
                     </div>
                     <span className={cn(
                       'text-xs transition-colors duration-300',
                       active ? 'text-purple-400' : 'text-gray-400 group-hover:text-purple-400'
                     )}>
-                      {t(`app.nav.${label}`)}
+                      {labels[lang as keyof typeof labels]}
                     </span>
                   </div>
                 </Link>

@@ -10,6 +10,7 @@ export const CONTRACT_ADDRESSES = {
   ANGEL_NFT_ENGINE: '0x3Eb30D5c0a317567AfEc6b063A61B9ef25d8e8C2' as const,
   USDC: '0x7F5c764cBc14f9669B88837ca1490cCa17c31607' as const,
   OPE: '0x4200000000000000000000000000000000000042' as const,
+  USER_NFT: '0x567F0669dC5280f1704485b1f8E9fd0C9056f3B3' as const,
   BACKEND_WALLET: '0x5cbB4786a824A5Bd54ecb8089c44102ac6f7A33A' as const
 } as const;
 
@@ -30,10 +31,7 @@ export const NFT_CONFIG = {
   ANGEL: {
     address: CONTRACT_ADDRESSES.ANGEL_NFT,
     tokens: {
-      ANGEL_1: { id: 0, price: 1000 * 1e6, name: 'Angel 1' },
-      ANGEL_2: { id: 1, price: 1000 * 1e6, name: 'Angel 2' },
-      ANGEL_3: { id: 2, price: 1000 * 1e6, name: 'Angel 3' },
-      ANGEL_4: { id: 3, price: 1000 * 1e6, name: 'Angel 4' }
+      ANGEL: { id: 0, price: 1000 * 1e6, name: 'Angel 1' },
     }
   },
   USDC: {

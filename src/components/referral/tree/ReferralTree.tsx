@@ -1,82 +1,195 @@
-import { memo } from 'react';
-import { motion } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
+import { useEffect, useState } from 'react';
+import { supabase } from '@/lib/supabase';
+import styles from './ReferralTree.module.css';
 
 interface ReferralNode {
+  id: string;
   useraddress: string;
   parentaddress: string | null;
+  placementarea: 'left' | 'middle' | 'right' | null;
   tier: number;
-  path: string[];
   isactive: boolean;
-  memberstatus: string;
-  placementarea: string | null;
   children: ReferralNode[];
 }
 
 interface ReferralTreeProps {
-  data: ReferralNode;
+  walletAddress: string;
 }
 
-const TreeNode = memo(({ node, depth = 0 }: { node: ReferralNode; depth?: number }) => {
-  console.log('Rendering node:', node);
-  const addressDisplay = `${node.useraddress.slice(0, 6)}...${node.useraddress.slice(-4)}`;
-  
-  return (
-    <div className="relative">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: depth * 0.1 }}
-        className={`rounded-lg p-4 border ${
-          node.isactive 
-            ? 'bg-purple-900/20 border-purple-500/20' 
-            : 'bg-gray-900/20 border-gray-500/20'
-        }`}
-      >
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="font-medium">{addressDisplay}</p>
-            <div className="flex items-center gap-2">
-              <p className="text-sm text-gray-400">Tier {node.tier}</p>
-              {node.placementarea && (
-                <p className="text-sm text-gray-400">Area: {node.placementarea}</p>
-              )}
-              <Badge variant={node.isactive ? "success" : "default"}>
-                {node.memberstatus}
-              </Badge>
+export function ReferralTree({ walletAddress }: ReferralTreeProps) {
+  const [treeData, setTreeData] = useState<ReferralNode | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchReferralTree() {
+      if (!walletAddress) return;
+      setLoading(true);
+      setError(null);
+
+      try {
+        const { data: referralData, error: referralError } = await supabase
+          .from('users')
+          .select(`
+            id,
+            walletaddress,
+            referreraddress,
+            placementarea,
+            isactive
+          `)
+          .or(`referreraddress.eq.${walletAddress},walletaddress.eq.${walletAddress}`)
+          .order('createdat');
+
+        if (referralError) throw referralError;
+
+        // 构建树形结构
+        const buildTree = (parentAddress: string | null): ReferralNode[] => {
+          return referralData
+            ?.filter(node => node.referreraddress === parentAddress)
+            .map(node => ({
+              id: node.id,
+              useraddress: node.walletaddress,
+              parentaddress: node.referreraddress,
+              placementarea: node.placementarea,
+              tier: 0, // 将在后面计算
+              isactive: node.isactive,
+              children: buildTree(node.walletaddress)
+            })) || [];
+        };
+
+        // 创建根节点
+        const rootNode: ReferralNode = {
+          id: 'root',
+          useraddress: walletAddress,
+          parentaddress: null,
+          placementarea: null,
+          tier: 0,
+          isactive: true,
+          children: buildTree(walletAddress)
+        };
+
+        // 计算每个节点的层级
+        const calculateTiers = (node: ReferralNode, currentTier: number = 0) => {
+          node.tier = currentTier;
+          node.children.forEach(child => calculateTiers(child, currentTier + 1));
+        };
+
+        calculateTiers(rootNode);
+        setTreeData(rootNode);
+      } catch (error) {
+        console.error('Error:', error);
+        setError('get referral tree error');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchReferralTree();
+  }, [walletAddress]);
+
+  const renderTreeNode = (node: ReferralNode) => {
+    const getZoneColor = (zone: string | null) => {
+      switch (zone) {
+        case 'left': return 'text-blue-400';
+        case 'middle': return 'text-green-400';
+        case 'right': return 'text-red-400';
+        default: return 'text-gray-400';
+      }
+    };
+
+    return (
+      <div key={node.id} className={styles.treeNode}>
+        <div className={`${styles.nodeCard} ${node.isactive ? styles.active : ''}`}>
+          <div className={styles.nodeContent}>
+            <div className={styles.userInfo}>
+              <div className={styles.addressSection}>
+                <span className={`${styles.statusIcon} ${node.isactive ? styles.active : ''}`}>
+                  {node.isactive ? '🟢' : '⚪️'}
+                </span>
+                <span className={styles.address}>
+                  {node.useraddress.slice(0, 6)}...{node.useraddress.slice(-4)}
+                </span>
+              </div>
+              <div className={styles.metadata}>
+                <span className={styles.level}>Level {node.tier}</span>
+                {node.placementarea && (
+                  <span className={`${styles.zone} ${getZoneColor(node.placementarea)}`}>
+                    {node.placementarea === 'left' ? '左区' :
+                     node.placementarea === 'middle' ? '中区' : '右区'}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-          {node.parentaddress && (
-            <div className="text-right">
-              <p className="text-sm text-purple-400">
-                Parent: {`${node.parentaddress.slice(0, 6)}...${node.parentaddress.slice(-4)}`}
-              </p>
-            </div>
-          )}
         </div>
-      </motion.div>
+        
+        {node.children.length > 0 && (
+          <div className={styles.childNodes}>
+            {node.children
+              .sort((a, b) => {
+                const order = { left: 1, middle: 2, right: 3 };
+                return (order[a.placementarea as keyof typeof order] || 0) - (order[b.placementarea as keyof typeof order] || 0);
+              })
+              .map(child => renderTreeNode(child))}
+          </div>
+        )}
+      </div>
+    );
+  };
 
-      {node.children?.length > 0 && (
-        <div className="mt-4 ml-8 space-y-4">
-          {node.children.map((child) => (
-            <TreeNode 
-              key={child.useraddress} 
-              node={child} 
-              depth={depth + 1} 
-            />
-          ))}
+  if (loading) {
+    return (
+      <div className={styles.loadingState}>
+        <div className="animate-pulse space-y-4">
+          <div className="h-12 bg-purple-900/20 rounded-lg w-full" />
+          <div className="h-12 bg-purple-900/20 rounded-lg w-3/4" />
+          <div className="h-12 bg-purple-900/20 rounded-lg w-1/2" />
         </div>
-      )}
-    </div>
-  );
-});
+      </div>
+    );
+  }
 
-TreeNode.displayName = 'TreeNode';
+  if (error) {
+    return (
+      <div className={styles.errorState}>
+        <p className="text-red-400">{error}</p>
+        <button 
+          onClick={() => window.location.reload()} 
+          className="px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 rounded-lg transition-colors"
+        >
+          retry
+        </button>
+      </div>
+    );
+  }
 
-export function ReferralTree({ data }: ReferralTreeProps) {
+  if (!treeData) {
+    return (
+      <div className={styles.emptyState}>
+        <p className="text-lg">no referral data</p>
+        <p className="text-sm text-gray-400">
+          when you start recommending other users, your referral tree will be displayed here
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div className="p-6 space-y-6">
-      <TreeNode node={data} />
+    <div className={styles.treeContainer}>
+      <div className={styles.header}>
+        <h3 className={styles.title}>Referral Tree</h3>
+        <div className={styles.legend}>
+          <div className={styles.legendItem}>
+            <span className={`${styles.legendIcon} ${styles.active}`} />
+            <span>active user</span>
+          </div>
+          <div className={styles.legendItem}>
+            <span className={`${styles.legendIcon} ${styles.inactive}`} />
+            <span>inactive user</span>
+          </div>
+        </div>
+      </div>
+      {renderTreeNode(treeData)}
     </div>
   );
 } 

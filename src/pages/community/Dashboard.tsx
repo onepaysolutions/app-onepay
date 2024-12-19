@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Header } from '@/components/common/layout/Header';
+import { Header } from '@/components/layout/Header';
 
 export function Dashboard() {
   const { t } = useTranslation();

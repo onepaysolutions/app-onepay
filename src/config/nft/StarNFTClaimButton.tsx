@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useAddress } from "@thirdweb-dev/react";
+import { useActiveWallet } from "thirdweb/react";
 import { toast } from "react-toastify";
 
 interface StarNFTClaimButtonProps {
@@ -20,7 +20,7 @@ export function StarNFTClaimButton({
 }: StarNFTClaimButtonProps) {
   const { t } = useTranslation();
   const [isClaiming, setIsClaiming] = useState(false);
-  const account = useAddress();
+  const account = useActiveWallet() as unknown as string;
 
   const handleClaim = async () => {
     if (!account) {

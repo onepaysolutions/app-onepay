@@ -54,5 +54,52 @@
         "whatsapp": "分享到 WhatsApp"
       }
     }
+  },
+  "landing": {
+    "hero": {
+      "title": "金融未来，就在眼前",
+      "subtitle": "通过 Web3 技术开启您的金融之旅。安全、透明、无国界。",
+      "button": "立即开始"
+    },
+    "features": {
+      "identity": {
+        "title": "全球数字身份",
+        "description": "加入全球数字革命，拥有独特的 Web3 身份"
+      },
+      "security": {
+        "title": "安全资产控制",
+        "description": "通过区块链技术完全掌控您的数字资产"
+      },
+      "finance": {
+        "title": "金融新未来",
+        "description": "获取下一代金融服务和机遇"
+      }
+    },
+    "wallet": {
+      "title": "连接未来",
+      "subtitle": "选择您喜欢的钱包开始旅程",
+      "features": {
+        "security": {
+          "title": "安全认证",
+          "description": "银行级别的数字资产安全保障"
+        },
+        "speed": {
+          "title": "即时访问",
+          "description": "快速无缝连接 Web3 世界"
+        },
+        "compatibility": {
+          "title": "全球兼容",
+          "description": "支持所有主流钱包"
+        }
+      },
+      "security": "您的资产受到行业领先的安全协议保护",
+      "supported": "支持的钱包"
+    },
+    "claim": {
+      "title": "领取用户 NFT",
+      "description": "领取您的用户 NFT，开启 Web3 世界",
+      "button": "领取用户 NFT",
+      "claiming": "领取中..."
+    }
   }
 } 

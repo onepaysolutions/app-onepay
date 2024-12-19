@@ -1,0 +1,134 @@
+.container {
+  @apply space-y-6;
+}
+
+/* 层级组样式 */
+.tierGroups {
+  @apply space-y-4;
+}
+
+.tierGroup {
+  @apply bg-purple-900/20 rounded-xl border border-purple-500/20 overflow-hidden
+    transition-all duration-300;
+}
+
+.tierGroup.inactive {
+  @apply opacity-75 hover:opacity-100;
+}
+
+.groupHeader {
+  @apply w-full flex items-center justify-between p-4 
+    hover:bg-purple-500/10 transition-colors;
+}
+
+.groupInfo {
+  @apply flex items-center gap-3;
+}
+
+.groupIcon {
+  @apply w-6 h-6 text-purple-400;
+}
+
+.groupMeta {
+  @apply flex flex-col;
+}
+
+.groupName {
+  @apply text-base font-semibold;
+}
+
+.groupRequirement {
+  @apply text-sm text-gray-400;
+}
+
+.chevron {
+  @apply w-5 h-5 text-purple-400 transition-transform duration-200;
+}
+
+/* 层级卡片网格 */
+.levelGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4;
+}
+
+.levelCard {
+  @apply relative bg-purple-800/10 rounded-lg p-4 border border-purple-500/10
+    hover:border-purple-500/20 transition-all duration-200;
+}
+
+.levelCard.inactive {
+  @apply opacity-50;
+}
+
+.levelHeader {
+  @apply flex items-center justify-between mb-3;
+}
+
+.levelNumber {
+  @apply text-lg font-bold text-purple-400;
+}
+
+.levelRate {
+  @apply text-sm font-medium text-green-400 bg-green-500/10 
+    px-2 py-1 rounded-full;
+}
+
+.levelStats {
+  @apply grid grid-cols-2 gap-3;
+}
+
+.levelStat {
+  @apply flex flex-col gap-1;
+}
+
+.statLabel {
+  @apply text-sm text-gray-400;
+}
+
+.statValue {
+  @apply text-sm font-medium text-purple-400;
+}
+
+/* 锁定状态覆盖层 */
+.lockOverlay {
+  @apply absolute inset-0 flex flex-col items-center justify-center
+    bg-black/60 backdrop-blur-sm rounded-lg;
+}
+
+.lockIcon {
+  @apply w-8 h-8 text-purple-400 mb-2;
+}
+
+/* 移动端优化 */
+@media (max-width: 640px) {
+  .levelGrid {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .groupHeader {
+    @apply p-3;
+  }
+
+  .groupIcon {
+    @apply w-5 h-5;
+  }
+
+  .groupName {
+    @apply text-sm;
+  }
+
+  .groupRequirement {
+    @apply text-xs;
+  }
+
+  .levelCard {
+    @apply p-3;
+  }
+
+  .levelNumber {
+    @apply text-base;
+  }
+
+  .levelRate {
+    @apply text-xs;
+  }
+} 

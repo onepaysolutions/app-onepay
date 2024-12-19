@@ -23,14 +23,14 @@ const CYCLE_CONFIG: CycleConfig[] = [
   { cycle_id: 3, cycle_initial_p: 0.34, cycle_end_p: 0.54, next_cycle_p: 0.36, cycle_total_Stages: 20, cycle_total: 2000000 },
   { cycle_id: 4, cycle_initial_p: 0.36, cycle_end_p: 0.56, next_cycle_p: 0.40, cycle_total_Stages: 20, cycle_total: 2000000 },
   { cycle_id: 5, cycle_initial_p: 0.40, cycle_end_p: 0.60, next_cycle_p: 0.44, cycle_total_Stages: 20, cycle_total: 3100000 },
-  { cycle_id: 6, cycle_initial_p: 0.44, cycle_end_p: 0.64, next_cycle_p: 0.48, cycle_total_Stages: 20, cycle_total: 3100000 },
+  { cycle_id: 6, cycle_initial_p: 0.44, cycle_end_p: 0.64, next_cycle_p: 0.48, cycle_total_Stages: 20, cycle_total: 3100000 }
 ];
 
 const NFT_LEVELS: NFTLevel[] = [
-  { id: 1, presaleValue: 250, contractValue: 1250 },
-  { id: 2, presaleValue: 550, contractValue: 3300 },
-  { id: 3, presaleValue: 1800, contractValue: 12600 },
-  { id: 4, presaleValue: 4550, contractValue: 36400 },
+  { id: 1, presaleValue: 250, contractValue: 500 },
+  { id: 2, presaleValue: 550, contractValue: 1100 },
+  { id: 3, presaleValue: 1800, contractValue: 3600 },
+  { id: 4, presaleValue: 4550, contractValue: 9100 }
 ];
 
 export function AirdropCalculator() {

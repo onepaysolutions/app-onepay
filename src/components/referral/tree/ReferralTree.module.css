@@ -32,34 +32,35 @@
 }
 
 .treeContainer {
-  @apply space-y-4 pl-4;
+  padding: 2rem;
+  overflow-x: auto;
 }
 
 .treeNode {
-  @apply relative;
-}
-
-/* 连接线 */
-.treeNode::before {
-  @apply content-[''] absolute -left-4 top-8 bottom-0 w-px 
-    bg-gradient-to-b from-purple-500/30 to-transparent;
-}
-
-.treeNode:last-child::before {
-  @apply hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 .nodeCard {
-  @apply relative transition-all duration-300 hover:translate-x-1;
+  background: rgba(147, 51, 234, 0.1);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-width: 280px;
+  transition: all 0.3s ease;
 }
 
-.nodeCard::before {
-  @apply content-[''] absolute -left-4 top-1/2 w-4 h-px 
-    bg-gradient-to-r from-purple-500/30 to-transparent;
+.nodeCard.active {
+  background: rgba(147, 51, 234, 0.2);
+  border-color: rgba(147, 51, 234, 0.4);
 }
 
 .nodeContent {
-  @apply flex items-center gap-4 p-4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .toggleButton {
@@ -67,16 +68,23 @@
 }
 
 .userInfo {
-  @apply flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .addressSection {
-  @apply flex items-center gap-3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .statusIcon {
-  @apply p-2 rounded-lg bg-gray-500/20 text-gray-400 
-    transition-colors;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
 }
 
 .statusIcon.active {
@@ -84,11 +92,15 @@
 }
 
 .address {
-  @apply font-mono text-sm;
+  font-family: monospace;
+  font-size: 0.875rem;
 }
 
 .metadata {
-  @apply flex items-center gap-3 text-sm;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .level {
@@ -100,21 +112,85 @@
 }
 
 .childNodes {
-  @apply pl-8 mt-4 space-y-4;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
 }
 
-/* 加载状态 */
+.childNodes::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  width: 2px;
+  height: 1rem;
+  background: rgba(147, 51, 234, 0.2);
+}
+
 .loadingState {
-  @apply space-y-4 animate-pulse;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .skeletonNode {
-  @apply h-16 bg-purple-900/20 rounded-xl;
+  width: 280px;
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(147, 51, 234, 0.1) 25%,
+    rgba(147, 51, 234, 0.2) 50%,
+    rgba(147, 51, 234, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 0.5rem;
 }
 
-/* 空状态 */
+.errorState {
+  padding: 2rem;
+  text-align: center;
+  color: #ef4444;
+}
+
+.retryButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(147, 51, 234, 0.1);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  border-radius: 0.25rem;
+  color: rgba(147, 51, 234, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+  background: rgba(147, 51, 234, 0.2);
+  border-color: rgba(147, 51, 234, 0.4);
+}
+
 .emptyState {
-  @apply text-center py-12 text-gray-400;
+  padding: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.emptyStateSubtext {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 /* 移动端适配 */

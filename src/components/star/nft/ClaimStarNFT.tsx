@@ -23,7 +23,7 @@ const NFT_LEVELS = [
   {
     id: 2,
     nameKey: 'starNFT.levels.vip2.title',
-    price: 1000,
+    price: 1100,
     opsAllocation: 1354,
     benefits: [
       'starNFT.levels.vip2.benefits.tradingFee',
@@ -34,7 +34,7 @@ const NFT_LEVELS = [
   {
     id: 3,
     nameKey: 'starNFT.levels.vip3.title',
-    price: 3000,
+    price: 3600,
     opsAllocation: 4062,
     benefits: [
       'starNFT.levels.vip3.benefits.tradingFee',
@@ -45,7 +45,7 @@ const NFT_LEVELS = [
   {
     id: 4,
     nameKey: 'starNFT.levels.vip4.title',
-    price: 7000,
+    price: 9100,
     opsAllocation: 9478,
     benefits: [
       'starNFT.levels.vip4.benefits.tradingFee',

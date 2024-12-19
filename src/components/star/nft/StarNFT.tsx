@@ -1,77 +1,41 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import styles from './StarNFT.module.css';
-import { OPSSale } from '../ops/OPSSale';
+import { useContract, useOwnedNFTs } from "@thirdweb-dev/react";
+import { useActiveWallet } from "thirdweb/react";
+import { CONTRACT_ADDRESSES } from "@/config/contracts";
 
 interface StarNFTProps {
-  starLevel?: number;
+  address?: string;
 }
 
-export function StarNFT({ starLevel = 1 }: StarNFTProps) {
-  const { t } = useTranslation();
-  const [currentCycle] = useState(1);
-  const [currentStage] = useState(1);
-  const [progress] = useState(45); // 初始进度设为45%
+export function StarNFT({ address }: StarNFTProps) {
+  const walletAddress = useActiveWallet() as unknown as string;
+  const { contract } = useContract(CONTRACT_ADDRESSES.STAR_NFT, "erc1155");
+  const { data: nfts, isLoading } = useOwnedNFTs(contract, address || walletAddress);
 
-  // Star NFT 等级对应的倍数
-  const STAR_MULTIPLIERS = {
-    1: 1,
-    2: 2,
-    3: 5,
-    4: 10
-  };
-
-  // 基础价格 0.3
-  const basePrice = 0.3;
-  const multiplier = STAR_MULTIPLIERS[starLevel as keyof typeof STAR_MULTIPLIERS] || 1;
-  const price = basePrice * multiplier;
+  if (isLoading) {
+    return (
+      <div className="w-full h-[750px] rounded-lg animate-pulse bg-purple-900/20" />
+    );
+  }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>
-          {t("Star NFT Digital Asset Growth Plan")}
-        </h2>
-        <p className={styles.subtitle}>
-          {t("Choose and claim your Star NFT")}
-        </p>
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold">Star NFT</h3>
+        <div className="text-sm text-gray-400">
+          {nfts?.length || 0} NFTs Owned
+        </div>
       </div>
 
-      <div className={styles.content}>
-        <div className={styles.nftCard}>
-          <div className={styles.nftHeader}>
-            <span className={styles.starLevel}>
-              {t("Star")} {starLevel}
-            </span>
-            <span className={styles.multiplier}>
-              {multiplier}x
-            </span>
+      {/* NFT 展示区域 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {nfts?.map((nft, index) => (
+          <div
+            key={index}
+            className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/20"
+          >
+            {/* NFT 内容 */}
           </div>
-
-          <div className={styles.priceDisplay}>
-            <div className={styles.priceLabel}>
-              {t("Contract Value")}
-            </div>
-            <div className={styles.price}>
-              <span className={styles.currency}>$</span>
-              <span className={styles.amount}>{price.toFixed(2)}</span>
-            </div>
-            <div className={styles.priceInfo}>
-              {t("Base")} ${basePrice.toFixed(2)} × {multiplier}
-            </div>
-          </div>
-
-          <button className={styles.claimButton}>
-            {t("Claim Now")}
-          </button>
-        </div>
-
-        <OPSSale 
-          currentCycle={currentCycle}
-          currentStage={currentStage}
-          totalStages={20}
-          progress={progress}
-        />
+        ))}
       </div>
     </div>
   );

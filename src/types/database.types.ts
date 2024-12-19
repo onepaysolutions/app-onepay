@@ -118,7 +118,7 @@ export interface ReferralNode {
   tier: number
   path: string[]
   isactive: boolean
-  memberstatus: string
+  memberstatus: 'Active' | 'Inactive'
   placementarea: string | null
   children: ReferralNode[]
 }

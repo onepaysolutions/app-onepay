@@ -7,7 +7,7 @@ import { ContractOptions } from "thirdweb";
 import { CONTRACT_ADDRESSES } from "@/config/contracts";
 import { supabase } from '@/lib/supabase';
 import client from "@/client";
-import { chain } from "@/chain";
+import { chain } from "@/config/chain";
 import { starNFTTypes } from "@/config/starNFT";
 import { distributeTierRewards, distributePairRewards } from '@/services/rewardService';
 
@@ -231,7 +231,10 @@ export function ClaimStarNFTButton({
                         contract: {
                           address: CONTRACT_ADDRESSES.STAR_NFT,
                           client,
-                          chain,
+                          chain: {
+                            id: 10,
+                            rpc: "https://mainnet.optimism.io",
+                          },
                         } as ContractOptions,
                         to: walletAddress,
                         quantity: 1n,

@@ -1,20 +1,21 @@
-import { useContract, useOwnedNFTs, useAddress } from "@thirdweb-dev/react";
+import { useContract, useOwnedNFTs } from "@thirdweb-dev/react";
 import { Badge } from "@/components/ui/badge";
-
-const ANGEL_NFT_ADDRESS = "0x620c741Ff92b992894Ab4b5d5a1Cc9F0bdDA5ce5";
+import { useActiveWallet } from "thirdweb/react";
+import { CONTRACT_ADDRESSES } from "@/config/contracts";
+import { ClaimButton2 } from "@/components/community/angel/ClaimButton2";
 
 interface AngelNFTProps {
   address?: string;
 }
 
 export function AngelNFT({ address }: AngelNFTProps) {
-  const walletAddress = useAddress();
-  const { contract } = useContract(ANGEL_NFT_ADDRESS, "erc1155");
+  const walletAddress = useActiveWallet() as unknown as string;
+  const { contract } = useContract(CONTRACT_ADDRESSES.ANGEL_NFT, "erc1155");
   const { data: nfts, isLoading } = useOwnedNFTs(contract, address || walletAddress);
 
   if (isLoading) {
     return (
-      <div className="w-full h-[750px] rounded-lg animate-pulse bg-purple-900/20" />
+      <div className="w-full h-48 rounded-lg animate-pulse bg-purple-900/20" />
     );
   }
 
@@ -27,14 +28,33 @@ export function AngelNFT({ address }: AngelNFTProps) {
         </Badge>
       </div>
 
-      <iframe
-        src={`https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoeoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=${ANGEL_NFT_ADDRESS}&chain=%7B%22name%22%3A%22OP+Mainnet%22%2C%22chain%22%3A%22ETH%22%2C%22rpc%22%3A%5B%22https%3A%2F%2F10.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Ether%22%2C%22symbol%22%3A%22ETH%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22oeth%22%2C%22chainId%22%3A10%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22optimism%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmcxZHpyJa8T4i63xqjPYrZ6tKrt55tZJpbXcjSDKuKaf9%2Foptimism%2F512.png%22%2C%22width%22%3A512%2C%22height%22%3A512%2C%22format%22%3A%22png%22%7D%7D&clientId=${THIRDWEB_CLIENT_ID}&tokenId=0&theme=dark&primaryColor=purple`}
-        width="100%"
-        height="750"
-        className="rounded-lg border border-purple-500/20"
-        style={{ maxWidth: '100%' }}
-        frameBorder="0"
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {nfts?.map((nft, index) => (
+          <div
+            key={index}
+            className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/20"
+          >
+            <div className="aspect-square rounded-lg overflow-hidden mb-4">
+              <img 
+                src={nft.metadata.image || ''} 
+                alt={`Angel NFT ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h4 className="font-medium mb-2">{nft.metadata.name || `Angel NFT #${index + 1}`}</h4>
+            <p className="text-sm text-gray-400">{nft.metadata.description || 'No description available'}</p>
+          </div>
+        ))}
+      </div>
+
+      {!nfts?.length && walletAddress && (
+        <div className="mt-6">
+          <ClaimButton2 
+            walletAddress={walletAddress}
+            isDemoMode={false}
+          />
+        </div>
+      )}
     </div>
   );
 } 

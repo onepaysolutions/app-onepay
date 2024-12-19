@@ -37,11 +37,11 @@ export interface WalletInfo {
 // 奖励交易记录
 export interface RewardTransaction {
   id: string;
-  wallet_address: string;
+  walletaddress: string;
   amount: string;
   type: RewardType;
   status: TransactionStatus;
-  created_at: string;
+  createdat: string;
 }
 
 // 荣耀等级

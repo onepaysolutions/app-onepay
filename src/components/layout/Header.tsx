@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { Container } from './Container';
 import { ConnectButton } from '@/components/auth/ConnectButton';
 import { cn } from '@/lib/utils';
+import logoWhite from '@/assets/logos/logo-white.png';
+import { LanguageSwitch } from '../common/LanguageSwitch';
 
 export function Header() {
   const { t } = useTranslation();
@@ -32,14 +34,15 @@ export function Header() {
       'fixed top-0 left-0 right-0 z-50 h-16 transition-all duration-300',
       isScrolled ? 'bg-black/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
     )}>
-      <Container size="xl" className="h-full">
+      <Container className="h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Logo" className="w-8 h-8" />
-            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-              OnePay
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logoWhite}
+              alt="OnePay Logo" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Navigation */}
@@ -63,6 +66,8 @@ export function Header() {
           <div className="flex items-center gap-4">
             <ConnectButton />
           </div>
+
+          <LanguageSwitch />
         </div>
       </Container>
 

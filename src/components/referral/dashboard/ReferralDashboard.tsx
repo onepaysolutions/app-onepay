@@ -1,81 +1,123 @@
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { supabase } from '@/lib/supabase';
-import { ReferralStats } from '../common/ReferralStats';
-import { ReferralTree } from '../rewards/tree/ReferralTree';
-import { RewardTransaction } from '@/types/supabase';
+import { TierRewards } from '../TierReward/TierRewards';
+import { DirectTierRewards } from '../DirectTier/DirectTierRewards';
+import { ReferralTree } from '../tree/ReferralTree';
+import { FloatingReferralLink } from '../link/FloatingReferralLink';
+import { ReferralLink } from '../link/ReferralLink';
+import { ClaimRewards } from '../claim/ClaimRewards';
 import styles from './ReferralDashboard.module.css';
 
 interface DashboardProps {
-  address: string;
+  walletaddress: string;
 }
 
-interface RewardData {
-  date: string;
-  amount: number;
-  type: string;
-}
-
-export function ReferralDashboard({ address }: DashboardProps) {
+export function ReferralDashboard({ walletaddress }: DashboardProps) {
   const { t } = useTranslation();
-  const [rewardsData, setRewardsData] = useState<RewardData[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchDashboardData() {
-      try {
-        const { data, error } = await supabase
-          .from('reward_records')
-          .select('*')
-          .eq('wallet_address', address.toLowerCase())
-          .order('created_at', { ascending: true });
-
-        if (error) throw error;
-
-        const processedData: RewardData[] = (data || []).map(tx => ({
-          date: new Date(tx.created_at).toLocaleDateString(),
-          amount: Number(tx.amount) / 10**18,
-          type: tx.type
-        }));
-
-        setRewardsData(processedData);
-      } catch (error) {
-        console.error('Error fetching dashboard data:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchDashboardData();
-  }, [address]);
-
-  if (loading) {
-    return <div className="animate-pulse">Loading...</div>;
-  }
 
   return (
     <div className={styles.container}>
-      {/* 统计数据 */}
-      <ReferralStats />
-
-      {/* 奖励趋势图表 */}
-      <div className={styles.chart}>
-        <h3 className={styles.chartTitle}>{t("Rewards Trend")}</h3>
-        <LineChart width={800} height={400} data={rewardsData}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="date" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="amount" stroke="#8884d8" />
-        </LineChart>
+      {/* 顶部推荐链接区域 */}
+      <div className={styles.linkSection}>
+        <ReferralLink address={walletaddress} />
       </div>
 
-      {/* 推荐树 */}
-      <div className={styles.treeSection}>
-        <h3 className={styles.sectionTitle}>{t("Referral Network")}</h3>
-        <ReferralTree address={address} />
+      {/* 主要内容区域 - 网格布局 */}
+      <div className={styles.mainGrid}>
+        {/* 左侧：直推奖励和层级奖励 */}
+        <div className={styles.leftColumn}>
+          {/* 直推奖励 */}
+          <div className={styles.rewardCard}>
+            <h3 className={styles.cardTitle}>{t("Direct Tier Rewards")}</h3>
+            <DirectTierRewards />
+          </div>
+
+          {/* 层级奖励 */}
+          <div className={styles.rewardCard}>
+            <h3 className={styles.cardTitle}>{t("Tier Rewards")}</h3>
+            <TierRewards address={walletaddress} />
+          </div>
+        </div>
+
+        {/* 右侧：推荐树和荣耀奖励 */}
+        <div className={styles.rightColumn}>
+          {/* 推荐树 */}
+          <div className={styles.treeCard}>
+            <h3 className={styles.cardTitle}>{t("Referral Network")}</h3>
+            <ReferralTree walletAddress={walletaddress} />
+          </div>
+
+          {/* 荣耀奖励 */}
+          <div className={styles.gloryCard}>
+            <h3 className={styles.cardTitle}>{t("Glory Rewards")}</h3>
+            <div className={styles.gloryContent}>
+              <div className={styles.gloryStats}>
+                <div className={styles.gloryStat}>
+                  <span className={styles.gloryLabel}>{t("Total Glory Points")}</span>
+                  <span className={styles.gloryValue}>0</span>
+                </div>
+                <div className={styles.gloryStat}>
+                  <span className={styles.gloryLabel}>{t("Current Rank")}</span>
+                  <span className={styles.gloryValue}>-</span>
+                </div>
+              </div>
+
+              {/* 三区进度 */}
+              <div className={styles.zoneProgress}>
+                <div className={styles.zoneCard}>
+                  <div className={styles.zoneHeader}>
+                    <span className={styles.zoneLabel}>{t("Left Zone")}</span>
+                    <span className={styles.zoneValue}>$0 / $1000</span>
+                  </div>
+                  <div className={styles.progressBar}>
+                    <div className={styles.progressFill} style={{ width: '0%' }} />
+                  </div>
+                </div>
+
+                <div className={styles.zoneCard}>
+                  <div className={styles.zoneHeader}>
+                    <span className={styles.zoneLabel}>{t("Middle Zone")}</span>
+                    <span className={styles.zoneValue}>$0 / $1000</span>
+                  </div>
+                  <div className={styles.progressBar}>
+                    <div className={styles.progressFill} style={{ width: '0%' }} />
+                  </div>
+                </div>
+
+                <div className={styles.zoneCard}>
+                  <div className={styles.zoneHeader}>
+                    <span className={styles.zoneLabel}>{t("Right Zone")}</span>
+                    <span className={styles.zoneValue}>$0 / $1000</span>
+                  </div>
+                  <div className={styles.progressBar}>
+                    <div className={styles.progressFill} style={{ width: '0%' }} />
+                  </div>
+                </div>
+
+                {/* 最小区域提示 */}
+                <div className={styles.minZoneInfo}>
+                  <span className={styles.minZoneLabel}>{t("Minimum Zone Progress")}</span>
+                  <span className={styles.minZoneValue}>0%</span>
+                </div>
+              </div>
+
+              {/* 荣耀等级进度 */}
+              <div className={styles.gloryProgress}>
+                <div className={styles.progressLabel}>
+                  <span>{t("Progress to Next Rank")}</span>
+                  <span>0/1000</span>
+                </div>
+                <div className={styles.progressBar}>
+                  <div className={styles.progressFill} style={{ width: '0%' }} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 底部：领取奖励区域 */}
+      <div className={styles.claimSection}>
+        <ClaimRewards address={walletaddress} />
       </div>
     </div>
   );

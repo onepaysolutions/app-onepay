@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
-import { Header } from "@/components/common/layout/Header";
+import { Header } from "@/components/layout/Header";
 import { IoArrowBack } from "react-icons/io5";
 import { OPEInfo } from "@/components/community/ope/OPEInfo";
 import { OPEChart } from "@/components/community/ope/OPEChart";

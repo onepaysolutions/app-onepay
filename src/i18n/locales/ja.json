@@ -109,7 +109,7 @@
     "angelNFT": {
       "intro": {
         "title": "Angel NFTへようこそ",
-        "description": "コミュニティメンバーになって特別な特典を獲得しましょう"
+        "description": "コミュニティメ���バーになって特別な特典を獲得しましょう"
       }
     }
   },
@@ -274,7 +274,7 @@
   },
   "profile": {
     "title": "プロフィール",
-    "wallet": "ウォレットアドレス",
+    "wallet": "ウォレ��トアドレス",
     "connect": "ウォレットを接続してください",
     "stats": "あなたの統計",
     "link": "あなたの紹介リンク"
@@ -351,7 +351,7 @@
     "network": "ネットワーク",
     "opMainnet": "OPメインネット",
     "payment": {
-      "choose": "支払い方法を選��",
+      "choose": "支払い方法を選択",
       "payWith": "支払い方法",
       "insufficientFunds": "残高不足",
       "otherWallet": "他のウォレットで支払う",
@@ -436,7 +436,7 @@
       "home": "ホーム",
       "star": "スター",
       "referral": "紹介",
-      "profile": "マイページ"
+      "profile": "プロフィール"
     }
   },
   "referral": {

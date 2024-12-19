@@ -133,6 +133,7 @@ export function ReferralLink({ address }: ReferralLinkProps) {
                   onClick={() => handleShare('facebook')}
                   className={styles.socialButton}
                   disabled={!selectedZone}
+                  title="Facebook"
                 >
                   <FaFacebook size={24} />
                 </button>
@@ -140,6 +141,7 @@ export function ReferralLink({ address }: ReferralLinkProps) {
                   onClick={() => handleShare('twitter')}
                   className={styles.socialButton}
                   disabled={!selectedZone}
+                  title="Twitter"
                 >
                   <FaTwitter size={24} />
                 </button>
@@ -147,6 +149,7 @@ export function ReferralLink({ address }: ReferralLinkProps) {
                   onClick={() => handleShare('telegram')}
                   className={styles.socialButton}
                   disabled={!selectedZone}
+                  title="Telegram"
                 >
                   <FaTelegram size={24} />
                 </button>
@@ -154,6 +157,7 @@ export function ReferralLink({ address }: ReferralLinkProps) {
                   onClick={() => handleShare('whatsapp')}
                   className={styles.socialButton}
                   disabled={!selectedZone}
+                  title="WhatsApp"
                 >
                   <FaWhatsapp size={24} />
                 </button>

@@ -4,206 +4,46 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-white antialiased;
+    background-image: radial-gradient(circle at center,
+      rgba(147, 51, 234, 0.15) 0%,
+      rgba(147, 51, 234, 0.1) 20%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    background-attachment: fixed;
   }
 }
 
 @layer components {
-  .card {
-    @apply relative overflow-hidden rounded-xl bg-gradient-purple border border-purple-200/20 backdrop-blur-md;
+  .glass-card {
+    @apply relative overflow-hidden rounded-xl;
+    @apply bg-white/[0.03] backdrop-blur-xl;
+    @apply border border-primary-200/20;
+    @apply shadow-lg shadow-primary-500/10;
+    @apply transition-all duration-300;
   }
 
   .btn-primary {
-    @apply px-4 py-2 rounded-lg transition-all duration-300
-      bg-gradient-to-r from-purple-600/80 to-purple-700/80
-      hover:from-purple-600/90 hover:to-purple-700/90
-      border border-purple-500/30
-      shadow-lg shadow-purple-500/20;
+    @apply px-4 py-2 rounded-lg;
+    @apply bg-gradient-to-r from-primary-600 to-primary-700;
+    @apply hover:from-primary-700 hover:to-primary-800;
+    @apply border border-primary-500/30;
+    @apply shadow-lg shadow-primary-500/20;
+    @apply transition-all duration-300;
   }
 
-  .title-purple {
-    @apply font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent;
-  }
-
-  .title-yellow {
-    @apply font-bold bg-gradient-to-r from-yellow-light to-yellow-dark bg-clip-text text-transparent;
-  }
-
-  .event-badge {
-    @apply px-2 py-1 rounded-full text-xs font-medium
-      bg-gradient-yellow border border-yellow-light
-      text-yellow-dark;
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 to-accent;
+    @apply bg-clip-text text-transparent;
+    @apply animate-glow;
   }
 }
 
 @layer utilities {
-  .text-glow {
-    text-shadow: 0 0 10px currentColor;
-  }
-  
-  .purple-glow {
-    box-shadow: 0 0 20px theme('colors.purple.500');
-  }
-  
-  .yellow-glow {
-    box-shadow: 0 0 20px theme('colors.yellow.dark');
-  }
-
   .glass-effect {
-    @apply backdrop-blur-md bg-white/5;
-  }
-  
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .animate-fade {
-    animation: fade 0.3s ease-in-out;
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.3s ease-in-out;
-  }
-
-  .animate-slide-in {
-    animation: slideIn 0.3s ease-in-out;
-  }
-
-  /* 侧边栏宽度变量 */
-  @screen md {
-    :root {
-      --sidebar-width: 256px;
-    }
-  }
-
-  /* 滚动条样式 */
-  .scrollbar-custom {
-    scrollbar-width: thin;
-    scrollbar-color: theme('colors.purple.500/20') transparent;
-  }
-
-  .scrollbar-custom::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .scrollbar-custom::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .scrollbar-custom::-webkit-scrollbar-thumb {
-    background-color: theme('colors.purple.500/20');
-    border-radius: 3px;
-  }
-}
-
-/* 防止页面滚动和缩放 */
-html, body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  text-size-adjust: 100%;
-  touch-action: manipulation;
-}
-
-/* 适配刘海屏 */
-.safe-area-top {
-  padding-top: env(safe-area-inset-top);
-}
-
-.safe-area-bottom {
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
-/* ���止内容溢出 */
-.container {
-  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-
-/* 修复 iOS Safari 100vh 问题 */
-@supports (-webkit-touch-callout: none) {
-  .min-h-screen {
-    min-height: -webkit-fill-available;
-  }
-}
-
-/* 修复移动端布局问题 */
-#root {
-  width: 100vw;
-  overflow-x: hidden;
-  position: relative;
-}
-
-@keyframes slideDown {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-collapsible-content-height);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    height: var(--radix-collapsible-content-height);
-  }
-  to {
-    height: 0;
-  }
-}
-
-.animate-slideDown {
-  animation: slideDown 300ms ease-out;
-}
-
-.animate-slideUp {
-  animation: slideUp 300ms ease-out;
-}
-
-/* 页面容器样式 */
-.page-container {
-  @apply relative min-h-screen w-full overflow-x-hidden;
-  @apply bg-gradient-to-b from-purple-900/20 to-black;
-}
-
-/* 卡片容器样式 */
-.card-container {
-  @apply bg-purple-900/20 rounded-xl backdrop-blur-sm;
-  @apply border border-purple-500/20;
-  @apply transition-all duration-300;
-}
-
-/* 响应式内边距 */
-.responsive-padding {
-  @apply px-4 md:px-6 lg:px-8;
-}
-
-/* 安全区域适配 */
-.safe-area {
-  @apply safe-area-top safe-area-bottom;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-}
-
-/* 毛玻璃效果 */
-.glass-effect {
-  @apply backdrop-blur-md bg-white/5;
-}
-
-/* 适配底部 TabBar 的安全区域 */
-.safe-area-bottom {
-  padding-bottom: calc(env(safe-area-inset-bottom) + 64px); /* 64px 是 TabBar 的高度 */
-}
-
-/* 移动端适配 */
-@media (max-width: 640px) {
-  .container {
-    @apply px-4;
+    @apply backdrop-blur-xl bg-white/[0.03];
+    @apply border border-primary-200/20;
+    @apply shadow-lg shadow-primary-500/10;
   }
 }
   

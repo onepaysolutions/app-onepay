@@ -5,6 +5,7 @@ import "./styles/globals.css";
 import "./i18n";
 import { LoadingScreen } from "./components/common/LoadingScreen";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // 错误边界处理
 const ErrorFallback = () => (
@@ -21,12 +22,16 @@ const ErrorFallback = () => (
   </div>
 );
 
+const queryClient = new QueryClient();
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <React.Suspense fallback={<LoadingScreen />}>
-      <ErrorBoundary>
-        <App />
-      </ErrorBoundary>
-    </React.Suspense>
+    <QueryClientProvider client={queryClient}>
+      <React.Suspense fallback={<LoadingScreen />}>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </React.Suspense>
+    </QueryClientProvider>
   </React.StrictMode>
 );

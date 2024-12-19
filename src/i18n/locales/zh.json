@@ -87,7 +87,67 @@
       "level": "层级奖励",
       "pending": "待领取奖励",
       "claimed": "已领取奖励",
-      "total": "总奖励"
+      "total": "总奖励",
+      "tier": {
+        "title": "推荐奖励等级",
+        "subtitle": "升级星辰勋章解锁更多奖励",
+        "stats": {
+          "totalRewards": "总获得奖励",
+          "claimedRewards": "已领取奖励",
+          "rollupRewards": "Rollup奖励"
+        },
+        "badges": {
+          "star1": "星辰勋章 I",
+          "star2": "星辰勋章 II",
+          "star3": "星辰勋章 III",
+          "star4": "星辰勋章 IV"
+        },
+        "noNFT": "获得星辰勋章解锁推荐奖励"
+      },
+      "directTier": {
+        "gen1": {
+          "title": "一代推荐奖励",
+          "description": "获得直推用户的5%层级奖励"
+        },
+        "gen2": {
+          "title": "二代推荐奖励",
+          "description": "获得二代用户的3%层级奖励"
+        },
+        "gen3": {
+          "title": "三代推荐奖励",
+          "description": "获得三代用户的2%层级奖励"
+        },
+        "stats": {
+          "totalReferrals": "总推荐人数",
+          "totalRewards": "总奖励",
+          "activeGenerations": "激活代数"
+        },
+        "requirements": {
+          "badge": "需要徽章等级",
+          "commission": "累计佣金"
+        }
+      },
+      "noNFT": "请先获得 Star NFT 以激活推荐奖励",
+      "glory": {
+        "title": "荣耀奖励",
+        "subtitle": "协助发展小社区，成就大社区",
+        "slogan": "支持发展小社区，获得5%-30%奖励",
+        "currentRank": "当前等级",
+        "nextRank": "下一等级",
+        "minZone": "最小区域",
+        "requirements": "升级要求",
+        "rewards": "奖励比例",
+        "earned": "已获得奖励",
+        "ranks": {
+          "citizen": "公民",
+          "knight": "骑士",
+          "baron": "男爵",
+          "count": "伯爵",
+          "marquis": "侯爵",
+          "duke": "公爵",
+          "sovereign": "至尊"
+        }
+      }
     },
     "tree": {
       "title": "推荐树",
@@ -96,6 +156,72 @@
       "starActivated": "已激活 Star NFT",
       "level": "等级",
       "zone": "区域"
+    },
+    "nav": {
+      "dashboard": "仪表板",
+      "directTier": "直推奖励",
+      "tree": "推荐树",
+      "tierRewards": "���级奖励",
+      "gloryRewards": "荣耀奖励"
+    },
+    "dashboard": {
+      "stats": {
+        "totalEarnings": "总收益",
+        "totalRollups": "总回滚",
+        "activeMembers": "激活会员",
+        "inactiveMembers": "未激活会员"
+      }
+    },
+    "tierRewards": {
+      "groups": {
+        "basic": "初级推荐奖励",
+        "intermediate": "中级推荐奖励",
+        "advanced": "高级推荐奖励",
+        "elite": "顶级推荐奖励"
+      },
+      "starNFT": {
+        "required": "需要 Star NFT 等级 {{level}}"
+      },
+      "status": {
+        "locked": "未解锁",
+        "active": "已激活",
+        "inactive": "未激活"
+      }
+    },
+    "directTier": {
+      "generations": {
+        "first": "一代会员",
+        "second": "二代会员",
+        "third": "三代会员"
+      },
+      "stats": {
+        "totalDirects": "直推总数",
+        "activeMembers": "激活会员",
+        "totalEarnings": "总收益",
+        "earnings": "收益"
+      }
+    },
+    "glory": {
+      "stats": {
+        "totalPoints": "总荣耀点数",
+        "currentRank": "当前等级",
+        "nextRank": "距离下一级"
+      },
+      "zones": {
+        "left": "左区",
+        "middle": "中区",
+        "right": "右区",
+        "minProgress": "最小区域进度"
+      }
+    },
+    "tree": {
+      "title": "推荐网络",
+      "status": {
+        "active": "已激活",
+        "inactive": "未激活"
+      },
+      "level": "等级 {{level}}",
+      "zone": "{{zone}}区"
     }
   },
   "community": {
@@ -123,7 +249,7 @@
       },
       "voting": {
         "title": "社区投票权",
-        "description": "参与治理决策"
+        "description": "参与治理策"
       }
     },
 
@@ -150,9 +276,9 @@
     "subtitle": "选择并认领您的 Star NFT",
     "noNFTs": "未找到 Star NFT",
     "tabs": {
-      "overview": "概览",
-      "rewards": "奖励",
-      "tutorial": "教程"
+      "claim": "认领 NFT",
+      "presale": "预售",
+      "release": "释放"
     },
     "levels": {
       "title": "星级等级",
@@ -195,7 +321,8 @@
           "referralBonus": "20% 推荐奖励",
           "idoAccess": "VIP IDO 优先权"
         }
-      }
+      },
+      "benefits": "会员权益"
     },
     "rewards": {
       "title": "奖励系统",
@@ -227,6 +354,54 @@
         "total": "总奖励",
         "confirm": "确认"
       }
+    },
+    "claim": {
+      "success": "认领成功",
+      "error": "认领失败",
+      "processing": "处理中...",
+      "connectWallet": "请连接钱包",
+      "addressMismatch": "钱包地址不匹配"
+    },
+    "buttons": {
+      "claim": "认领 Star NFT",
+      "purchase": "购买 Star NFT"
+    },
+    "info": {
+      "details": "NFT 详情",
+      "sale": "销售信息",
+      "price": "价格",
+      "ratio": "比例",
+      "presale": "预售额度",
+      "contract": "合约价值",
+      "benefits": "权益",
+      "earnings": "收益",
+      "return": "年化回报",
+      "levels": "等级",
+      "tiers": "层级",
+      "rollup": "回滚",
+      "direct": "直推",
+      "generation": "代"
+    },
+    "active": {
+      "status": {
+        "ready": "可释放",
+        "active": "激活中"
+      },
+      "presale_ops": "预售 OPS",
+      "airdrop_ops": "空投 OPS",
+      "rewards_ops": "奖励 OPS",
+      "current_value": "当前价值",
+      "contract_value": "合约价值",
+      "release_threshold": "释放阈值",
+      "buttons": {
+        "withdraw": "提取奖励",
+        "release": "释放"
+      }
+    },
+    "stats": {
+      "holders": "持有人数",
+      "volume": "总锁仓量",
+      "floor": "地板价"
     }
   },
   "nft": {
@@ -315,6 +490,75 @@
       },
       "info": {
         "title": "提示"
+      }
+    }
+  },
+  "ops": {
+    "sale": {
+      "title": "OPS 预售进度",
+      "description": "跟踪当前预售进度并参与 OPS 代币销售",
+      "cycle": "当前周期",
+      "stage": "当前阶段",
+      "progress": "进度",
+      "currentPrice": "当前价格",
+      "nextPrice": "下一阶段价格",
+      "totalSupply": "总供应量",
+      "soldAmount": "已售数量"
+    },
+    "calculator": {
+      "title": "OPS 空投计算器",
+      "description": "计算您潜在的 OPS 代币空投数量",
+      "input": {
+        "label": "输入 OPS 数量",
+        "placeholder": "请输入 OPS 代币数量"
+      },
+      "calculate": "计算空投",
+      "result": {
+        "title": "预计空投数量",
+        "description": "基于当前比例的预计空投数量"
+      }
+    },
+    "presale": {
+      "title": "OPS 预售",
+      "subtitle": "参与 OPS 代币预售",
+      "progress": "预售进度",
+      "currentPrice": "当前价格",
+      "nextPrice": "下一阶段价格",
+      "remaining": "剩余数量",
+      "minimum": "最低购买",
+      "maximum": "最高购买",
+      "stages": {
+        "title": "预售阶段",
+        "current": "当前阶段",
+        "next": "下一阶段",
+        "price": "价格",
+        "sold": "已售",
+        "total": "总量"
+      }
+    },
+    "airdrop": {
+      "title": "OPS 空投",
+      "info": {
+        "total": "总空投量",
+        "claimed": "已领取",
+        "remaining": "剩余数量",
+        "claimable": "可领取数量"
+      },
+      "actions": {
+        "claim": "领取空投"
+      }
+    },
+    "calculator": {
+      "title": "收益计算器",
+      "inputs": {
+        "amount": "投资金额",
+        "price": "当前价格",
+        "period": "持有期限"
+      },
+      "results": {
+        "tokens": "获得代币",
+        "value": "预期价值",
+        "roi": "投资回报率"
       }
     }
   }
